@@ -25,17 +25,17 @@ const NavbarMenu = [
     {
         id: 4,
         title: "Project",
-        link: "#",
+        link: "#project",
     },
     {
         id: 5,
         title: "Education",
-        link: "#",
+        link: "#education",
     },
     {
         id: 6,
         title: "Contact",
-        link: "#",
+        link: "#contact",
     },
 ];
 
@@ -62,7 +62,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#050414a6] text-white bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#050414a6] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transparent"
             } `}>
             <div className="flex justify-between relative items-center my-5 lg:my-5.5 md:my-7">
                 <div className="flex justify-center items-center cursor-pointer">
