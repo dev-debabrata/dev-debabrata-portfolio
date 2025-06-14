@@ -1,12 +1,14 @@
 import React from 'react'
 import ProfileImg from "../assets/profile.png";
 import Contact from './Contact';
+import { TbDownload } from 'react-icons/tb';
+import { FiSend } from 'react-icons/fi';
 
 const Hero = () => {
     return (
         <section
             id="home"
-            className=" bg-gray-300 py-22 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-20 md:mt-24 lg:my-21 ">
+            className=" bg-blue-100 py-22 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-20 md:mt-20.5 lg:mt-20.5 ">
             <div className="flex xl:flex flex-col-reverse gap-12 md:flex-row justify-between items-center">
                 {/* Left side */}
                 <div className="text-center md:text-left mt-8 md:mt-0">
@@ -16,12 +18,18 @@ const Hero = () => {
                     <div className=" space-x-4 md:space-x-2 lg:space-x-4 mt-5">
                         <a
                             href="Contact"
-                            className="inline-block bg-blue-600 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 lg:text-lg rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105">Contact Me</a>
+                            className="inline-flex justify-center items-center gap-3 bg-blue-600 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 lg:text-lg rounded-full text-[15px] font-semibold transition duration-300 transform hover:scale-105">
+                            Contact Me
+                            <FiSend />
+                        </a>
                         <a
                             href="https://drive.google.com/file/d/13V4SvtK-SmqUSSA1gMuihipAb6zV0E-y/view?usp=sharing"
                             target='_blank'
                             rel='noopener noreferrer'
-                            className="inline-block bg-gray-950 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 rounded-full text-lg lg:text-lg font-semibold transition duration-300 transform hover:scale-105">Download CV</a>
+                            className=" inline-flex justify-center items-center gap-3 bg-gray-950 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 rounded-full text-[15px] lg:text-lg font-semibold transition duration-300 transform hover:scale-105">
+                            Download CV
+                            <TbDownload size={20} />
+                        </a>
                     </div>
                 </div>
                 {/* Right side */}

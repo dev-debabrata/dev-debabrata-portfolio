@@ -1,43 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { NavbarMenu } from '../data';
 import Logo from "../assets/Logo.png"
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdClose, MdMenu } from "react-icons/md";
 
 
-
-
-const NavbarMenu = [
-    {
-        id: 1,
-        title: "Home",
-        link: "#home",
-    },
-    {
-        id: 2,
-        title: "About Me",
-        link: "#about",
-    },
-    {
-        id: 3,
-        title: "Skills",
-        link: "#skills",
-    },
-    {
-        id: 4,
-        title: "Project",
-        link: "#project",
-    },
-    {
-        id: 5,
-        title: "Education",
-        link: "#education",
-    },
-    {
-        id: 6,
-        title: "Contact",
-        link: "#contact",
-    },
-];
 
 const Navbar = () => {
 
@@ -62,18 +29,18 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#050414a6] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transparent"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transparent"
             } `}>
-            <div className="flex justify-between relative items-center my-5 lg:my-5.5 md:my-7">
+            <div className="flex justify-between relative items-center my-4 lg:my-4 md:my-4">
                 <div className="flex justify-center items-center cursor-pointer">
-                    <img src={Logo} alt="" className=" w-12" />
+                    <img src={Logo} alt="" className=" w-15 " />
                     <h2 className=" text-lg font-bold">Debabrata Das</h2>
                 </div>
                 {/* Destop menu */}
                 <div>
                     <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
                         {NavbarMenu.map((item) => (
-                            <li key={item.id} className={`cursor-pointer hover:text-[#8245ec] ${activeSection === item.id ? "text-[#8245ec]" : ""
+                            <li key={item.id} className={`cursor-pointer hover:text-blue-600 ${activeSection === item.id ? " text-blue-600" : ""
                                 }`}>
                                 <a
                                     href={item.link}
@@ -91,15 +58,15 @@ const Navbar = () => {
                         href="https://github.com/dev-debabrata"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#8245ec]">
-                        <FaGithub size={28} />
+                        className=" hover:text-blue-600">
+                        <FaGithub size={45} />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#8245ec]">
-                        <FaLinkedin size={28} />
+                        className=" hover:text-blue-600">
+                        <FaLinkedin size={45} />
                     </a>
                 </div>
                 {/* Mobile menu icons */}
