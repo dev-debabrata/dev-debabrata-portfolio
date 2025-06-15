@@ -8,10 +8,39 @@ const About = () => {
     // const getData = (arr, title) => {
     //     return arr.find((item) => item.title === title);
     // };
+    // const tabRef = useRef(null);
+    // const [tabWidth, setTabWidth] = useState(0);
+    // const [activeTab, setActiveTab] = useState("tab1")
+
+
+    // const updateWidth = () => {
+    //     if (tabRef.current) {
+    //         const parentWidth = tabRef.current.getBoundingClientRect().width;
+    //         const numberOfTabs = tabs.length;
+    //         const newTabWidth = parentWidth / numberOfTabs;
+    //         setTabWidth(newTabWidth);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     const resizeObserver = new ResizeObserver(updateWidth);
+    //     if (tabRef.current) {
+    //         resizeObserver.observe(tabRef.current);
+    //     }
+    //     return () => {
+    //         if (tabRef.current) {
+    //             resizeObserver.unobserve(tabRef.current);
+    //         }
+    //     };
+    // }, [tabs.length]);
+
+    // const activeData = tabContent[tabs[activeTab].id];
+
+
+
     const tabRef = useRef(null);
     const [tabWidth, setTabWidth] = useState(0);
-    const [activeTab, setActiveTab] = useState("tab1")
-
+    const [activeTab, setActiveTab] = useState(0); // Now using index (number)
 
     const updateWidth = () => {
         if (tabRef.current) {
@@ -23,6 +52,7 @@ const About = () => {
     };
 
     useEffect(() => {
+        updateWidth(); // set initial width
         const resizeObserver = new ResizeObserver(updateWidth);
         if (tabRef.current) {
             resizeObserver.observe(tabRef.current);
@@ -33,6 +63,8 @@ const About = () => {
             }
         };
     }, [tabs.length]);
+
+    const activeData = tabContent[tabs[activeTab].id];
 
     return (
         <section
@@ -72,65 +104,63 @@ const About = () => {
 
 
                 {/*Educations and Skills section */}
-                <div className="mt-5">
-                    <div ref={tabRef}
-                        className="xl:w-[30%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-gray-200 p-1">
-                        {tabs.map((tab) => (
-                            <button key={tab.id} className={` text-sm px-4 py-4 font-semibold ${activeTab === tab.id ? " text-white " : " cursor-pointer hover:text-blue-600"}`} onClick={() => setActiveTab(tab.id)}>
+                <div className="w-full px-4 mt-10 flex flex-col items-center">
+                    {/* Tab Buttons */}
+                    <div
+                        ref={tabRef}
+                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-gray-200 p-1 mb-10"
+                    >
+                        {tabs.map((tab, index) => (
+                            <button
+                                key={tab.id}
+                                className={`relative cursor-pointer py-3 text-sm font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
+                                style={{ width: tabWidth }}
+                                onClick={() => setActiveTab(index)}
+                            >
                                 {tab.label}
                             </button>
                         ))}
+
                         {/* Animated slider */}
                         <div
-                            className="absolute inset-0 bg-whi rounded-full bg-blue-600  transition-all duration-300"
+                            className="absolute top-0 left-0 h-full rounded-full bg-blue-600 transition-all duration-300 z-0"
                             style={{
                                 width: `${tabWidth}px`,
                                 transform: `translateX(${activeTab * tabWidth}px)`,
                             }}
                         />
-                        <div />
                     </div>
-                    {/* Tab Data section */}
-                    <div className=" flex justify-between gap-20 mt-12 items-center">
-                        {/* <h2 className="text-2xl font-semibold mb-4">{tabContent[activeTab].title}</h2> */}
-                        <div className=" flex flex-col gap-5">
-                            {tabContent[activeTab].data.map((item, index) => (
+
+                    {/* Tab Content */}
+                    <div className="flex flex-col lg:flex-row justify-between items-center gap-12 w-full max-w-10xl">
+                        <div className="flex flex-col gap-5 w-full lg:w-1/2">
+                            {activeData.data.map((item, index) => (
                                 <div key={index} className="pb-5 border-b">
-                                    {activeTab === "tab1" ? (
-                                        <div className=" flex flex-row gap-3 mb-7 items-center">
-                                            <div>
-                                                <h3 className=" text-2xl font-semibold">{item.title}</h3>
-                                            </div>
-                                            <div>
-                                                <p className="text-gray-700 text-[16px]">{item.list}</p>
-                                            </div>
+                                    {tabs[activeTab].id === "tab1" ? (
+                                        <div className="flex flex-row gap-3 mb-2 items-center">
+                                            <h3 className="text-2xl font-semibold">{item.title}</h3>
+                                            <p className="text-gray-700 text-[16px]">{item.list}</p>
                                         </div>
                                     ) : (
-                                        <div className=" relative flex flex-row items-center justify-between">
-                                            {/* Education section */}
-                                            <div className=" space-y-2">
-                                                <h3 className="text-[25px] font-semibold"><span dangerouslySetInnerHTML={{ __html: item.school }} /></h3>
+                                        <div className="flex justify-between items-center">
+                                            <div className=" mb-2">
+                                                <h3 className="text-[20px] font-semibold" dangerouslySetInnerHTML={{ __html: item.school }} />
                                                 <p className="text-gray-700">{item.qualification}</p>
                                             </div>
-                                            <div className=" flex flex-col gap-5 items-end">
-                                                <div>
-                                                    {item.icon && <item.icon size={25} className=" text-gray-500" />}
-                                                </div>
-                                                <div>
-                                                    <p className="text-gray-500 text-[15px]">
-                                                        {item.years}
-                                                    </p>
-                                                </div>
+                                            <div className="text-right flex flex-col items-end">
+                                                {item.icon && <item.icon size={20} className="text-gray-500 mb-2" />}
+                                                <p className="text-gray-500 text-[15px]">{item.years}</p>
                                             </div>
                                         </div>
                                     )}
                                 </div>
                             ))}
                         </div>
-                        <div className="flex justify-center items-center">
+
+                        <div className="flex justify-center items-center w-full lg:w-1/2">
                             <img
-                                src={tabContent[activeTab].image}
-                                alt={activeTab === "tab1" ? "Skills" : "Education"}
+                                src={activeData.image}
+                                alt={tabs[activeTab].title}
                                 className="max-w-[495px]"
                             />
                         </div>
