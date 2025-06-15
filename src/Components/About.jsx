@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 import AboutImg from "../assets/about.png";
 import { iconInfoData, tabContent, tabs } from '../data';
 
@@ -8,7 +8,31 @@ const About = () => {
     // const getData = (arr, title) => {
     //     return arr.find((item) => item.title === title);
     // };
+    const tabRef = useRef(null);
+    const [tabWidth, setTabWidth] = useState(0);
     const [activeTab, setActiveTab] = useState("tab1")
+
+
+    const updateWidth = () => {
+        if (tabRef.current) {
+            const parentWidth = tabRef.current.getBoundingClientRect().width;
+            const numberOfTabs = tabs.length;
+            const newTabWidth = parentWidth / numberOfTabs;
+            setTabWidth(newTabWidth);
+        }
+    };
+
+    useEffect(() => {
+        const resizeObserver = new ResizeObserver(updateWidth);
+        if (tabRef.current) {
+            resizeObserver.observe(tabRef.current);
+        }
+        return () => {
+            if (tabRef.current) {
+                resizeObserver.unobserve(tabRef.current);
+            }
+        };
+    }, [tabs.length]);
 
     return (
         <section
@@ -49,12 +73,21 @@ const About = () => {
 
                 {/*Educations and Skills section */}
                 <div className="mt-5">
-                    <div className=" flex relative rounded-full relativ bg-blue-600 items-center justify-center w-[80%] mx-auto xl:max-w-[300px] xl:border ">
+                    <div ref={tabRef}
+                        className="xl:w-[30%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-gray-200 p-1">
                         {tabs.map((tab) => (
                             <button key={tab.id} className={` text-sm px-4 py-4 font-semibold ${activeTab === tab.id ? " text-white " : " cursor-pointer hover:text-blue-600"}`} onClick={() => setActiveTab(tab.id)}>
                                 {tab.label}
                             </button>
                         ))}
+                        {/* Animated slider */}
+                        <div
+                            className="absolute inset-0 bg-whi rounded-full bg-blue-600  transition-all duration-300"
+                            style={{
+                                width: `${tabWidth}px`,
+                                transform: `translateX(${activeTab * tabWidth}px)`,
+                            }}
+                        />
                         <div />
                     </div>
                     {/* Tab Data section */}

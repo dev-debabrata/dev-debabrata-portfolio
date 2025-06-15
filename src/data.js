@@ -35,7 +35,7 @@ export const NavbarMenu = [
 ];
 
 
-// About section data
+// About tabs section data
 export const tabs = [
     {
         id: "tab1",
@@ -48,10 +48,9 @@ export const tabs = [
 ];
 
 
-
+// About tabcontent section
 export const tabContent = {
     tab1: {
-        // title: 'Skills',
         data: [
             {
                 title: "Frontend:",
@@ -73,7 +72,6 @@ export const tabContent = {
         image: SkillsImg,
     },
     tab2: {
-        // title: 'Education',
         data: [
             {
                 school: "🎓 Dr. Sudhir Chandra Sur Institute <br/> of Technology & Sports Complex",
@@ -98,7 +96,7 @@ export const tabContent = {
     },
 }
 
-
+// About icon section
 export const iconInfoData = [
 
     {

@@ -34,7 +34,7 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
-                {/* Right side */}
+                {/* Right side photo */}
                 <div className=" flex justify-center md:justify-end">
                     <img
                         src={ProfileImg}
