@@ -13,8 +13,10 @@ const Hero = () => {
                 {/* Left side */}
                 <div className="text-center md:text-left mt-8 md:mt-0">
                     {/* Greeting */}
-                    <h1 className=" text-3xl sm:text-5xl md:text-4xl lg:text-7xl font-semibold mb-4 leading-tight ">I'm Debabrata Das, frontend developer.</h1>
-                    <p className=" text-sm md:text-sm lg:text-xl">I am a frontent developer from Kolkata. I have a meny project bulid in react.</p>
+                    <h2 className="text-2xl text-blue-600 font-semibold">Hi, I'm</h2>
+                    <h1 className=" text-3xl sm:text-5xl md:text-4xl lg:text-7xl font-extrabold mt-2">Debabrata Das</h1>
+                    <h2 className="text-3xl font-bold text-blue-600 mt-2 ">frontend developer.</h2>
+                    <p className=" text-sm md:text-sm lg:text-[18px] mt-2">I am a frontent developer from Kolkata. I have a meny project bulid in react.</p>
                     <div className=" space-x-4 md:space-x-2 lg:space-x-4 mt-5">
                         <a
                             href="Contact"

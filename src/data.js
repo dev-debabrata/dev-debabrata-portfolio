@@ -1,7 +1,8 @@
 import { FiMapPin } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
-
-
+import SkillsImg from "../src/assets/skills.png";
+import EducationsImg from "../src/assets/educations.png";
+import { PiBookOpen } from "react-icons/pi";
 
 
 // Navbar data
@@ -18,7 +19,7 @@ export const NavbarMenu = [
     },
     {
         id: 3,
-        title: "Skills",
+        title: "Exprience",
         link: "#skills",
     },
     {
@@ -35,25 +36,70 @@ export const NavbarMenu = [
 
 
 // About section data
-export const EXAMPLES = {
-    education: {
-        title: 'Education',
-        description:
-            'Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.',
-        code: `
-  function Welcome() {
-    return <h1>Hello, World!</h1>;
-  }`,
+export const tabs = [
+    {
+        id: "tab1",
+        label: "🛠️ Skills"
     },
-    skills: {
-        title: 'Skills',
-        description:
-            'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
-
+    {
+        id: "tab2",
+        label: "📚 Education"
     },
-};
+];
 
-export const infoData = [
+
+
+export const tabContent = {
+    tab1: {
+        // title: 'Skills',
+        data: [
+            {
+                title: "Frontend:",
+                list: "HTML, CSS, Tailwind CSS, React JS",
+            },
+            {
+                title: "Backend:",
+                list: "Node JS, Express, MySQL, MoongoDB",
+            },
+            {
+                title: "Languages:",
+                list: "C, JavaScript",
+            },
+            {
+                title: "Tools:",
+                list: "Git, GitHub, VS Code, Vercel, Netlify ",
+            },
+        ],
+        image: SkillsImg,
+    },
+    tab2: {
+        // title: 'Education',
+        data: [
+            {
+                school: "🎓 Dr. Sudhir Chandra Sur Institute <br/> of Technology & Sports Complex",
+                qualification: "Computer Science and Engineering",
+                icon: PiBookOpen,
+                years: "2023 - PRESENT",
+            },
+            {
+                school: "🎓📜 Kingston Educational Institute",
+                qualification: "Mechanical Engineering",
+                icon: PiBookOpen,
+                years: "2016 - 2019",
+            },
+            {
+                school: "🏫 Purunda Ramkrishna Siksha Sadhan",
+                qualification: "Secondary & Higher Secondary",
+                icon: PiBookOpen,
+                years: "2009 - 2014 - 2016",
+            },
+        ],
+        image: EducationsImg,
+    },
+}
+
+
+export const iconInfoData = [
 
     {
         icon: MdMailOutline,
@@ -65,20 +111,3 @@ export const infoData = [
     },
 ];
 
-export const qualificationData = [
-    {
-        school: "Dr. Sudhir Chandra Sur Institute of Technology & Sports Complex",
-        qualification: "Computer Science and Engineering",
-        years: "2023 - PRESENT",
-    },
-    {
-        school: "Kingston Educational Institute",
-        qualification: "Mechanical Engineering",
-        years: "2016 - 2019",
-    },
-    {
-        school: "Purunda Ramkrishna Siksha Sadhan",
-        qualification: "H.S",
-        years: "2014 - 2016",
-    },
-];
