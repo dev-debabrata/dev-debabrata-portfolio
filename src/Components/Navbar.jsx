@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavbarMenu } from '../data';
-import Logo from "../assets/Logo.png"
+import { assets, NavbarMenu } from '../data';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdClose, MdMenu } from "react-icons/md";
 
@@ -29,13 +28,17 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transparent"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-blue-800 text-white"
             } `}>
             <div className="flex justify-between relative items-center my-4 lg:my-4 md:my-4">
-                <div className="flex justify-center items-center cursor-pointer">
-                    <img src={Logo} alt="" className=" w-15 " />
+
+                <a
+                    href="#"
+                    className="flex justify-center items-center cursor-pointer">
+                    <img src={assets.Logo} alt="" className=" w-15 " />
                     <h2 className=" text-lg font-bold">Debabrata Das</h2>
-                </div>
+                </a>
+
                 {/* Destop menu */}
                 <div>
                     <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">

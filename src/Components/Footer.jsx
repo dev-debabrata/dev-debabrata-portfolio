@@ -61,7 +61,7 @@ const Footer = () => {
                 </div>
                 {/* Copyright text */}
                 <p className="text-center mt-8 border-t-2 border-white/40 pt-8">
-                    Copyright &copy; 2025. All Rights Reserved - Debabrata
+                    &copy; 2025 Debabrata Das. All rights reserved.
                 </p>
             </div>
         </footer>

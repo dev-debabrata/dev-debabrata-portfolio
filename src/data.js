@@ -1,9 +1,23 @@
-import { FiMapPin } from "react-icons/fi";
-import { MdMailOutline } from "react-icons/md";
+import Logo from "../src/assets/logo.png";
+import ProfileImg from "../src/assets/profile.png";
+import AboutImg from "../src/assets/about.png";
 import SkillsImg from "../src/assets/skills.png";
 import EducationsImg from "../src/assets/educations.png";
+import { FiMapPin } from "react-icons/fi";
+import { MdMailOutline } from "react-icons/md";
 import { PiBookOpen } from "react-icons/pi";
 
+
+
+
+// Image
+export const assets = {
+    Logo,
+    ProfileImg,
+    AboutImg,
+    SkillsImg,
+    EducationsImg,
+}
 
 // Navbar data
 export const NavbarMenu = [
@@ -20,12 +34,12 @@ export const NavbarMenu = [
     {
         id: 3,
         title: "Exprience",
-        link: "#skills",
+        link: "#expriences",
     },
     {
         id: 4,
         title: "Project",
-        link: "#project",
+        link: "#projects",
     },
     {
         id: 5,
@@ -69,7 +83,7 @@ export const tabContent = {
                 list: "Git, GitHub, VS Code, Vercel, Netlify ",
             },
         ],
-        image: SkillsImg,
+        image: assets.SkillsImg,
     },
     tab2: {
         data: [
@@ -92,7 +106,7 @@ export const tabContent = {
                 years: "2009 - 2014 - 2016",
             },
         ],
-        image: EducationsImg,
+        image: assets.EducationsImg,
     },
 }
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import AboutImg from "../assets/about.png";
-import { iconInfoData, tabContent, tabs } from '../data';
+import { assets, iconInfoData, tabContent, tabs } from '../data';
 
 
 const About = () => {
@@ -76,12 +75,12 @@ const About = () => {
                     <h1 className=" text-5xl font-semibold">About me</h1>
                 </div>
                 {/* About section */}
-                <div className="flex justify-between items-center gap-10">
+                <div className="flex xl:flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
                     <div>
-                        <img src={AboutImg} alt="About" className=" max-w-[350px]" />
+                        <img src={assets.AboutImg} alt="About" className=" max-w-[350px]" />
                     </div>
                     <div className="">
-                        <p className=" text-lg">
+                        <p className=" xl:text-lg">
                             Hello! I'm Debabrata Das, a B-Tech student in Computer Science and Engineering with a strong passion for technology, programming, and problem-solving. I enjoy exploring various areas of computer science including web development, database management, and algorithms. I'm currently building a solid foundation in both theoretical and practical aspects of computing.
                         </p>
                         {/* Icons */}
@@ -161,7 +160,7 @@ const About = () => {
                             <img
                                 src={activeData.image}
                                 alt={tabs[activeTab].title}
-                                className="max-w-[495px]"
+                                className="xl:max-w-[495px] max-w-[350px]"
                             />
                         </div>
                     </div>
