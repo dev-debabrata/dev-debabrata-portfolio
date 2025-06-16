@@ -31,7 +31,7 @@ const Footer = () => {
                         <button
                             key={index}
                             onClick={() => handleScroll(item.id)}
-                            className="hover:text-blue-500 cursor-pointer xl:text-[18px] text-sm sm:text-base my-1"
+                            className="hover:text-black cursor-pointer xl:text-[18px] text-sm sm:text-base my-1"
                         >
                             {item.name}
                         </button>
@@ -53,7 +53,7 @@ const Footer = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xl hover:text-blue-500 transition-transform transform hover:scale-110"
+                            className="text-xl hover:text-black transition-transform transform hover:scale-110"
                         >
                             {item.icon}
                         </a>

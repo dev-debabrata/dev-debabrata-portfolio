@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div>
                     <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
                         {NavbarMenu.map((item) => (
-                            <li key={item.id} className={`cursor-pointer hover:text-[#212529] ${activeSection === item.id ? " text-[#212529]" : ""
+                            <li key={item.id} className={`cursor-pointer hover:text-black ${activeSection === item.id ? " text-black" : ""
                                 }`}>
                                 <a
                                     href={item.link}
@@ -61,14 +61,14 @@ const Navbar = () => {
                         href="https://github.com/dev-debabrata"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" hover:text-blue-600">
+                        className=" hover:text-black">
                         <FaGithub size={45} />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" hover:text-blue-600">
+                        className=" hover:text-black">
                         <FaLinkedin size={45} />
                     </a>
                 </div>
@@ -102,14 +102,14 @@ const Navbar = () => {
                                     href="https://github.com/dev-debabrata"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-[#8245ec]">
+                                    className="hover:text-[#212529]">
                                     <FaGithub size={28} />
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-[#8245ec]">
+                                    className="hover:text-[#212529]">
                                     <FaLinkedin size={28} />
                                 </a>
                             </div>
