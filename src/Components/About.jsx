@@ -75,9 +75,9 @@ const About = () => {
                     <h1 className=" text-5xl font-semibold">About me</h1>
                 </div>
                 {/* About section */}
-                <div className="flex xl:flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
+                <div className=" bg-blue-50 p-10 rounded-2xl flex xl:flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
                     <div>
-                        <img src={assets.AboutImg} alt="About" className=" max-w-[350px]" />
+                        <img src={assets.AboutImg} alt="About" className=" max-w-[350px] rounded-2xl" />
                     </div>
                     <div className="">
                         <p className=" xl:text-lg">
@@ -103,7 +103,7 @@ const About = () => {
 
 
                 {/*Educations and Skills section */}
-                <div className="w-full px-4 mt-10 flex flex-col items-center">
+                <div className="w-full bg-blue-50 p-10 rounded-2xl mt-10 flex flex-col items-center">
                     {/* Tab Buttons */}
                     <div
                         ref={tabRef}
@@ -160,7 +160,7 @@ const About = () => {
                             <img
                                 src={activeData.image}
                                 alt={tabs[activeTab].title}
-                                className="xl:max-w-[495px] max-w-[350px]"
+                                className="xl:max-w-[495px] rounded-2xl max-w-[350px]"
                             />
                         </div>
                     </div>

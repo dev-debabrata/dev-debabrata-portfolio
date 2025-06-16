@@ -15,7 +15,7 @@ const Footer = () => {
 
 
     return (
-        <footer className=" bg-blue-800 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans pt-12 pb-8 text-white">
+        <footer className=" bg-[#3b5bdb] px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans pt-12 pb-8 text-white">
             <div className=" container mx-auto text-center">
                 <h2 className="text-2xl font-semibold">Debabrata Das</h2>
 

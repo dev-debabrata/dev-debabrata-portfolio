@@ -28,7 +28,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-blue-800 text-white"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-[#3b5bdb] text-white"
             } `}>
             <div className="flex justify-between relative items-center my-4 lg:my-4 md:my-4">
 
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div>
                     <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
                         {NavbarMenu.map((item) => (
-                            <li key={item.id} className={`cursor-pointer hover:text-blue-600 ${activeSection === item.id ? " text-blue-600" : ""
+                            <li key={item.id} className={`cursor-pointer hover:text-[#212529] ${activeSection === item.id ? " text-[#212529]" : ""
                                 }`}>
                                 <a
                                     href={item.link}
