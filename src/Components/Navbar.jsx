@@ -35,7 +35,10 @@ const Navbar = () => {
                 <a
                     href="#"
                     className="flex justify-center items-center cursor-pointer">
-                    <img src={assets.Logo} alt="" className=" w-15 " />
+                    <img
+                        src={assets.Logo}
+                        alt="Logo"
+                        className=" w-15 " />
                     <h2 className=" text-lg font-bold">Debabrata Das</h2>
                 </a>
 
@@ -43,8 +46,10 @@ const Navbar = () => {
                 <div>
                     <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
                         {NavbarMenu.map((item) => (
-                            <li key={item.id} className={`cursor-pointer hover:text-black ${activeSection === item.id ? " text-black" : ""
-                                }`}>
+                            <li
+                                key={item.id}
+                                className={`cursor-pointer hover:text-black ${activeSection === item.id ? " text-black" : ""
+                                    }`}>
                                 <a
                                     href={item.link}
                                     onClick={() => handleMenuItemClick(item.id)}

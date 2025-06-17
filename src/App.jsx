@@ -6,12 +6,14 @@ import Contact from './Components/Contact'
 import Footer from './Components/Footer'
 import Hero from './Components/Hero'
 import Expriences from './Components/Expriences'
+import Logo from './Components/Logo'
 
 const App = () => {
   return (
     <div className=" relative">
       <Navbar />
       <Hero />
+      <Logo />
       <About />
       <Expriences />
       <Projects />

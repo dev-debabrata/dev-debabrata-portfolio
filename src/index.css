@@ -2,6 +2,19 @@
 
 @import "tailwindcss";
 
+@theme {
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%); /* No quotes around transform value */
+    }
+    100% {
+      transform: translateX(-100%); /* No quotes around transform value */
+    }
+  }
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }

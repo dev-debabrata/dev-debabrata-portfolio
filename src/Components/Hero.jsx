@@ -7,8 +7,8 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className=" bg-blue-200 py-22 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-20 md:mt-20.5 lg:mt-20.5 ">
-            <div className="flex xl:flex flex-col-reverse gap-12 md:flex-row justify-between items-center">
+            className=" bg-blue-200 py-8 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-20 md:mt-20.5 lg:mt-20.5 ">
+            <div className="flex xl:flex flex-col-reverse xl:gap-12 md:gap-10 gap-5 md:flex-row justify-between items-center">
                 {/* Left side */}
                 <div className="text-center md:text-left mt-8 md:mt-0">
                     {/* Greeting */}
@@ -38,7 +38,7 @@ const Hero = () => {
                     <img
                         src={assets.ProfileImg}
                         alt="Debabrata Das"
-                        className=" xl:max-h-[500px] xl:max-w-[500px] max-w-[400px] max-h-[400px] md:max-h-[300px] rounded-full object-cover" />
+                        className=" xl:max-h-[450px] xl:max-w-[450px] max-w-[400px] max-h-[400px] md:max-h-[300px] rounded-full object-cover" />
                 </div>
             </div>
         </section>

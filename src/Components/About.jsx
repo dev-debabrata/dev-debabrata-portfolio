@@ -79,17 +79,17 @@ const About = () => {
                     <div>
                         <img src={assets.AboutImg} alt="About" className=" max-w-[350px] rounded-2xl" />
                     </div>
-                    <div className="">
+                    <div className=" flex flex-col items-start">
                         <p className=" xl:text-lg">
                             Hello! I'm Debabrata Das, a B-Tech student in Computer Science and Engineering with a strong passion for technology, programming, and problem-solving. I enjoy exploring various areas of computer science including web development, database management, and algorithms. I'm currently building a solid foundation in both theoretical and practical aspects of computing.
                         </p>
                         {/* Icons */}
-                        <div className=" grid grid-rows-2 gap-2 mt-4">
+                        <div className="mt-4">
                             {iconInfoData.map((item, index) => {
                                 const Icon = item.icon;
                                 return (
                                     <div
-                                        className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                                        className="flex items-center gap-x-4 mt-1 mx-auto xl:mx-0"
                                         key={index}
                                     >
                                         <div className="text-primary "><Icon size={20} /></div>
@@ -132,13 +132,23 @@ const About = () => {
 
                     {/* Tab Content */}
                     <div className="flex flex-col lg:flex-row justify-between items-center gap-12 w-full max-w-10xl">
-                        <div className="flex flex-col gap-5 w-full lg:w-1/2">
+                        <div className="flex flex-col gap-4 w-full lg:w-1/2">
                             {activeData.data.map((item, index) => (
-                                <div key={index} className="pb-5 border-b">
+                                <div key={index} className="pb-2 border-b">
                                     {tabs[activeTab].id === "tab1" ? (
-                                        <div className="flex flex-row gap-3 mb-2 items-center">
-                                            <h3 className="text-2xl font-semibold">{item.title}</h3>
-                                            <p className="text-gray-700 text-[16px]">{item.list}</p>
+                                        <div className=" mb-2 items-center">
+                                            <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                                            {/* <p className="text-gray-700 p-4 rounded-2xl inline-block bg-blue-200 text-[16px]">{item.list}</p> */}
+                                            <div className="flex flex-wrap gap-2">
+                                                {item.list.split(",").map((tech, index) => (
+                                                    <span
+                                                        key={index}
+                                                        className="bg-blue-300 text-gray-700 text-sm px-3 py-1.5 rounded-md"
+                                                    >
+                                                        {tech.trim()}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     ) : (
                                         <div className="flex justify-between items-center">
