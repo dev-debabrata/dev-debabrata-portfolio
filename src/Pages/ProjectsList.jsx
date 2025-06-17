@@ -6,7 +6,7 @@ const ProjectsList = () => {
     return (
         <>
             <Navbar />
-            <div className="p-6 border border-red-500 bg-yellow-100">
+            <div className="">
                 <h1 className=' text-7xl'>All projects are ther</h1>
             </div>
             <Footer />

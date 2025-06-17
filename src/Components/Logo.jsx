@@ -62,8 +62,7 @@ const Logo = () => {
 export default Logo;
 
 
-// import React from 'react';
-// import { logoCard } from '../data';
+
 
 // const Logo = () => {
 //     return (
