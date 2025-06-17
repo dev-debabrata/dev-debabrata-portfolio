@@ -1,24 +1,25 @@
 import React from 'react'
-import Navbar from './Components/Navbar'
-import About from './Components/About'
+
+import { Route, Routes, Navigate } from 'react-router-dom'
+import Home from './Pages/Home'
 import Projects from './Components/Projects'
-import Contact from './Components/Contact'
-import Footer from './Components/Footer'
-import Hero from './Components/Hero'
-import Expriences from './Components/Expriences'
-import Logo from './Components/Logo'
+
+
+
+
+
+
+
 
 const App = () => {
   return (
     <div className=" relative">
-      <Navbar />
-      <Hero />
-      <Logo />
-      <About />
-      <Expriences />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/projectsList' element={<Projects />} />
+        <Route path='/home' element={<Navigate to="/" />} />
+        <Route path='*' element={<h1>404 - Page Not Found</h1>} />
+      </Routes>
 
     </div>
   )

@@ -50,8 +50,8 @@ export const NavbarMenu = [
     },
     {
         id: 3,
-        title: "Exprience",
-        link: "#expriences",
+        title: "Experience",
+        link: "#experiences",
     },
     {
         id: 4,

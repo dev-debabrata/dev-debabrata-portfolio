@@ -1,8 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
     return (
-        <div id='projects'>Projects</div>
+        <div id='projects'>
+            <Link to="/projectslist" className="text-blue-600 underline">
+                All Projects
+            </Link>
+        </div>
     )
 }
 
