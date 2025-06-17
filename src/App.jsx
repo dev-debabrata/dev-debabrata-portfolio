@@ -1,14 +1,7 @@
 import React from 'react'
-
 import { Route, Routes, Navigate } from 'react-router-dom'
 import Home from './Pages/Home'
-import Projects from './Components/Projects'
-
-
-
-
-
-
+import ProjectsList from './Pages/ProjectsList'
 
 
 const App = () => {
@@ -16,7 +9,7 @@ const App = () => {
     <div className=" relative">
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/projectsList' element={<Projects />} />
+        <Route path='/projectsList' element={<ProjectsList />} />
         <Route path='/home' element={<Navigate to="/" />} />
         <Route path='*' element={<h1>404 - Page Not Found</h1>} />
       </Routes>

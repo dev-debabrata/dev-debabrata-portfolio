@@ -2,30 +2,87 @@ import React, { useEffect, useState } from 'react';
 import { assets, NavbarMenu } from '../data';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdClose, MdMenu } from "react-icons/md";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 
 const Navbar = () => {
 
+    // const [isOpen, setIsOpen] = useState(false);
+    // const [activeSection, setActiveSection] = useState("");
+    // const [isScrolled, setIsScrolled] = useState(false);
+
+    // // Check scroll and change navbar background
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setIsScrolled(window.scrollY > 50);
+    //     }
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
+
+    // // Smooth scroll function
+    // const handleMenuItemClick = (sectionId) => {
+    //     setActiveSection(sectionId);
+    //     setIsOpen(sectionId);
+    // }
+
+
     const [isOpen, setIsOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState("");
+    const [activeSection, setActiveSection] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // Check scroll and change navbar background
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    // Change navbar style on scroll
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
-        }
+        };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Smooth scroll function
-    const handleMenuItemClick = (sectionId) => {
-        setActiveSection(sectionId);
-        setIsOpen(sectionId);
-    }
+    // Scroll or Navigate Handler
+    // const handleMenuItemClick = (sectionId) => {
+    //     setActiveSection(sectionId);
+    //     setIsOpen(false);
 
+    //     if (location.pathname !== '/') {
+    //         navigate('/'); // navigate to home first
+    //         setTimeout(() => {
+    //             scrollToSection(sectionId);
+    //         }, 300); // wait for home to render
+    //     } else {
+    //         scrollToSection(sectionId);
+    //     }
+    // };
+
+    const handleMenuItemClick = (item) => {
+        setActiveSection(item.id);
+        setIsOpen(false);
+
+        if (item.type === "route") {
+            navigate(`/${item.id}`);
+        } else {
+            if (location.pathname !== '/') {
+                navigate('/');
+                setTimeout(() => {
+                    scrollToSection(item.id);
+                }, 300);
+            } else {
+                scrollToSection(item.id);
+            }
+        }
+    };
+
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-[#3b5bdb] text-white"
@@ -50,12 +107,16 @@ const Navbar = () => {
                                 key={item.id}
                                 className={`cursor-pointer hover:text-black ${activeSection === item.id ? " text-black" : ""
                                     }`}>
-                                <a
+                                {/* <a
                                     href={item.link}
                                     onClick={() => handleMenuItemClick(item.id)}
                                     className="inline-block text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase" >
                                     {item.title}
-                                </a>
+                                </a> */}
+                                <button onClick={() => handleMenuItemClick(item)}
+                                    className="inline-block cursor-pointer text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase">
+                                    {item.title}
+                                </button>
                             </li>
                         ))}
                     </ul>

@@ -37,33 +37,44 @@ export const assets = {
 }
 
 // Navbar data
+// export const NavbarMenu = [
+//     {
+//         id: 1,
+//         title: "Home",
+//         link: "home",
+//     },
+//     {
+//         id: 2,
+//         title: "About Me",
+//         link: "about",
+//     },
+//     {
+//         id: 3,
+//         title: "Experience",
+//         link: "experiences",
+//     },
+//     {
+//         id: 4,
+//         title: "Project",
+//         link: "projectsList",
+//     },
+//     {
+//         id: 5,
+//         title: "Contact",
+//         link: "contact",
+//     },
+// ];
+
+
+
 export const NavbarMenu = [
-    {
-        id: 1,
-        title: "Home",
-        link: "#home",
-    },
-    {
-        id: 2,
-        title: "About Me",
-        link: "#about",
-    },
-    {
-        id: 3,
-        title: "Experience",
-        link: "#experiences",
-    },
-    {
-        id: 4,
-        title: "Project",
-        link: "#projects",
-    },
-    {
-        id: 5,
-        title: "Contact",
-        link: "#contact",
-    },
+    { id: "home", title: "Home", type: "scroll" },
+    { id: "about", title: "About", type: "scroll" },
+    { id: "experiences", title: "Experience", type: "scroll" },
+    { id: "projectsList", title: "Projects", type: "route" },
+    { id: "contact", title: "Contact", type: "scroll" }
 ];
+
 
 
 // LogoCard section
