@@ -23,6 +23,7 @@ import VueCard from "../src/assets/Banner/vue.png";
 import { FiMapPin } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
 import { PiBookOpen } from "react-icons/pi";
+import { BiPhoneCall } from "react-icons/bi";
 
 
 
@@ -171,6 +172,21 @@ export const iconInfoData = [
     {
         icon: MdMailOutline,
         text: "debabratadas711@gmail.com"
+    },
+    {
+        icon: FiMapPin,
+        text: "Kolkata, West Bengal, India"
+    },
+];
+
+export const iconInfoContact = [
+    {
+        icon: MdMailOutline,
+        text: "debabratadas711@gmail.com"
+    },
+    {
+        icon: BiPhoneCall,
+        text: '+919734990919'
     },
     {
         icon: FiMapPin,

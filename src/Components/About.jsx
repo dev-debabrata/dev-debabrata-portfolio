@@ -90,9 +90,8 @@ const About = () => {
                                 return (
                                     <div
                                         className="flex items-center gap-x-4 mt-1 mx-auto xl:mx-0"
-                                        key={index}
-                                    >
-                                        <div className="text-primary "><Icon size={20} /></div>
+                                        key={index}>
+                                        <div className=" text-blue-700 text-primary "><Icon size={20} /></div>
                                         <div>{item.text}</div>
                                     </div>
                                 );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { assets, NavbarMenu } from '../data';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdClose, MdMenu } from "react-icons/md";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 
 
@@ -89,7 +89,7 @@ const Navbar = () => {
             } `}>
             <div className="flex justify-between relative items-center my-4 lg:my-4 md:my-4">
 
-                <a
+                {/* <a
                     href="#"
                     className="flex justify-center items-center cursor-pointer">
                     <img
@@ -97,8 +97,16 @@ const Navbar = () => {
                         alt="Logo"
                         className=" w-15 " />
                     <h2 className=" text-lg font-bold">Debabrata Das</h2>
-                </a>
-
+                </a> */}
+                <Link
+                    to="/home"
+                    className="flex justify-center items-center cursor-pointer">
+                    <img
+                        src={assets.Logo}
+                        alt="Logo"
+                        className=" w-15 " />
+                    <h2 className=" text-lg font-bold">Debabrata Das</h2>
+                </Link>
                 {/* Destop menu */}
                 <div>
                     <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
@@ -155,12 +163,10 @@ const Navbar = () => {
                                     key={item.id}
                                     className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-[#8245ec]" : ""}`}
                                 >
-                                    <a
-                                        href={item.link}
-                                        onClick={() => handleMenuItemClick(item.id)}
-                                        className="inline-block text-base font-semibold py-2 px-4 uppercase" >
+                                    <button onClick={() => handleMenuItemClick(item)}
+                                        className="inline-block cursor-pointer text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase">
                                         {item.title}
-                                    </a>
+                                    </button>
                                 </li>
                             ))}
                             <div className="flex space-x-4">
