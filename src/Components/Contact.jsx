@@ -3,11 +3,12 @@ import { iconInfoContact } from '../data';
 
 const Contact = () => {
     return (
-        <section>
-            <div>
+        <section id='contact' className=" flex flex-col justify-center items-center gap-10 my-20 mx-[10%]">
+            <div className="text-5xl font-bold">
                 <h1>Get in touch</h1>
+                <div className=" w-55 h-1 bg-blue-600 mx-auto mt-3"></div>
             </div>
-            <div>
+            <div className="flex justify-between w-[100%] bg-blue-50 p-10 rounded-2xl">
                 {/* Left section */}
                 <div>
                     <h1>Let's talk</h1>

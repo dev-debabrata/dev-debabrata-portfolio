@@ -72,7 +72,8 @@ const About = () => {
             <div className="flex flex-col justify-center items-center" >
                 {/* About title */}
                 <div className="relative">
-                    <h1 className=" text-5xl font-semibold">About me</h1>
+                    <h1 className=" text-5xl font-bold">About me</h1>
+                    <div className=" w-42 h-1 bg-blue-600 mx-auto mt-3"></div>
                 </div>
                 {/* About section */}
                 <div className=" bg-blue-50 p-10 rounded-2xl flex xl:flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
