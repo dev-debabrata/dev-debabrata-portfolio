@@ -68,7 +68,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className=" my-20 mx-[10%] font-sans  ">
+            className="my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[10%] lg:mx-[10%] xl:mx-[10%] font-sans  ">
             {/* lg:scroll-mt-6.5 md:scroll-mt-4.5 scroll-mt-10 */}
             <div className="flex flex-col justify-center items-center" >
                 {/* About title */}
@@ -77,9 +77,9 @@ const About = () => {
                     <div className=" w-42 h-1 bg-blue-600 mx-auto mt-3"></div>
                 </div>
                 {/* About section */}
-                <div className=" bg-blue-50 p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
+                <div className=" bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
                     <div>
-                        <img src={assets.AboutImg} alt="About" className=" max-w-[350px] rounded-2xl" />
+                        <img src={assets.AboutImg} alt="About" className=" max-w-[300px] md:max-w-[350px] lg:max-w-[350px] xl:max-w-[350px] rounded-2xl" />
                     </div>
                     <div className=" flex flex-col items-start">
                         <p className=" xl:text-lg">
@@ -104,7 +104,7 @@ const About = () => {
 
 
                 {/*Educations and Skills section */}
-                <div className="w-full bg-blue-50 p-10 rounded-2xl mt-10 flex flex-col items-center">
+                <div className="w-full bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl mt-10 flex flex-col items-center">
                     {/* Tab Buttons */}
                     <div
                         ref={tabRef}
@@ -113,7 +113,7 @@ const About = () => {
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab.id}
-                                className={`relative cursor-pointer py-3 text-xl font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
+                                className={`relative cursor-pointer py-3 text-sm md:text-xl lg:text-xl xl:text-xl font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
                                 style={{ width: tabWidth }}
                                 onClick={() => setActiveTab(index)}
                             >

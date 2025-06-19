@@ -71,7 +71,7 @@ export const assets = {
 export const NavbarMenu = [
     { id: "home", title: "Home", type: "scroll" },
     { id: "about", title: "About", type: "scroll" },
-    { id: "experiences", title: "Experience", type: "scroll" },
+    { id: "experience", title: "Experience", type: "scroll" },
     { id: "projectsList", title: "Projects", type: "route" },
     { id: "contact", title: "Contact", type: "scroll" }
 ];

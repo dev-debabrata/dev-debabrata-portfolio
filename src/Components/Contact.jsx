@@ -3,12 +3,14 @@ import { iconInfoContact } from '../data';
 
 const Contact = () => {
     return (
-        <section id='contact' className=" flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-20 mx-[10%]">
+        <section
+            id='contact'
+            className=" flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[10%] lg:mx-[10%] xl:mx-[10%]">
             <div className="relative">
                 <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold px-8">Get in touch</h1>
-                <div className=" w-55 h-1 bg-blue-600 mx-auto mt-3"></div>
+                <div className=" w-40 md:w-55 lg:w-55 xl:w-55 h-1 bg-blue-600 mx-auto mt-3"></div>
             </div>
-            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 w-[100%] bg-blue-50 p-10 rounded-2xl">
+            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 w-full bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl">
                 {/* Left section */}
                 <div className="flex flex-col gap-5 basis-[40%]">
                     <h1 className="text-3xl font-semibold text-blue-900">Let's talk</h1>
@@ -29,13 +31,33 @@ const Contact = () => {
                 </div>
                 {/* Right section */}
 
-                <form action="" className="flex flex-col items-start gap-3 basis-[55%]">
-                    <label htmlFor="" className="text-gray-500 text-[18px] font-semibold">Your Name</label>
-                    <input className="border-none w-full py-4 pl-5 rounded-md bg-blue-200 text-gray-800 text-md " type="text" placeholder='Enter your name' name='name' />
-                    <label htmlFor="" className="text-gray-500 text-[18px] font-semibold">Your Email</label>
-                    <input className="border-none w-full py-4 pl-5 rounded-md bg-blue-200 text-gray-800 text-md " type="email" placeholder='Enter your email' name='email' />
-                    <label htmlFor="" className="text-gray-500 text-[18px] font-semibold">Write your message here</label>
-                    <textarea className="border-none w-full md:w-[650px] lg:w-[650px] xl:w-[650px] py-4 pl-5 rounded-md bg-blue-200 text-gray-800 text-md " name="message" rows="8" placeholder='Enter your message'></textarea>
+                <form
+                    action=""
+                    className="flex flex-col items-start gap-3 basis-[55%]">
+                    <label
+                        htmlFor=""
+                        className="text-gray-500 text-[18px] font-semibold">Your Name</label>
+                    <input
+                        className="border-none w-full py-4 pl-5 rounded-md bg-blue-200 text-gray-800 text-md "
+                        type="text"
+                        placeholder='Enter your name'
+                        name='name' />
+                    <label
+                        htmlFor=""
+                        className="text-gray-500 text-[18px] font-semibold">Your Email</label>
+                    <input
+                        className="border-none w-full py-4 pl-5 rounded-md bg-blue-200 text-gray-800 text-md "
+                        type="email"
+                        placeholder='Enter your email'
+                        name='email' />
+                    <label
+                        htmlFor=""
+                        className="text-gray-500 text-[18px] font-semibold">Write your message here</label>
+                    <textarea
+                        className="border-none w-full lg:w-[650px] xl:w-[650px] py-4 pl-5 rounded-md bg-blue-200 text-gray-800 text-md "
+                        name="message"
+                        rows="8"
+                        placeholder='Enter your message'></textarea>
                     <button className="border-none text-white rounded-full bg-blue-600 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">Submit now</button>
                 </form>
             </div>
