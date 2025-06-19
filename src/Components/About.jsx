@@ -68,7 +68,8 @@ const About = () => {
     return (
         <section
             id="about"
-            className="px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans lg:scroll-mt-6.5 md:scroll-mt-4.5 scroll-mt-10 mt-15 md:mt-8 lg:mt-10">
+            className=" my-20 mx-[10%] font-sans  ">
+            {/* lg:scroll-mt-6.5 md:scroll-mt-4.5 scroll-mt-10 */}
             <div className="flex flex-col justify-center items-center" >
                 {/* About title */}
                 <div className="relative">
@@ -76,7 +77,7 @@ const About = () => {
                     <div className=" w-42 h-1 bg-blue-600 mx-auto mt-3"></div>
                 </div>
                 {/* About section */}
-                <div className=" bg-blue-50 p-10 rounded-2xl flex xl:flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
+                <div className=" bg-blue-50 p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
                     <div>
                         <img src={assets.AboutImg} alt="About" className=" max-w-[350px] rounded-2xl" />
                     </div>
@@ -112,7 +113,7 @@ const About = () => {
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab.id}
-                                className={`relative cursor-pointer py-3 text-sm font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
+                                className={`relative cursor-pointer py-3 text-xl font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
                                 style={{ width: tabWidth }}
                                 onClick={() => setActiveTab(index)}
                             >

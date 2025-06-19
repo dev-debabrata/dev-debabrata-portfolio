@@ -3,10 +3,11 @@ import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
 import About from '../Components/About'
 import Logo from '../Components/Logo'
-import Experiences from '../Components/Experiences'
+
 import Projects from '../Components/Projects'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
+import Experience from '../Components/Experience'
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
             <Hero />
             <Logo />
             <About />
-            <Experiences />
+            <Experience />
             <Projects />
             <Contact />
             <Footer />
