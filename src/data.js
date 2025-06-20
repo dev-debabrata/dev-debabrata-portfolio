@@ -194,3 +194,125 @@ export const iconInfoContact = [
     },
 ];
 
+export const projectsTabs = [
+    {
+        id: "allprojects",
+        label: "All Projects"
+    },
+    {
+        id: "mernstack",
+        label: "MERN Stack"
+    },
+    {
+        id: "reactjs",
+        label: "React.JS"
+    },
+    {
+        id: "javascript",
+        label: "JavaScript"
+    },
+    {
+        id: "htmlcss",
+        label: "HTML CSS"
+    },
+];
+
+// export const projectListData = {
+//     allprojects: {
+//         title: 'All Projects',
+//         description:
+//             'Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.',
+//         link: '',
+//     },
+//     mernstack: {
+//         title: 'MERN Stack',
+//         description:
+//             'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
+//         link: '',
+//     },
+//     reactjs: {
+//         title: 'React.JS',
+//         description:
+//             'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
+//         link: '',
+//     },
+//     javascript: {
+//         title: 'JavaScript',
+//         description:
+//             'Components accept arbitrary inputs called props. They are like function arguments.',
+//         link: '',
+//     },
+//     htmlcss: {
+//         title: 'HTML CSS',
+//         description:
+//             'State allows React components to change their output over time in response to user actions, network responses, and anything else.',
+//         link: '',
+//     },
+// };
+
+
+export const projectListData = [
+    {
+        image:
+            "",
+        category: "allprojects",
+        name: "",
+        description:
+            "Technologies: React.js, Framer Motion, & Tailwind CSS",
+        link: "",
+    },
+
+    {
+        image:
+            "",
+        category: "reactjs",
+        name: "",
+        description:
+            "Technologies: React.js, Framer Motion, & Tailwind CSS",
+        link: "",
+    },
+    {
+        image:
+            "",
+        category: "reactjs",
+        name: "",
+        description: "Technologies: React.js, Tailwind CSS",
+        link: "",
+    },
+    {
+        image:
+            "",
+        category: "reactjs",
+        name: "",
+        description: "Technologies: React.js, Tailwind CSS",
+        link: "",
+    },
+
+    {
+        image:
+            "",
+        category: "reactjs",
+        name: "",
+        description: "Technologies: React, Tailwind CSS ",
+        link: "",
+    },
+
+    {
+        image:
+            "",
+        category: "reactjs",
+        name: "",
+        description:
+            "Technologies: React.js, Tailwind CSS",
+        link: "",
+    },
+    {
+        image:
+            "",
+        category: "reactjs",
+        name: "Digital Wallet",
+        description:
+            "Technologies: React.js, Tailwind CSS, Framer Motion",
+        link: "",
+    },
+];

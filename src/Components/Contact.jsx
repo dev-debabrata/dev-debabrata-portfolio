@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <section
             id='contact'
-            className=" flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[10%] lg:mx-[10%] xl:mx-[10%]">
+            className=" flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%]">
             <div className="relative">
                 <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold px-8">Get in touch</h1>
                 <div className=" w-40 md:w-55 lg:w-55 xl:w-55 h-1 bg-blue-600 mx-auto mt-3"></div>
