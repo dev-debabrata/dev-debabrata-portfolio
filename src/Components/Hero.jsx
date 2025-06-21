@@ -19,7 +19,7 @@ const Hero = () => {
                     <div className=" space-x-1 md:space-x-2 lg:space-x-4 mt-5">
                         <a
                             href="#contact"
-                            className="inline-flex justify-center items-center gap-3 bg-blue-600 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 lg:text-lg rounded-full text-sm font-semibold transition duration-300 transform hover:scale-105">
+                            className="inline-flex justify-center items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 lg:text-lg rounded-full text-sm font-semibold transition duration-300 transform hover:scale-105">
                             Contact Me
                             <FiSend />
                         </a>

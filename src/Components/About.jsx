@@ -108,7 +108,7 @@ const About = () => {
                     {/* Tab Buttons */}
                     <div
                         ref={tabRef}
-                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-gray-200 p-1 mb-10"
+                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-[#e9ecef] p-1 mb-10"
                     >
                         {tabs.map((tab, index) => (
                             <button
@@ -178,7 +178,7 @@ const About = () => {
                 </div>
 
 
-                <div className=" flex w-full justify-around mt-20">
+                {/* <div className=" flex w-full justify-around mt-20">
                     <div className="flex flex-col items-center gap-2.5 transition">
                         <h1 className="text-[60px] font-bold bg-clip-text">0+</h1>
                         <p>FRESHER</p>
@@ -193,7 +193,7 @@ const About = () => {
                         <h1 className="text-[60px] font-bold bg-clip-text">80%</h1>
                         <p>SKILLS ACHIVE</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )

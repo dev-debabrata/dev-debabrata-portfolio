@@ -24,10 +24,25 @@ import { FiMapPin } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
 import { PiBookOpen } from "react-icons/pi";
 import { BiPhoneCall } from "react-icons/bi";
+import PortImg from "../src/assets/ProjectImg/port.png"
+import AcademicImg from "../src/assets/ProjectImg/academic.png"
+import CloudKitchenImg from "../src/assets/ProjectImg/cloudkitchen.png"
+import CalculatorImg from "../src/assets/ProjectImg/calculator.png"
+import WeatherImg from "../src/assets/ProjectImg/weather.png"
+import AnalogClockImg from "../src/assets/ProjectImg/analogclock.png"
+import DigitalClockImg from "../src/assets/ProjectImg/digitalclock.png"
+import StopwatchImg from "../src/assets/ProjectImg/stopwatch.png"
+import GuessMyNumberImg from "../src/assets/ProjectImg/guessmynumber.png"
+import ModalShowImg from "../src/assets/ProjectImg/modalshow.png"
+import PigGameImg from "../src/assets/ProjectImg/piggame.png"
+import ElearningImg from "../src/assets/ProjectImg/elearning.png"
+import CocaColaImg from "../src/assets/ProjectImg/cocacola.png"
 
 
 
 
+
+/////////////////////////////////////////////
 // Image
 export const assets = {
     Logo,
@@ -72,12 +87,12 @@ export const NavbarMenu = [
     { id: "home", title: "Home", type: "scroll" },
     { id: "about", title: "About", type: "scroll" },
     { id: "experience", title: "Experience", type: "scroll" },
-    { id: "projectsList", title: "Projects", type: "route" },
+    { id: "projectslist", title: "Projects", type: "route" },
     { id: "contact", title: "Contact", type: "scroll" }
 ];
 
 
-
+//////////////////////////////////////////////////////
 // LogoCard section
 export const logoCard = {
     HTMLCard,
@@ -104,7 +119,7 @@ export const logoCard = {
 
 }
 
-
+/////////////////////////////////////////////////////
 // About tabs section data
 export const tabs = [
     {
@@ -116,7 +131,6 @@ export const tabs = [
         label: "📚 Education"
     },
 ];
-
 
 // About tabcontent section
 export const tabContent = {
@@ -179,6 +193,10 @@ export const iconInfoData = [
     },
 ];
 
+
+
+/////////////////////////////////////////////////////
+// Conract icon section
 export const iconInfoContact = [
     {
         icon: MdMailOutline,
@@ -194,17 +212,22 @@ export const iconInfoContact = [
     },
 ];
 
+
+
+//////////////////////////////////////////////
+// ProjectList section
+// Project Tabs
 export const projectsTabs = [
     {
         id: "allprojects",
         label: "All Projects"
     },
     {
-        id: "mernstack",
+        id: "mern stack",
         label: "MERN Stack"
     },
     {
-        id: "reactjs",
+        id: "react.js",
         label: "React.JS"
     },
     {
@@ -250,69 +273,232 @@ export const projectsTabs = [
 //     },
 // };
 
-
+// ProjectList Data
 export const projectListData = [
+
+
+
+
+    /////////////////////////////
+    // React.JS
     {
-        image:
-            "",
-        category: "allprojects",
-        name: "",
+        image: CocaColaImg,
+        title: "react.js",
+        name: "Coca Cola",
         description:
-            "Technologies: React.js, Framer Motion, & Tailwind CSS",
-        link: "",
+            "Technologies: React, Tailwind CSS, Framer-motion",
+        github: "https://github.com/dev-debabrata/CocaCola-react",
+        webapp: "https://cocacola-house.netlify.app/",
+    },
+
+
+
+
+    ////////////////////////////
+    // Mern stack
+    {
+        image: ElearningImg,
+        title: "mern stack",
+        name: "E-Learning",
+        description:
+            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB",
+        github: "https://github.com/dev-debabrata/e-learning-mern",
+        webapp: "https://education-learnig.netlify.app/",
+    },
+
+
+
+    /////////////////////////////////////
+    // JavaScript
+    {
+        image: PigGameImg,
+        title: "javascript",
+        name: "Guess My Number",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/pig-game",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/pig-game",
+    },
+    {
+        image: ModalShowImg,
+        title: "javascript",
+        name: "Modal Show",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/modal-show",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/modal-show",
+    },
+    {
+        image: GuessMyNumberImg,
+        title: "javascript",
+        name: "Guess My Number",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/guess-my-number",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/guess-my-number",
+    },
+    {
+        image: StopwatchImg,
+        title: "javascript",
+        name: "Stopwatch",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/stopwatch-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/stopwatch-app",
     },
 
     {
-        image:
-            "",
-        category: "reactjs",
-        name: "",
+        image: DigitalClockImg,
+        title: "javascript",
+        name: "Digital Clock",
         description:
-            "Technologies: React.js, Framer Motion, & Tailwind CSS",
-        link: "",
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/digital-clock-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/digital-clock-app",
     },
     {
-        image:
-            "",
-        category: "reactjs",
-        name: "",
-        description: "Technologies: React.js, Tailwind CSS",
-        link: "",
+        image: AnalogClockImg,
+        title: "javascript",
+        name: "Analog Clock",
+        description: "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/analog-clock-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/analog-clock-app",
     },
     {
-        image:
-            "",
-        category: "reactjs",
-        name: "",
-        description: "Technologies: React.js, Tailwind CSS",
-        link: "",
+        image: WeatherImg,
+        title: "javascript",
+        name: "Weather",
+        description: "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/weather-app-javascript",
+        webapp: "https://weather-debu.netlify.app/",
     },
 
     {
-        image:
-            "",
-        category: "reactjs",
-        name: "",
-        description: "Technologies: React, Tailwind CSS ",
-        link: "",
+        image: CalculatorImg,
+        title: "javascript",
+        name: "Calculator",
+        description: "Technologies: HTML, CSS, JavaScript ",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/calculator-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/calculator-app",
     },
 
+
+
+
+    /////////////////////////////////////
+    // HTML CSS
     {
-        image:
-            "",
-        category: "reactjs",
-        name: "",
+        image: CloudKitchenImg,
+        title: "htmlcss",
+        name: "Cloud Kitchen",
         description:
-            "Technologies: React.js, Tailwind CSS",
-        link: "",
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/cloud-kitchen-htmlcss",
+        webapp: "https://cloud-kitchen.netlify.app/",
     },
     {
-        image:
-            "",
-        category: "reactjs",
-        name: "Digital Wallet",
+        image: AcademicImg,
+        title: "htmlcss",
+        name: "Academic web",
         description:
-            "Technologies: React.js, Tailwind CSS, Framer Motion",
-        link: "",
+            "Technologies: HTM, CSS only",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/college-web-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/college-web-app",
     },
 ];
+
+
+///////////////////////////////////////////
+// Project home section data
+export const projectData = [
+    {
+        id: 0,
+        title: "GitHub Profile Detective",
+        description:
+            "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
+
+        tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
+        github: "",
+        webapp: "",
+    },
+    // {
+    //     id: 1,
+    //     title: "CS Prep",
+    //     description:
+    //         "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
+    //     image: csprepLogo,
+    //     tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
+    //     github: "https://github.com/codingmastr/CSPrep",
+    //     webapp: "https://csprep.netlify.app/",
+    // },
+    // {
+    //     id: 2,
+    //     title: "Movie Recommendation App",
+    //     description:
+    //         "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
+    //     image: movierecLogo,
+    //     tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
+    //     github: "https://github.com/codingmastr/Movie-Recommendation-App",
+    //     webapp: "https://movie-recommendation-app-jet.vercel.app/",
+    // },
+    // {
+    //     id: 3,
+    //     title: "Email Validator NPM Package",
+    //     description:
+    //         "An efficient and customizable NPM package for validating email addresses. Built using React.js and Node.js, it provides robust validation features to help developers ensure that email inputs meet required formats and standards.",
+    //     image: npmLogo,
+    //     tags: ["React JS", "Node.js", "NPM", "Validation"],
+    //     github: "https://github.com/codingmastr/cmtk-email-validator",
+    //     webapp: "https://www.npmjs.com/package/cmtk-email-validator",
+    // },
+    // {
+    //     id: 4,
+    //     title: "Task Reminder Chrome Extension Tool",
+    //     description:
+    //         "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
+    //     image: taskremLogo,
+    //     tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
+    //     github: "https://github.com/codingmastr/Task-Reminder-Tool",
+    //     webapp: "chrome://extensions/?id=kngheeibjnnidhfoomkpnbeghackheci",
+    // },
+    // {
+    //     id: 5,
+    //     title: "Webverse Digital",
+    //     description:
+    //         "The official website for Webverse Digital, a creative digital marketing agency. Built using HTML, CSS, and JavaScript, it features visually appealing animations and a clean design to showcase the agency's services.",
+    //     image: webverLogo,
+    //     tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
+    //     github: "https://github.com/codingmastr/Webverse-Digital",
+    //     webapp: "https://webversedigital.com/",
+    // },
+    // {
+    //     id: 6,
+    //     title: "Coding Master",
+    //     description:
+    //         "An ed-tech platform where users can access tech and coding-related blogs, notes, interview questions, e-books, and premium content with payment integration. Built with full-stack technologies for a seamless learning experience.",
+    //     image: cmLogo,
+    //     tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Integration"],
+    //     github: "https://codingmasterweb.in/",
+    //     webapp: "https://codingmasterweb.in/",
+    // },
+    // {
+    //     id: 7,
+    //     title: "Image Search App",
+    //     description:
+    //         "A React.js-based image search application that allows users to search and download high-quality images from the web. Built using external APIs to ensure a vast library of results for various queries.",
+    //     image: imagesearchLogo,
+    //     tags: ["React JS", "API", "Search Feature", "CSS", "Javascript"],
+    //     github: "https://github.com/codingmastr/Image-Search-App",
+    //     webapp: "https://imagsearch.netlify.app/",
+    // },
+    // {
+    //     id: 8,
+    //     title: "Image Background Remover",
+    //     description:
+    //         "An efficient background removal app built with React.js and API integration. Users can upload any image, remove the background, and download the transparent version for further use.",
+    //     image: removebgLogo,
+    //     tags: ["React JS", "API", "Image Processing", "HTML", "CSS", "Javascript"],
+    //     github: "https://github.com/codingmastr/Image-Background-Remover",
+    //     webapp: "https://removeyourbg.netlify.app/",
+    // },
+];  
