@@ -21,16 +21,33 @@ const ProjectsList = () => {
 
     useEffect(() => {
         updateWidth();
+
+        const tabElement = tabRef.current; // ✅ Capture the current value
         const resizeObserver = new ResizeObserver(updateWidth);
-        if (tabRef.current) {
-            resizeObserver.observe(tabRef.current);
+
+        if (tabElement) {
+            resizeObserver.observe(tabElement);
         }
+
         return () => {
-            if (tabRef.current) {
-                resizeObserver.unobserve(tabRef.current);
+            if (tabElement) {
+                resizeObserver.unobserve(tabElement);
             }
         };
-    }, [projectsTabs.length]);
+    }, []);
+
+    // useEffect(() => {
+    //     updateWidth();
+    //     const resizeObserver = new ResizeObserver(updateWidth);
+    //     if (tabRef.current) {
+    //         resizeObserver.observe(tabRef.current);
+    //     }
+    //     return () => {
+    //         if (tabRef.current) {
+    //             resizeObserver.unobserve(tabRef.current);
+    //         }
+    //     };
+    // }, [projectsTabs.length]);
 
     // scroll to top of page
     useEffect(() => {
@@ -66,7 +83,7 @@ const ProjectsList = () => {
                             {projectsTabs.map((tab, index) => (
                                 <button
                                     key={tab.id}
-                                    className={`relative cursor-pointer py-3 text-[18px] font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
+                                    className={`relative cursor-pointer py-3  md:text-sm lg:text-[18px] xl:text-[18px] font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
                                     style={{ width: tabWidth }}
                                     onClick={() => setActiveTab(index)}
                                 >
@@ -107,19 +124,7 @@ const ProjectsList = () => {
                                 <img src={project.image} alt={project.name} className="w-full h-48 object-cover rounded-lg mb-4" />
                                 <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
                                 <p className="text-gray-700 mb-4">{project.description}</p>
-                                {/* <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
-                                    {project.title}
-                                </Badge> */}
-                                {/* {project.github && (
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition"
-                                    >
-                                        View Code
-                                    </a>
-                                )} */}
+
                                 <div className=" flex gap-15 justify-center items-center">
                                     <a
                                         href={project.github}

@@ -50,18 +50,36 @@ const About = () => {
         }
     };
 
+
     useEffect(() => {
-        updateWidth(); // set initial width
+        updateWidth();
+
+        const tabElement = tabRef.current;
         const resizeObserver = new ResizeObserver(updateWidth);
-        if (tabRef.current) {
-            resizeObserver.observe(tabRef.current);
+
+        if (tabElement) {
+            resizeObserver.observe(tabElement);
         }
+
         return () => {
-            if (tabRef.current) {
-                resizeObserver.unobserve(tabRef.current);
+            if (tabElement) {
+                resizeObserver.unobserve(tabElement);
             }
         };
-    }, [tabs.length]);
+    }, []);
+
+    // useEffect(() => {
+    //     updateWidth(); // set initial width
+    //     const resizeObserver = new ResizeObserver(updateWidth);
+    //     if (tabRef.current) {
+    //         resizeObserver.observe(tabRef.current);
+    //     }
+    //     return () => {
+    //         if (tabRef.current) {
+    //             resizeObserver.unobserve(tabRef.current);
+    //         }
+    //     };
+    // }, [tabs.length]);
 
     const activeData = tabContent[tabs[activeTab].id];
 

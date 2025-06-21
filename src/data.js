@@ -3,6 +3,8 @@ import ProfileImg from "../src/assets/profile.png";
 import AboutImg from "../src/assets/about.png";
 import SkillsImg from "../src/assets/skills.png";
 import EducationsImg from "../src/assets/educations.png";
+
+// Logo card image
 import HTMLCard from "../src/assets/Banner/html.png";
 import CssCard from "../src/assets/Banner/css.png";
 import JavascriptCard from "../src/assets/Banner/javascript.png";
@@ -20,11 +22,14 @@ import TypescriptCard from "../src/assets/Banner/typescript.png";
 import VScodeCard from "../src/assets/Banner/vscode.png";
 import MysqlCard from "../src/assets/Banner/mysql.png";
 import VueCard from "../src/assets/Banner/vue.png";
+
+// Icons
 import { FiMapPin } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
 import { PiBookOpen } from "react-icons/pi";
 import { BiPhoneCall } from "react-icons/bi";
-import PortImg from "../src/assets/ProjectImg/port.png"
+
+// ProjectList image
 import AcademicImg from "../src/assets/ProjectImg/academic.png"
 import CloudKitchenImg from "../src/assets/ProjectImg/cloudkitchen.png"
 import CalculatorImg from "../src/assets/ProjectImg/calculator.png"
@@ -37,7 +42,8 @@ import ModalShowImg from "../src/assets/ProjectImg/modalshow.png"
 import PigGameImg from "../src/assets/ProjectImg/piggame.png"
 import ElearningImg from "../src/assets/ProjectImg/elearning.png"
 import CocaColaImg from "../src/assets/ProjectImg/cocacola.png"
-
+import BankTransactionImg from "../src/assets/ProjectImg/bankingtransaction.png"
+import TodoListImg from "../src/assets/ProjectImg/todolist.png"
 
 
 
@@ -240,38 +246,6 @@ export const projectsTabs = [
     },
 ];
 
-// export const projectListData = {
-//     allprojects: {
-//         title: 'All Projects',
-//         description:
-//             'Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.',
-//         link: '',
-//     },
-//     mernstack: {
-//         title: 'MERN Stack',
-//         description:
-//             'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
-//         link: '',
-//     },
-//     reactjs: {
-//         title: 'React.JS',
-//         description:
-//             'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
-//         link: '',
-//     },
-//     javascript: {
-//         title: 'JavaScript',
-//         description:
-//             'Components accept arbitrary inputs called props. They are like function arguments.',
-//         link: '',
-//     },
-//     htmlcss: {
-//         title: 'HTML CSS',
-//         description:
-//             'State allows React components to change their output over time in response to user actions, network responses, and anything else.',
-//         link: '',
-//     },
-// };
 
 // ProjectList Data
 export const projectListData = [
@@ -310,6 +284,15 @@ export const projectListData = [
 
     /////////////////////////////////////
     // JavaScript
+    {
+        image: BankTransactionImg,
+        title: "javascript",
+        name: "Banking Transaction",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/banking-transaction-app",
+        webapp: "https://banking-transaction.netlify.app/",
+    },
     {
         image: PigGameImg,
         title: "javascript",
@@ -382,7 +365,15 @@ export const projectListData = [
         webapp: "https://dev-debabrata.github.io/projects-javascript/calculator-app",
     },
 
-
+    {
+        image: TodoListImg,
+        title: "django",
+        name: "Todo List Django",
+        description:
+            "Technologies: HTML, CSS, JavaScript, Django",
+        github: "https://github.com/dev-debabrata/django-todo-list",
+        webapp: "",
+    },
 
 
     /////////////////////////////////////

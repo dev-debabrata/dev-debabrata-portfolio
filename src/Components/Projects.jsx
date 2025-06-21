@@ -12,7 +12,7 @@ const Projects = () => {
                 <p className="text-gray-500 mt-4 text-[16px]">A showcase of the projects I have worked on, highlighting my skills and experience in various technologies</p>
             </div>
             <div>
-                
+
             </div>
         </section>
     )
