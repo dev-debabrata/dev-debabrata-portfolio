@@ -263,7 +263,7 @@ export const projectListData = [
         description:
             "Technologies: React, Tailwind CSS, Framer-motion",
         github: "https://github.com/dev-debabrata/CocaCola-react",
-        webapp: "https://cocacola-house.netlify.app/",
+        webapp: "https://cocacola-dev.netlify.app/",
     },
 
     {
@@ -286,7 +286,7 @@ export const projectListData = [
         description:
             "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB",
         github: "https://github.com/dev-debabrata/e-learning-mern",
-        webapp: "https://education-learnig.netlify.app/",
+        webapp: "https://education-learnig-dev.netlify.app/",
     },
 
 
@@ -300,7 +300,7 @@ export const projectListData = [
         description:
             "Technologies: HTML, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/projects-javascript/tree/main/banking-transaction-app",
-        webapp: "https://banking-transaction.netlify.app/",
+        webapp: "https://banking-transaction-dev.netlify.app/",
     },
     {
         image: PigGameImg,
@@ -371,7 +371,7 @@ export const projectListData = [
         name: "Weather",
         description: "Technologies: HTML, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/weather-app-javascript",
-        webapp: "https://weather-debu.netlify.app/",
+        webapp: "https://weatherweb-dev.netlify.app/",
     },
 
     {
@@ -403,7 +403,7 @@ export const projectListData = [
         description:
             "Technologies: HTML, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/cloud-kitchen-htmlcss",
-        webapp: "https://cloud-kitchen.netlify.app/",
+        webapp: "https://cloud-kitchen-dev.netlify.app/",
     },
     {
         image: AcademicImg,
