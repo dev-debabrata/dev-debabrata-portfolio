@@ -37,6 +37,7 @@ import WeatherImg from "../src/assets/ProjectImg/weather.png"
 import AnalogClockImg from "../src/assets/ProjectImg/analogclock.png"
 import DigitalClockImg from "../src/assets/ProjectImg/digitalclock.png"
 import StopwatchImg from "../src/assets/ProjectImg/stopwatch.png"
+import QRcodeImg from "../src/assets/ProjectImg/qrcode.png"
 import GuessMyNumberImg from "../src/assets/ProjectImg/guessmynumber.png"
 import ModalShowImg from "../src/assets/ProjectImg/modalshow.png"
 import PigGameImg from "../src/assets/ProjectImg/piggame.png"
@@ -44,7 +45,7 @@ import ElearningImg from "../src/assets/ProjectImg/elearning.png"
 import CocaColaImg from "../src/assets/ProjectImg/cocacola.png"
 import BankTransactionImg from "../src/assets/ProjectImg/bankingtransaction.png"
 import TodoListImg from "../src/assets/ProjectImg/todolist.png"
-
+import TicTacToeImg from "../src/assets/ProjectImg/tictactoe.png"
 
 
 
@@ -265,7 +266,15 @@ export const projectListData = [
         webapp: "https://cocacola-house.netlify.app/",
     },
 
-
+    {
+        image: TicTacToeImg,
+        title: "react.js",
+        name: "Tic Tac Toe",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/tic-tac-toe-react",
+        webapp: "https://tictactoe-dev.netlify.app/",
+    },
 
 
     ////////////////////////////
@@ -319,6 +328,15 @@ export const projectListData = [
             "Technologies: HTML, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/projects-javascript/tree/main/guess-my-number",
         webapp: "https://dev-debabrata.github.io/projects-javascript/guess-my-number",
+    },
+    {
+        image: QRcodeImg,
+        title: "javascript",
+        name: "QR Code Generator",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/QR-code-generator-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/QR-code-generator-app",
     },
     {
         image: StopwatchImg,

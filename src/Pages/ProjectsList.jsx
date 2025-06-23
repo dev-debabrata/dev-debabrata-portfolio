@@ -22,7 +22,7 @@ const ProjectsList = () => {
     useEffect(() => {
         updateWidth();
 
-        const tabElement = tabRef.current; // ✅ Capture the current value
+        const tabElement = tabRef.current;
         const resizeObserver = new ResizeObserver(updateWidth);
 
         if (tabElement) {
