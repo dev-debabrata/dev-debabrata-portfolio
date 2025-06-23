@@ -7,8 +7,8 @@ const Contact = () => {
             id='contact'
             className=" flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%]">
             <div className="relative">
-                <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold px-8">Get in touch</h1>
-                <div className=" w-40 md:w-55 lg:w-55 xl:w-55 h-1 bg-blue-600 mx-auto mt-3"></div>
+                <h1 className="text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold px-8">Get in touch</h1>
+                <div className=" w-30 md:w-42 lg:w-42 xl:w-42 h-1 bg-blue-600 mx-auto mt-2"></div>
             </div>
             <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 w-full bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl">
                 {/* Left section */}

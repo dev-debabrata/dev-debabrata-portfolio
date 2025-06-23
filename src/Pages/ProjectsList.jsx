@@ -119,13 +119,13 @@ const ProjectsList = () => {
                     {/* Render Project Info */}
                     <div className="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                         {filteredProjects.map((project, index) => (
-                            <div key={index} className="bg-gray-100 rounded-xl p-6 shadow-xl">
-                                <h3 className=" uppercase px-3 py-1 text-whi bg-gray-300 inline-block border-none rounded-xl mb-2">{project.title}</h3>
+                            <div key={index} className="bg-gray-100 rounded-2xl p-6 shadow-2xl overflow-hidden backdrop-blur-md hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300">
+                                <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">{project.title}</h3>
                                 <img src={project.image} alt={project.name} className="w-full h-48 object-cover rounded-lg mb-4" />
                                 <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
                                 <p className="text-gray-700 mb-4">{project.description}</p>
 
-                                <div className=" flex gap-15 justify-center items-center">
+                                <div className=" flex justify-between items-center">
                                     <a
                                         href={project.github}
                                         target="_blank"

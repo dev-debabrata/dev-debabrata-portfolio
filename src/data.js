@@ -420,55 +420,125 @@ export const projectListData = [
 ///////////////////////////////////////////
 // Project home section data
 export const projectData = [
+
+
     {
         id: 0,
-        title: "GitHub Profile Detective",
+        image: CocaColaImg,
+        title: "react.js",
+        name: "Coca Cola",
         description:
-            "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
+            "Technologies: React, Tailwind CSS, Framer-motion",
+        github: "https://github.com/dev-debabrata/CocaCola-react",
+        webapp: "https://cocacola-dev.netlify.app/",
+    },
 
-        tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-        github: "",
-        webapp: "",
+    {
+        id: 1,
+        image: TicTacToeImg,
+        title: "react.js",
+        name: "Tic Tac Toe",
+        description: "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/tic-tac-toe-react",
+        webapp: "https://tictactoe-dev.netlify.app/",
+    },
+
+
+    ////////////////////////////
+    // Mern stack
+    {
+        id: 2,
+        image: ElearningImg,
+        title: "mern stack",
+        name: "E-Learning",
+        description:
+            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB",
+        github: "https://github.com/dev-debabrata/e-learning-mern",
+        webapp: "https://education-learnig-dev.netlify.app/",
+    },
+
+
+
+    /////////////////////////////////////
+    // JavaScript
+    {
+        id: 3,
+        image: BankTransactionImg,
+        title: "javascript",
+        name: "Banking Transaction",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/banking-transaction-app",
+        webapp: "https://banking-transaction-dev.netlify.app/",
+    },
+    {
+        id: 4,
+        image: PigGameImg,
+        title: "javascript",
+        name: "Guess My Number",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/pig-game",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/pig-game",
+    },
+    {
+        id: 5,
+        image: ModalShowImg,
+        title: "javascript",
+        name: "Modal Show",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/modal-show",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/modal-show",
     },
     // {
-    //     id: 1,
-    //     title: "CS Prep",
+    //     id: 0,
+    //     title: "Coca Cola",
     //     description:
-    //         "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
-    //     image: csprepLogo,
+    //         "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information.",
+    //     image: CocaColaImg,
+    //     tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
+    //     github: "",
+    //     webapp: "",
+    // },
+    // {
+    //     id: 1,
+    //     title: "E-Learning",
+    //     description:
+    //         "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests.",
+    //     image: ElearningImg,
     //     tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
-    //     github: "https://github.com/codingmastr/CSPrep",
-    //     webapp: "https://csprep.netlify.app/",
+    //     github: "",
     // },
     // {
     //     id: 2,
-    //     title: "Movie Recommendation App",
+    //     title: "Tic Tac Toe",
     //     description:
-    //         "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
-    //     image: movierecLogo,
+    //         "A React-based web application that provides movie recommendations based on different criteria.",
+    //     image: TicTacToeImg,
     //     tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
-    //     github: "https://github.com/codingmastr/Movie-Recommendation-App",
-    //     webapp: "https://movie-recommendation-app-jet.vercel.app/",
+    //     github: "",
+    //     webapp: "",
     // },
     // {
     //     id: 3,
-    //     title: "Email Validator NPM Package",
+    //     title: "Email ",
     //     description:
-    //         "An efficient and customizable NPM package for validating email addresses. Built using React.js and Node.js, it provides robust validation features to help developers ensure that email inputs meet required formats and standards.",
-    //     image: npmLogo,
+    //         "An efficient and customizable NPM package for validating email addresses. Built using React.js.",
+    //     image: TicTacToeImg,
     //     tags: ["React JS", "Node.js", "NPM", "Validation"],
-    //     github: "https://github.com/codingmastr/cmtk-email-validator",
-    //     webapp: "https://www.npmjs.com/package/cmtk-email-validator",
+    //     github: "",
+    //     webapp: "",
     // },
     // {
     //     id: 4,
     //     title: "Task Reminder Chrome Extension Tool",
     //     description:
-    //         "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
-    //     image: taskremLogo,
+    //         "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks.",
+    //     image: TicTacToeImg,
     //     tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
-    //     github: "https://github.com/codingmastr/Task-Reminder-Tool",
-    //     webapp: "chrome://extensions/?id=kngheeibjnnidhfoomkpnbeghackheci",
+    //     github: "",
+    //     webapp: "",
     // },
     // {
     //     id: 5,
