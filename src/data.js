@@ -46,6 +46,7 @@ import CocaColaImg from "../src/assets/ProjectImg/cocacola.png"
 import BankTransactionImg from "../src/assets/ProjectImg/bankingtransaction.png"
 import TodoListImg from "../src/assets/ProjectImg/todolist.png"
 import TicTacToeImg from "../src/assets/ProjectImg/tictactoe.png"
+import OutdoorTravelImg from "../src/assets/ProjectImg/outdoortravel.png"
 
 
 
@@ -265,6 +266,15 @@ export const projectListData = [
         github: "https://github.com/dev-debabrata/CocaCola-react",
         webapp: "https://cocacola-dev.netlify.app/",
     },
+    {
+        image: OutdoorTravelImg,
+        title: "react.js",
+        name: "Outdoor Travel",
+        description:
+            "Technologies: React, Tailwind CSS, Framer-motion",
+        github: "https://github.com/dev-debabrata/outdoor-travel-react",
+        webapp: "https://outdoor-travel-dev.netlify.app/",
+    },
 
     {
         image: TicTacToeImg,
@@ -305,7 +315,7 @@ export const projectListData = [
     {
         image: PigGameImg,
         title: "javascript",
-        name: "Guess My Number",
+        name: "Ludo Game",
         description:
             "Technologies: HTML, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/projects-javascript/tree/main/pig-game",
@@ -453,35 +463,24 @@ export const projectData = [
         github: "https://github.com/dev-debabrata/e-learning-mern",
         webapp: "https://education-learnig-dev.netlify.app/",
     },
-
     {
         id: 3,
-        image: BankTransactionImg,
-        title: "javascript",
-        name: "Banking Transaction",
+        image: OutdoorTravelImg,
+        title: "react.js",
+        name: "Outdoor Travel",
         description:
-            "Technologies: HTML, CSS, JavaScript",
-        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/banking-transaction-app",
-        webapp: "https://banking-transaction-dev.netlify.app/",
+            "Technologies: React, Tailwind CSS, Framer-motion",
+        github: "https://github.com/dev-debabrata/outdoor-travel-react",
+        webapp: "https://outdoor-travel-dev.netlify.app/",
     },
     {
         id: 4,
-        image: PigGameImg,
-        title: "javascript",
-        name: "Guess My Number",
+        image: CloudKitchenImg,
+        title: "htmlcss",
+        name: "Cloud Kitchen",
         description:
             "Technologies: HTML, CSS, JavaScript",
-        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/pig-game",
-        webapp: "https://dev-debabrata.github.io/projects-javascript/pig-game",
-    },
-    {
-        id: 5,
-        image: ModalShowImg,
-        title: "javascript",
-        name: "Modal Show",
-        description:
-            "Technologies: HTML, CSS, JavaScript",
-        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/modal-show",
-        webapp: "https://dev-debabrata.github.io/projects-javascript/modal-show",
+        github: "https://github.com/dev-debabrata/cloud-kitchen-htmlcss",
+        webapp: "https://cloud-kitchen-dev.netlify.app/",
     },
 ];  

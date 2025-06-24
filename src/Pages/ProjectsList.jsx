@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 
 const ProjectsList = () => {
     const { pathname } = useLocation();
+    const projectListRef = useRef(null);
     const tabRef = useRef(null);
     const [tabWidth, setTabWidth] = useState(0);
     const [activeTab, setActiveTab] = useState(0);
@@ -51,8 +52,17 @@ const ProjectsList = () => {
 
     // scroll to top of page
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (projectListRef.current) {
+            projectListRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
     }, [pathname]);
+
+    // useEffect(() => {
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // }, [pathname]);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [pathname]);
 
 
 
@@ -66,7 +76,9 @@ const ProjectsList = () => {
     return (
         <>
             <Navbar />
-            <section id="projectlist"
+            <section
+                ref={projectListRef}
+                id="projectlist"
                 className="min-h-screen pt-12  my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%]">
                 <div >
                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold section-title  text-center mx-auto">My Projects</h1>

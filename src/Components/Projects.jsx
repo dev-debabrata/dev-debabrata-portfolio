@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { projectData } from '../data';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -28,41 +35,61 @@ const Projects = () => {
             </div>
 
             {/* Project Section */}
-            <div className=" bg-blue-50 p-8 rounded-2xl grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                {projectData.map((project) => (
-                    <div
-                        key={project.id}
-                        onClick={() => handleOpenModal(project)}
-                        className="bg-gray-100 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4">
 
-                        <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">
-                            {project.title}
-                        </h3>
-                        <div>
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-48 object-cover rounded-xl" />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold mt-5 mb-2">
-                                {project.name}
-                            </h3>
-
-                            <p className="text-gray-500 mb-4 line-clamp-3">
-                                {project.description}
-                            </p>
-                        </div>
-                    </div>
-                ))}
+            <div className="bg-blue-50 p-8 rounded-2xl w-full">
+                <Swiper
+                    modules={[Autoplay, Pagination]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
+                    breakpoints={{
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
+                    }}
+                >
+                    {projectData.map((project) => (
+                        <SwiperSlide key={project.id}>
+                            <div
+                                onClick={() => handleOpenModal(project)}
+                                className="bg-gray-100 backdrop-blur-md h- rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4"
+                            >
+                                <h3 className="text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">
+                                    {project.title}
+                                </h3>
+                                <div>
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-48 object-cover rounded-xl"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-bold mt-5 mb-2">
+                                        {project.name}
+                                    </h3>
+                                    <p className="text-gray-500 mb-4 line-clamp-3">
+                                        {project.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className="text-center mt-12 mb-2">
+                    <Link to={'/projectslist'} className='inline-block bg-blue-600 border-none text-white px-8 py-3 rounded-full text-xl font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105'>All Projects</Link>
+                </div>
             </div>
+
 
             {/* Modal container */}
             {selectedProject && (
                 <div className="fixed inset-0 z-50 pt-24 flex items-center justify-center bg-black/90 p-4">
                     <div className="bg-gray-100 rounded-xl shadow-2xl lg:w-[50%] xl:w-[80%] w-[80%] max-w-[480px] overflow-hidden relative ">
                         <div className="flex justify-end p-3 bg-blue-800">
-                            <button onClick={handleCloseModal} className="text-5xl text-white font-bold hover:text-black ">
+                            <button
+                                onClick={handleCloseModal}
+                                className="text-5xl cursor-pointer text-white font-bold hover:text-black ">
                                 &times;
                             </button>
                         </div>
@@ -105,8 +132,39 @@ const Projects = () => {
                     </div>
                 </div>
             )}
+
         </section>
     )
 }
 
 export default Projects
+
+
+{/* <div className=" bg-blue-50 p-8 rounded-2xl grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                {projectData.map((project) => (
+                    <div
+                        key={project.id}
+                        onClick={() => handleOpenModal(project)}
+                        className="bg-gray-100 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4">
+
+                        <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">
+                            {project.title}
+                        </h3>
+                        <div>
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-48 object-cover rounded-xl" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold mt-5 mb-2">
+                                {project.name}
+                            </h3>
+
+                            <p className="text-gray-500 mb-4 line-clamp-3">
+                                {project.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div> */}

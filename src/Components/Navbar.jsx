@@ -6,27 +6,8 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 
 
+
 const Navbar = () => {
-
-    // const [isOpen, setIsOpen] = useState(false);
-    // const [activeSection, setActiveSection] = useState("");
-    // const [isScrolled, setIsScrolled] = useState(false);
-
-    // // Check scroll and change navbar background
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setIsScrolled(window.scrollY > 50);
-    //     }
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
-
-    // // Smooth scroll function
-    // const handleMenuItemClick = (sectionId) => {
-    //     setActiveSection(sectionId);
-    //     setIsOpen(sectionId);
-    // }
-
 
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
@@ -43,21 +24,6 @@ const Navbar = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    // Scroll or Navigate Handler
-    // const handleMenuItemClick = (sectionId) => {
-    //     setActiveSection(sectionId);
-    //     setIsOpen(false);
-
-    //     if (location.pathname !== '/') {
-    //         navigate('/'); // navigate to home first
-    //         setTimeout(() => {
-    //             scrollToSection(sectionId);
-    //         }, 300); // wait for home to render
-    //     } else {
-    //         scrollToSection(sectionId);
-    //     }
-    // };
 
     const handleMenuItemClick = (item) => {
         setActiveSection(item.id);
@@ -100,12 +66,12 @@ const Navbar = () => {
                 </a> */}
                 <Link
                     to="/home"
-                    className="flex justify-center items-center cursor-pointer">
+                    className="flex justify-center gap-2 items-center cursor-pointer">
                     <img
                         src={assets.Logo}
                         alt="Logo"
-                        className=" w-15 " />
-                    <h2 className=" text-lg font-bold">Debabrata Das</h2>
+                        className=" w-14 invert brightness-200" />
+                    <h2 className=" text-xl font-bold">Debabrata Das</h2>
                 </Link>
                 {/* Destop menu */}
                 <div>
@@ -115,12 +81,7 @@ const Navbar = () => {
                                 key={item.id}
                                 className={`cursor-pointer hover:text-black ${activeSection === item.id ? " text-black" : ""
                                     }`}>
-                                {/* <a
-                                    href={item.link}
-                                    onClick={() => handleMenuItemClick(item.id)}
-                                    className="inline-block text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase" >
-                                    {item.title}
-                                </a> */}
+
                                 <button onClick={() => handleMenuItemClick(item)}
                                     className="inline-block cursor-pointer text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase">
                                     {item.title}
@@ -136,14 +97,14 @@ const Navbar = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className=" hover:text-black">
-                        <FaGithub size={45} />
+                        <FaGithub size={35} />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className=" hover:text-black">
-                        <FaLinkedin size={45} />
+                        <FaLinkedin size={35} />
                     </a>
                 </div>
                 {/* Mobile menu icons */}
