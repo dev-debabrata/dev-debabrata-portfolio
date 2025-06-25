@@ -238,14 +238,15 @@ export const projectsTabs = [
         id: "react.js",
         label: "React.JS"
     },
+    // {
+    //     id: "next.js",
+    //     label: "Next.JS"
+    // },
     {
         id: "javascript",
         label: "JavaScript"
     },
-    {
-        id: "htmlcss",
-        label: "HTML CSS"
-    },
+
 ];
 
 
@@ -408,7 +409,7 @@ export const projectListData = [
     // HTML CSS
     {
         image: CloudKitchenImg,
-        title: "htmlcss",
+        title: "javascript",
         name: "Cloud Kitchen",
         description:
             "Technologies: HTML, CSS, JavaScript",
@@ -417,10 +418,10 @@ export const projectListData = [
     },
     {
         image: AcademicImg,
-        title: "htmlcss",
+        title: "javascript",
         name: "Academic web",
         description:
-            "Technologies: HTM, CSS only",
+            "Technologies: HTM, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/projects-javascript/tree/main/college-web-app",
         webapp: "https://dev-debabrata.github.io/projects-javascript/college-web-app",
     },
@@ -476,7 +477,7 @@ export const projectData = [
     {
         id: 4,
         image: CloudKitchenImg,
-        title: "htmlcss",
+        title: "javascript",
         name: "Cloud Kitchen",
         description:
             "Technologies: HTML, CSS, JavaScript",
