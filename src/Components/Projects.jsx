@@ -132,7 +132,6 @@ const Projects = () => {
                     </div>
                 </div>
             )}
-
         </section>
     )
 }
@@ -140,31 +139,37 @@ const Projects = () => {
 export default Projects
 
 
-{/* <div className=" bg-blue-50 p-8 rounded-2xl grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                {projectData.map((project) => (
-                    <div
-                        key={project.id}
-                        onClick={() => handleOpenModal(project)}
-                        className="bg-gray-100 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4">
 
-                        <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">
-                            {project.title}
-                        </h3>
-                        <div>
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-48 object-cover rounded-xl" />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold mt-5 mb-2">
-                                {project.name}
-                            </h3>
+// For resource
+/////////////////////////////////////////
 
-                            <p className="text-gray-500 mb-4 line-clamp-3">
-                                {project.description}
-                            </p>
-                        </div>
-                    </div>
-                ))}
-            </div> */}
+// < div div className = " bg-blue-50 p-8 rounded-2xl grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3" >
+// {
+//     projectData.map((project) => (
+//         <div
+//             key={project.id}
+//             onClick={() => handleOpenModal(project)}
+//             className="bg-gray-100 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4">
+
+//             <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">
+//                 {project.title}
+//             </h3>
+//             <div>
+//                 <img
+//                     src={project.image}
+//                     alt={project.title}
+//                     className="w-full h-48 object-cover rounded-xl" />
+//             </div>
+//             <div>
+//                 <h3 className="text-2xl font-bold mt-5 mb-2">
+//                     {project.name}
+//                 </h3>
+
+//                 <p className="text-gray-500 mb-4 line-clamp-3">
+//                     {project.description}
+//                 </p>
+//             </div>
+//         </div>
+//     ))
+// }
+//         </ >

@@ -3,6 +3,8 @@ import { TbDownload } from 'react-icons/tb';
 import { FiSend } from 'react-icons/fi';
 import { assets } from '../data';
 
+
+
 const Hero = () => {
     return (
         <section
@@ -24,7 +26,8 @@ const Hero = () => {
                             <FiSend />
                         </a>
                         <a
-                            href="https://drive.google.com/file/d/13V4SvtK-SmqUSSA1gMuihipAb6zV0E-y/view?usp=sharing"
+                            href="/resume/DebabrataResume.pdf"
+                            download
                             target='_blank'
                             rel='noopener noreferrer'
                             className=" inline-flex justify-center items-center gap-3 bg-gray-950 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 rounded-full text-sm lg:text-lg font-semibold transition duration-300 transform hover:scale-105">
@@ -41,7 +44,7 @@ const Hero = () => {
                         className=" xl:max-h-[450px] xl:max-w-[450px] max-w-[400px] max-h-[400px] md:max-h-[300px] rounded-full object-cover" />
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

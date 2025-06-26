@@ -37,34 +37,12 @@ const ProjectsList = () => {
         };
     }, []);
 
-    // useEffect(() => {
-    //     updateWidth();
-    //     const resizeObserver = new ResizeObserver(updateWidth);
-    //     if (tabRef.current) {
-    //         resizeObserver.observe(tabRef.current);
-    //     }
-    //     return () => {
-    //         if (tabRef.current) {
-    //             resizeObserver.unobserve(tabRef.current);
-    //         }
-    //     };
-    // }, [projectsTabs.length]);
-
     // scroll to top of page
     useEffect(() => {
         if (projectListRef.current) {
             projectListRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     }, [pathname]);
-
-    // useEffect(() => {
-    //     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // }, [pathname]);
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, [pathname]);
-
-
 
     // Project data render
     const activeTitle = projectsTabs[activeTab].id;
@@ -169,4 +147,26 @@ export default ProjectsList
 
 
 
+// For resource
+////////////////////////////////////////////
+// useEffect(() => {
+//     updateWidth();
+//     const resizeObserver = new ResizeObserver(updateWidth);
+//     if (tabRef.current) {
+//         resizeObserver.observe(tabRef.current);
+//     }
+//     return () => {
+//         if (tabRef.current) {
+//             resizeObserver.unobserve(tabRef.current);
+//         }
+//     };
+// }, [projectsTabs.length]);
 
+
+
+// useEffect(() => {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+// }, [pathname]);
+// useEffect(() => {
+//     window.scrollTo(0, 0);
+// }, [pathname]);

@@ -4,39 +4,6 @@ import { assets, iconInfoData, tabContent, tabs } from '../data';
 
 const About = () => {
 
-    // const getData = (arr, title) => {
-    //     return arr.find((item) => item.title === title);
-    // };
-    // const tabRef = useRef(null);
-    // const [tabWidth, setTabWidth] = useState(0);
-    // const [activeTab, setActiveTab] = useState("tab1")
-
-
-    // const updateWidth = () => {
-    //     if (tabRef.current) {
-    //         const parentWidth = tabRef.current.getBoundingClientRect().width;
-    //         const numberOfTabs = tabs.length;
-    //         const newTabWidth = parentWidth / numberOfTabs;
-    //         setTabWidth(newTabWidth);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     const resizeObserver = new ResizeObserver(updateWidth);
-    //     if (tabRef.current) {
-    //         resizeObserver.observe(tabRef.current);
-    //     }
-    //     return () => {
-    //         if (tabRef.current) {
-    //             resizeObserver.unobserve(tabRef.current);
-    //         }
-    //     };
-    // }, [tabs.length]);
-
-    // const activeData = tabContent[tabs[activeTab].id];
-
-
-
     const tabRef = useRef(null);
     const [tabWidth, setTabWidth] = useState(0);
     const [activeTab, setActiveTab] = useState(0); // Now using index (number)
@@ -68,18 +35,6 @@ const About = () => {
         };
     }, []);
 
-    // useEffect(() => {
-    //     updateWidth(); // set initial width
-    //     const resizeObserver = new ResizeObserver(updateWidth);
-    //     if (tabRef.current) {
-    //         resizeObserver.observe(tabRef.current);
-    //     }
-    //     return () => {
-    //         if (tabRef.current) {
-    //             resizeObserver.unobserve(tabRef.current);
-    //         }
-    //     };
-    // }, [tabs.length]);
 
     const activeData = tabContent[tabs[activeTab].id];
 
@@ -196,22 +151,7 @@ const About = () => {
                 </div>
 
 
-                {/* <div className=" flex w-full justify-around mt-20">
-                    <div className="flex flex-col items-center gap-2.5 transition">
-                        <h1 className="text-[60px] font-bold bg-clip-text">0+</h1>
-                        <p>FRESHER</p>
-                    </div>
-                    <hr />
-                    <div className="flex flex-col items-center gap-2.5 transition">
-                        <h1 className="text-[60px] font-bold bg-clip-text">10+</h1>
-                        <p>PROJECTS COMPLETED</p>
-                    </div>
-                    <hr />
-                    <div className="flex flex-col items-center gap-2.5 transition">
-                        <h1 className="text-[60px] font-bold bg-clip-text">80%</h1>
-                        <p>SKILLS ACHIVE</p>
-                    </div>
-                </div> */}
+
             </div>
         </section>
     )
@@ -222,8 +162,71 @@ export default About
 
 
 
+// For resource
+/////////////////////////////////////////
+
+
+// const getData = (arr, title) => {
+//     return arr.find((item) => item.title === title);
+// };
+// const tabRef = useRef(null);
+// const [tabWidth, setTabWidth] = useState(0);
+// const [activeTab, setActiveTab] = useState("tab1")
+
+
+// const updateWidth = () => {
+//     if (tabRef.current) {
+//         const parentWidth = tabRef.current.getBoundingClientRect().width;
+//         const numberOfTabs = tabs.length;
+//         const newTabWidth = parentWidth / numberOfTabs;
+//         setTabWidth(newTabWidth);
+//     }
+// };
+
+// useEffect(() => {
+//     const resizeObserver = new ResizeObserver(updateWidth);
+//     if (tabRef.current) {
+//         resizeObserver.observe(tabRef.current);
+//     }
+//     return () => {
+//         if (tabRef.current) {
+//             resizeObserver.unobserve(tabRef.current);
+//         }
+//     };
+// }, [tabs.length]);
+
+// const activeData = tabContent[tabs[activeTab].id];
 
 
 
+// useEffect(() => {
+//     updateWidth(); // set initial width
+//     const resizeObserver = new ResizeObserver(updateWidth);
+//     if (tabRef.current) {
+//         resizeObserver.observe(tabRef.current);
+//     }
+//     return () => {
+//         if (tabRef.current) {
+//             resizeObserver.unobserve(tabRef.current);
+//         }
+//     };
+// }, [tabs.length]);
 
+
+// <div div className = " flex w-full justify-around mt-20" >
+//     <div className="flex flex-col items-center gap-2.5 transition">
+//         <h1 className="text-[60px] font-bold bg-clip-text">0+</h1>
+//         <p>FRESHER</p>
+//     </div>
+//     <hr />
+//     <div className="flex flex-col items-center gap-2.5 transition">
+//         <h1 className="text-[60px] font-bold bg-clip-text">10+</h1>
+//         <p>PROJECTS COMPLETED</p>
+//     </div>
+//     <hr />
+//     <div className="flex flex-col items-center gap-2.5 transition">
+//         <h1 className="text-[60px] font-bold bg-clip-text">80%</h1>
+//         <p>SKILLS ACHIVE</p>
+//     </div>
+// </div>
 

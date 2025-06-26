@@ -54,16 +54,6 @@ const Navbar = () => {
         <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-[#3b5bdb] text-white"
             } `}>
             <div className="flex justify-between relative items-center my-4 lg:my-4 md:my-4">
-
-                {/* <a
-                    href="#"
-                    className="flex justify-center items-center cursor-pointer">
-                    <img
-                        src={assets.Logo}
-                        alt="Logo"
-                        className=" w-15 " />
-                    <h2 className=" text-lg font-bold">Debabrata Das</h2>
-                </a> */}
                 <Link
                     to="/home"
                     className="flex justify-center gap-2 items-center cursor-pointer">
@@ -156,3 +146,24 @@ const Navbar = () => {
 };
 
 export default Navbar
+
+
+
+
+
+
+
+
+
+
+// For resource
+//////////////////////////////////////
+{/* <a
+                    href="#"
+                    className="flex justify-center items-center cursor-pointer">
+                    <img
+                        src={assets.Logo}
+                        alt="Logo"
+                        className=" w-15 " />
+                    <h2 className=" text-lg font-bold">Debabrata Das</h2>
+                </a> */}
