@@ -1,27 +1,28 @@
-import Logo from "../src/assets/logo.png";
-import ProfileImg from "../src/assets/profile.png";
-import AboutImg from "../src/assets/about.png";
-import SkillsImg from "../src/assets/skills.png";
-import EducationsImg from "../src/assets/educations.png";
+// General assets
+import Logo from "./assets/logo.png";
+import ProfileImg from "./assets/profile.png";
+import AboutImg from "./assets/about.png";
+import SkillsImg from "./assets/skills.png";
+import EducationsImg from "./assets/educations.png";
 
-// Logo card image
-import HTMLCard from "../src/assets/Banner/html.png";
-import CssCard from "../src/assets/Banner/css.png";
-import JavascriptCard from "../src/assets/Banner/javascript.png";
-import ReactCard from "../src/assets/Banner/react.png";
-import NodeCard from "../src/assets/Banner/node.png";
-import ExpressCard from "../src/assets/Banner/express.png";
-import AngularCard from "../src/assets/Banner/angular.png";
-import AzureCard from "../src/assets/Banner/azure.png";
-import GithubCard from "../src/assets/Banner/github.png";
-import MongodbCard from "../src/assets/Banner/mongodb.png";
-import NextCard from "../src/assets/Banner/nextjs.png";
-import PythonCard from "../src/assets/Banner/python.png";
-import SassCard from "../src/assets/Banner/sass.png";
-import TypescriptCard from "../src/assets/Banner/typescript.png";
-import VScodeCard from "../src/assets/Banner/vscode.png";
-import MysqlCard from "../src/assets/Banner/mysql.png";
-import VueCard from "../src/assets/Banner/vue.png";
+// Logo card images
+import HTMLCard from "./assets/Banner/html.png";
+import CssCard from "./assets/Banner/css.png";
+import JavascriptCard from "./assets/Banner/javascript.png";
+import ReactCard from "./assets/Banner/react.png";
+import NodeCard from "./assets/Banner/node.png";
+import ExpressCard from "./assets/Banner/express.png";
+import AngularCard from "./assets/Banner/angular.png";
+import AzureCard from "./assets/Banner/azure.png";
+import GithubCard from "./assets/Banner/github.png";
+import MongodbCard from "./assets/Banner/mongodb.png";
+import NextCard from "./assets/Banner/nextjs.png";
+import PythonCard from "./assets/Banner/python.png";
+import SassCard from "./assets/Banner/sass.png";
+import TypescriptCard from "./assets/Banner/typescript.png";
+import VScodeCard from "./assets/Banner/vscode.png";
+import MysqlCard from "./assets/Banner/mysql.png";
+import VueCard from "./assets/Banner/vue.png";
 
 // Icons
 import { FiMapPin } from "react-icons/fi";
@@ -29,25 +30,26 @@ import { MdMailOutline } from "react-icons/md";
 import { PiBookOpen } from "react-icons/pi";
 import { BiPhoneCall } from "react-icons/bi";
 
-// ProjectList image
-import AcademicImg from "../src/assets/ProjectImg/academic.png"
-import CloudKitchenImg from "../src/assets/ProjectImg/cloudkitchen.png"
-import CalculatorImg from "../src/assets/ProjectImg/calculator.png"
-import WeatherImg from "../src/assets/ProjectImg/weather.png"
-import AnalogClockImg from "../src/assets/ProjectImg/analogclock.png"
-import DigitalClockImg from "../src/assets/ProjectImg/digitalclock.png"
-import StopwatchImg from "../src/assets/ProjectImg/stopwatch.png"
-import QRcodeImg from "../src/assets/ProjectImg/qrcode.png"
-import GuessMyNumberImg from "../src/assets/ProjectImg/guessmynumber.png"
-import ModalShowImg from "../src/assets/ProjectImg/modalshow.png"
-import PigGameImg from "../src/assets/ProjectImg/piggame.png"
-import ElearningImg from "../src/assets/ProjectImg/elearning.png"
-import CocaColaImg from "../src/assets/ProjectImg/cocacola.png"
-import BankTransactionImg from "../src/assets/ProjectImg/bankingtransaction.png"
-import TodoListImg from "../src/assets/ProjectImg/todolist.png"
-import TicTacToeImg from "../src/assets/ProjectImg/tictactoe.png"
-import OutdoorTravelImg from "../src/assets/ProjectImg/outdoortravel.png"
-import BankingSystemImg from "../src/assets/ProjectImg/bankingsystem.png"
+// Project images
+import AcademicImg from "./assets/ProjectImg/academic.png";
+import CloudKitchenImg from "./assets/ProjectImg/cloudkitchen.png";
+import CalculatorImg from "./assets/ProjectImg/calculator.png";
+import WeatherImg from "./assets/ProjectImg/weather.png";
+import AnalogClockImg from "./assets/ProjectImg/analogclock.png";
+import DigitalClockImg from "./assets/ProjectImg/digitalclock.png";
+import StopwatchImg from "./assets/ProjectImg/stopwatch.png";
+import QRcodeImg from "./assets/ProjectImg/qrcode.png";
+import GuessMyNumberImg from "./assets/ProjectImg/guessmynumber.png";
+import ModalShowImg from "./assets/ProjectImg/modalshow.png";
+import PigGameImg from "./assets/ProjectImg/piggame.png";
+import ElearningImg from "./assets/ProjectImg/elearning.png";
+import CocaColaImg from "./assets/ProjectImg/cocacola.png";
+import BankTransactionImg from "./assets/ProjectImg/bankingtransaction.png";
+import TodoListImg from "./assets/ProjectImg/todolist.png";
+import TicTacToeImg from "./assets/ProjectImg/tictactoe.png";
+import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
+import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
+
 
 
 /////////////////////////////////////////////
