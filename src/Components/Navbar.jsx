@@ -42,7 +42,7 @@ const Navbar = () => {
             }
         }
     };
-
+    // Scroll section
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {

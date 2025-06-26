@@ -47,7 +47,7 @@ import BankTransactionImg from "../src/assets/ProjectImg/bankingtransaction.png"
 import TodoListImg from "../src/assets/ProjectImg/todolist.png"
 import TicTacToeImg from "../src/assets/ProjectImg/tictactoe.png"
 import OutdoorTravelImg from "../src/assets/ProjectImg/outdoortravel.png"
-
+import BankingSystemImg from "../src/assets/ProjectImg/bankingsystem.png"
 
 
 /////////////////////////////////////////////
@@ -304,6 +304,16 @@ export const projectListData = [
 
     /////////////////////////////////////
     // JavaScript
+
+    {
+        image: BankingSystemImg,
+        title: "javascript",
+        name: "Banking System",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/projects-javascript/tree/main/banking-app",
+        webapp: "https://dev-debabrata.github.io/projects-javascript/banking-app",
+    },
     {
         image: BankTransactionImg,
         title: "javascript",

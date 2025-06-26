@@ -11,7 +11,7 @@ import Experience from '../Components/Experience'
 const Home = () => {
     return (
         // <div className=' flex flex-col items-center space-y-7 text-center'>
-        <div>
+        <div id="nav-trigger" className="h-[100px]">
             <Navbar />
             <Hero />
             <Logo />

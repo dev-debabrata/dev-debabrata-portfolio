@@ -1,12 +1,62 @@
-# React + Vite
+# 💼 Debabrata Das - Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and modern developer portfolio built with **React.js** and **Tailwind CSS**. This site showcases my skills, projects, experience, and contact details in a clean, user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Responsive design (Mobile, Tablet, Desktop)
+- Animated smooth scrolling and transitions
+- Project showcase section with modal/gallery support
+- Skills and tools section with logos or icons
+- Contact form with email support (EmailJS or other)
+- Downloadable resume option
+- Dark mode (optional)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Tech                    | Description                      |
+| ----------------------- | -------------------------------- |
+| **React.js**            | Frontend UI library              |
+| **Tailwind CSS**        | Utility-first modern CSS styling |
+| **Framer Motion**       | Animations and transitions       |
+| **React Router**        | Page navigation                  |
+| **EmailJS / Formspree** | Contact form handling            |
+| **Vite**                | Fast build tool (optional)       |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+Install Dependencies
+npm install
+
+Start the Development Server
+npm run dev
+
+📁 Folder Structure
+portfolio-react/
+├── public/
+│   └── assets/            # Images and static files
+├── src/
+│   ├── components/        # Reusable components
+│   ├── pages/             # Home, Projects, Contact, etc.
+│   ├── data/              # Projects or skills data
+│   ├── App.jsx            # Main component
+│   └── main.jsx           # React root
+├── tailwind.config.js     # Tailwind setup
+└── README.md
+
+```
+
+---
+
+🙋‍♂️ Author
+Debabrata Das
+🔗 GitHub • 💼 LinkedIn
