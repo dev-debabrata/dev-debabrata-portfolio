@@ -62,13 +62,13 @@ const ProjectsList = () => {
                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold section-title  text-center mx-auto">My Projects</h1>
                     <div className=" w-30 md:w-50 lg:w-50 xl:w-52 h-1 bg-blue-600 mx-auto mt-3 mb-8 xl:mb-12"></div>
                 </div>
-                <div className=" bg-blue-50 p-8 rounded-2xl">
+                <div className=" bg-[#edf2ff] p-8 rounded-2xl">
                     <div>
                         {/* Tab Buttons */}
                         {/* Destop slider */}
                         <div
                             ref={tabRef}
-                            className=" hidden xl:w-[80%] mx-auto md:flex items-center justify-between relative rounded-full bg-[#e9ecef] p-1 mb-10"
+                            className=" hidden xl:w-[80%] mx-auto md:flex items-center justify-between relative rounded-full bg-white p-1 mb-10"
                         >
                             {projectsTabs.map((tab, index) => (
                                 <button

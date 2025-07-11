@@ -50,7 +50,7 @@ const About = () => {
                     <div className=" w-25 md:w-35 lg:w-35 xl:w-35 h-1 bg-blue-600 mx-auto mt-2"></div>
                 </div>
                 {/* About section */}
-                <div className=" bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
+                <div className=" bg-[#edf2ff] p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
                     <div>
                         <img src={assets.AboutImg} alt="About" className=" max-w-[300px] md:max-w-[350px] lg:max-w-[350px] xl:max-w-[350px] rounded-2xl" />
                     </div>
@@ -77,11 +77,11 @@ const About = () => {
 
 
                 {/*Educations and Skills section */}
-                <div className="w-full bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl mt-10 flex flex-col items-center">
+                <div className="w-full bg-[#edf2ff] p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl mt-10 flex flex-col items-center">
                     {/* Tab Buttons */}
                     <div
                         ref={tabRef}
-                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-[#e9ecef] p-1 mb-10"
+                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-white p-1 mb-10"
                     >
                         {tabs.map((tab, index) => (
                             <button

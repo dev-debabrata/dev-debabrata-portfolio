@@ -10,7 +10,7 @@ const Contact = () => {
                 <h1 className="text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold px-8">Get in touch</h1>
                 <div className=" w-30 md:w-42 lg:w-42 xl:w-42 h-1 bg-blue-600 mx-auto mt-2"></div>
             </div>
-            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 w-full bg-blue-50 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl">
+            <div className="bg-[#edf2ff] flex flex-col md:flex-row lg:flex-row xl:flex-row gap-8 w-full p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl">
                 {/* Left section */}
                 <div className="flex flex-col gap-5 basis-[40%]">
                     <h1 className="text-3xl font-semibold text-blue-900">Let's talk</h1>
