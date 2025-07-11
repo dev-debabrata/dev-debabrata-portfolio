@@ -36,7 +36,7 @@ const Projects = () => {
 
             {/* Project Section */}
 
-            <div className="bg-[#edf2ff] p-8 rounded-2xl w-full">
+            <div className="bg-[#edf2ff] p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl w-full">
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     spaceBetween={30}
