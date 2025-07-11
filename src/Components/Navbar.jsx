@@ -53,14 +53,14 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-[#3b5bdb] text-white"
             } `}>
-            <div className="flex justify-between relative items-center my-4 lg:my-4 md:my-4">
+            <div className="flex justify-between relative items-center my-3">
                 <Link
                     to="/home"
                     className="flex justify-center gap-2 items-center cursor-pointer">
                     <img
                         src={assets.Logo}
                         alt="Logo"
-                        className=" w-14 invert brightness-200" />
+                        className=" w-10 invert brightness-200" />
                     <h2 className=" text-xl font-bold">Debabrata Das</h2>
                 </Link>
                 {/* Destop menu */}

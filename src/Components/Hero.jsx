@@ -9,8 +9,8 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className=" bg-blue-200 py-12 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-20 md:mt-20.5 lg:mt-20.5 ">
-            <div className="flex xl:flex flex-col-reverse xl:gap-12 md:gap-10 gap-5 md:flex-row justify-between items-center">
+            className=" bg-blue-200 py-12 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans mt-16 ">
+            <div className="flex xl:flex flex-col-reverse xl:gap-12 md:gap-10 gap-5 md:flex-row justify-between items-center my-2">
                 {/* Left side */}
                 <div className="text-center md:text-left mt-8 md:mt-0">
                     {/* Greeting */}
