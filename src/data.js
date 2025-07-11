@@ -257,7 +257,15 @@ export const projectListData = [
 
 
 
-
+    {
+        image: "",
+        title: "mern stack",
+        name: "Athentication",
+        description:
+            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB Framer-motion",
+        github: "",
+        webapp: "",
+    },
     /////////////////////////////
     // React.JS
     {
