@@ -49,6 +49,7 @@ import TodoListImg from "./assets/ProjectImg/todolist.png";
 import TicTacToeImg from "./assets/ProjectImg/tictactoe.png";
 import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
 import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
+import MindMateImg from "./assets/ProjectImg/mindMate.png";
 
 
 
@@ -256,7 +257,15 @@ export const projectsTabs = [
 export const projectListData = [
 
 
-
+    {
+        image: MindMateImg,
+        title: "react.js",
+        name: "MindMate AI Chat App",
+        description:
+            "Technologies: React, Tailwind CSS, React Just Parallax, React Scroll Lock",
+        github: "https://github.com/dev-debabrata/MindMate-react",
+        webapp: "",
+    },
     {
         image: "",
         title: "mern stack",
