@@ -270,7 +270,7 @@ export const projectListData = [
     {
         image: AuthImg,
         title: "mern stack",
-        name: "Athentication",
+        name: "Athentication App",
         description:
             "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB Framer-motion",
         github: "https://github.com/dev-debabrata/auth-mern",
@@ -486,13 +486,13 @@ export const projectData = [
 
     {
         id: 2,
-        image: ElearningImg,
+        image: AuthImg,
         title: "mern stack",
-        name: "E-Learning",
+        name: "Authentication App",
         description:
-            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB",
-        github: "https://github.com/dev-debabrata/e-learning-mern",
-        webapp: "https://education-learnig-dev.netlify.app/",
+            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB Framer-motion",
+        github: "https://github.com/dev-debabrata/auth-mern",
+        webapp: "",
     },
     {
         id: 3,
