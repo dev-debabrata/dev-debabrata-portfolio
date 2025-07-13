@@ -49,6 +49,7 @@ import TodoListImg from "./assets/ProjectImg/todolist.png";
 import TicTacToeImg from "./assets/ProjectImg/tictactoe.png";
 import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
 import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
+import AuthImg from "./assets/ProjectImg/auth.png";
 import MindMateImg from "./assets/ProjectImg/mindMate.png";
 
 
@@ -267,12 +268,12 @@ export const projectListData = [
         webapp: "",
     },
     {
-        image: "",
+        image: AuthImg,
         title: "mern stack",
         name: "Athentication",
         description:
             "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB Framer-motion",
-        github: "",
+        github: "https://github.com/dev-debabrata/auth-mern",
         webapp: "",
     },
     /////////////////////////////
