@@ -41,21 +41,23 @@ const About = () => {
     return (
         <section
             id="about"
-            className="my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%] font-sans  ">
+            className="px-[4%] md:py-20 lg:py-20 xl:py-20 md:px-[7.5%] lg:px-[10%] xl:px-[10%] font-sans dark:bg-slate-950">
             {/* lg:scroll-mt-6.5 md:scroll-mt-4.5 scroll-mt-10 */}
             <div className="flex flex-col justify-center items-center" >
                 {/* About title */}
                 <div className="relative">
-                    <h1 className=" text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold">About me</h1>
+                    <h1 className=" text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold dark:text-gray-300">
+                        About me
+                    </h1>
                     <div className=" w-25 md:w-35 lg:w-35 xl:w-35 h-1 bg-blue-600 mx-auto mt-2"></div>
                 </div>
                 {/* About section */}
-                <div className=" bg-[#edf2ff] p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
+                <div className=" bg-[#edf2ff] dark:bg-slate-900 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl flex flex-col mt-5 md:flex-row justify-between items-center gap-10">
                     <div>
                         <img src={assets.AboutImg} alt="About" className=" max-w-[300px] md:max-w-[350px] lg:max-w-[350px] xl:max-w-[350px] rounded-2xl" />
                     </div>
                     <div className=" flex flex-col items-start">
-                        <p className=" xl:text-lg">
+                        <p className=" xl:text-lg dark:text-gray-400">
                             Hello! I'm Debabrata Das, a B-Tech student in Computer Science and Engineering with a strong passion for technology, programming, and problem-solving. I enjoy exploring various areas of computer science including web development, database management, and algorithms. I'm currently building a solid foundation in both theoretical and practical aspects of computing.
                         </p>
                         {/* Icons */}
@@ -67,7 +69,7 @@ const About = () => {
                                         className="flex items-center gap-x-4 mt-1 mx-auto xl:mx-0"
                                         key={index}>
                                         <div className=" text-blue-700 text-primary "><Icon size={20} /></div>
-                                        <div>{item.text}</div>
+                                        <div className=" dark:text-gray-200">{item.text}</div>
                                     </div>
                                 );
                             })}
@@ -76,17 +78,23 @@ const About = () => {
                 </div>
 
 
+
+
+
+
+
+                {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
                 {/*Educations and Skills section */}
-                <div className="w-full bg-[#edf2ff] p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl mt-10 flex flex-col items-center">
+                <div className="w-full bg-[#edf2ff] dark:bg-slate-900 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl mt-10 flex flex-col items-center">
                     {/* Tab Buttons */}
                     <div
                         ref={tabRef}
-                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full bg-white p-1 mb-10"
+                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full dark:bg-slate-600 bg-white p-1 mb-10"
                     >
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab.id}
-                                className={`relative cursor-pointer py-3 text-sm md:text-xl lg:text-xl xl:text-xl font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700'}`}
+                                className={`relative cursor-pointer py-3 text-sm md:text-xl lg:text-xl xl:text-xl font-semibold transition-colors duration-300 z-10 ${activeTab === index ? 'text-white' : 'text-gray-700 dark:text-black'}`}
                                 style={{ width: tabWidth }}
                                 onClick={() => setActiveTab(index)}
                             >
@@ -96,7 +104,7 @@ const About = () => {
 
                         {/* Animated slider */}
                         <div
-                            className="absolute top-0 left-0 h-full rounded-full bg-blue-600 transition-all duration-300 z-0"
+                            className="absolute top-0 left-0 h-full rounded-full bg-blue-600 dark:bg-gray-950 transition-all duration-300 z-0"
                             style={{
                                 width: `${tabWidth}px`,
                                 transform: `translateX(${activeTab * tabWidth}px)`,
@@ -111,13 +119,13 @@ const About = () => {
                                 <div key={index} className="pb-2 border-b">
                                     {tabs[activeTab].id === "tab1" ? (
                                         <div className=" mb-2 items-center">
-                                            <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                                            <h3 className="text-2xl font-semibold mb-2 dark:text-gray-300">{item.title}</h3>
                                             {/* <p className="text-gray-700 p-4 rounded-2xl inline-block bg-blue-200 text-[16px]">{item.list}</p> */}
                                             <div className="flex flex-wrap gap-2">
                                                 {item.list.split(",").map((tech, index) => (
                                                     <span
                                                         key={index}
-                                                        className="bg-blue-300 text-gray-700 text-sm px-3 py-1.5 rounded-md"
+                                                        className="bg-blue-300 dark:bg-gray-700 text-gray-200 text-sm px-3 py-1.5 rounded-md"
                                                     >
                                                         {tech.trim()}
                                                     </span>
@@ -127,12 +135,12 @@ const About = () => {
                                     ) : (
                                         <div className="flex justify-between items-center">
                                             <div className=" mb-2">
-                                                <h3 className="text-[20px] font-semibold" dangerouslySetInnerHTML={{ __html: item.school }} />
-                                                <p className="text-gray-700">{item.qualification}</p>
+                                                <h3 className="text-[20px] font-semibold dark:text-gray-300" dangerouslySetInnerHTML={{ __html: item.school }} />
+                                                <p className="text-gray-700 dark:text-gray-400">{item.qualification}</p>
                                             </div>
                                             <div className="text-right flex flex-col items-end">
                                                 {item.icon && <item.icon size={20} className="text-gray-500 mb-2" />}
-                                                <p className="text-gray-500 text-[15px]">{item.years}</p>
+                                                <p className="text-gray-500 dark:text-gray-400 text-[15px]">{item.years}</p>
                                             </div>
                                         </div>
                                     )}

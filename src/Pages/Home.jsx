@@ -11,7 +11,9 @@ import Footer from '../Components/Footer'
 const Home = () => {
     return (
         // <div className=' flex flex-col items-center space-y-7 text-center'>
-        <div id="nav-trigger" className="h-[100px]">
+        <div
+            id="nav-trigger"
+            className="h-[100px]  dark:bg-gray-900 dark:text-gray-200">
             <Navbar />
             <Hero />
             <Logo />

@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --animate-marquee: marquee 40s linear infinite;
 
@@ -14,11 +16,13 @@
     }
   }
 }
-
+/* body {
+  background-color: #111827;
+} */
 * {
-  font-family: "Poppins", sans-serif;
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit", "Poppins", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;

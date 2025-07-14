@@ -23,20 +23,20 @@ const Projects = () => {
     return (
         <section
             id='projects'
-            className=" flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%]">
+            className="dark:bg-slate-950 flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 px-[4%] md:py-20 lg:py-20 xl:py-20 md:px-[7.5%] lg:px-[10%] xl:px-[10%]">
             <div className="relative text-center">
-                <h1 className="text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold px-8">
+                <h1 className="text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold px-8 dark:text-gray-300">
                     Projects
                 </h1>
                 <div className=" w-22 md:w-30 lg:w-30 xl:w-30 h-1 bg-blue-600 mx-auto mt-2"></div>
-                <p className="text-gray-500 mt-4 text-[16px]">
+                <p className="text-gray-500 mt-4 text-[16px] dark:text-gray-400">
                     A showcase of the projects I have worked on, highlighting my skills and experience in various technologies
                 </p>
             </div>
 
             {/* Project Section */}
 
-            <div className="bg-[#edf2ff] p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl w-full">
+            <div className="bg-[#edf2ff] dark:bg-slate-900 p-8 md:p-10 lg:p-10 xl:p-10 rounded-2xl w-full">
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     spaceBetween={30}
@@ -52,9 +52,9 @@ const Projects = () => {
                         <SwiperSlide key={project.id}>
                             <div
                                 onClick={() => handleOpenModal(project)}
-                                className="bg-gray-100 backdrop-blur-md h- rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4"
+                                className="bg-gray-100 dark:bg-slate-950 backdrop-blur-md h- rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4"
                             >
-                                <h3 className="text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">
+                                <h3 className="text-base font-semibold uppercase px-3 py-1 bg-gray-300 dark:bg-slate-800 inline-block border-none rounded-xl mb-2">
                                     {project.title}
                                 </h3>
                                 <div>
@@ -68,7 +68,7 @@ const Projects = () => {
                                     <h3 className="text-2xl font-bold mt-5 mb-2">
                                         {project.name}
                                     </h3>
-                                    <p className="text-gray-500 mb-4 line-clamp-3">
+                                    <p className="text-gray-500 dark:text-gray-400 mb-4 line-clamp-3">
                                         {project.description}
                                     </p>
                                 </div>
@@ -77,7 +77,11 @@ const Projects = () => {
                     ))}
                 </Swiper>
                 <div className="text-center mt-12 mb-2">
-                    <Link to={'/projectslist'} className='inline-block bg-blue-600 border-none text-white px-8 py-3 rounded-full text-xl font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105'>All Projects</Link>
+                    <Link
+                        to={'/projectslist'}
+                        className='inline-block bg-blue-600 dark:bg-blue-800 border-none text-white px-8 py-3 rounded-full text-xl font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105'>
+                        All Projects
+                    </Link>
                 </div>
             </div>
 

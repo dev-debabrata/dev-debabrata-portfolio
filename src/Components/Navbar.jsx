@@ -3,6 +3,8 @@ import { assets, NavbarMenu } from '../data';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdClose, MdMenu } from "react-icons/md";
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { SiLeetcode } from 'react-icons/si';
+import ThemeToggler from './ThemeToggler';
 
 
 
@@ -51,7 +53,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379b8] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa bg-[#3b5bdb] text-white"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379a6] dark:bg-[#11112038] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa dark:bg-gray-950 bg-[#3b5bdb] text-white"
             } `}>
             <div className="flex justify-between relative items-center my-3">
                 <Link
@@ -69,7 +71,7 @@ const Navbar = () => {
                         {NavbarMenu.map((item) => (
                             <li
                                 key={item.id}
-                                className={`cursor-pointer hover:text-black ${activeSection === item.id ? " text-black" : ""
+                                className={`cursor-pointer hover:text-black hover:dark:text-blue-500 ${activeSection === item.id ? " text-black dark:text-blue-500" : ""
                                     }`}>
 
                                 <button onClick={() => handleMenuItemClick(item)}
@@ -86,16 +88,26 @@ const Navbar = () => {
                         href="https://github.com/dev-debabrata"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" hover:text-black">
+                        className=" hover:text-black hover:dark:text-blue-500">
                         <FaGithub size={35} />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" hover:text-black">
+                        className=" hover:text-black hover:dark:text-blue-500">
                         <FaLinkedin size={35} />
                     </a>
+                    <a
+                        href="https://leetcode.com/u/leet-debabrata/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=" hover:text-black hover:dark:text-blue-500">
+                        <SiLeetcode size={35} />
+                    </a>
+                </div>
+                <div>
+                    <ThemeToggler />
                 </div>
                 {/* Mobile menu icons */}
                 <div className=" md:hidden">
@@ -134,6 +146,13 @@ const Navbar = () => {
                                     rel="noopener noreferrer"
                                     className="hover:text-[#212529]">
                                     <FaLinkedin size={28} />
+                                </a>
+                                <a
+                                    href="https://leetcode.com/u/leet-debabrata/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className=" hover:text-black">
+                                    <SiLeetcode size={35} />
                                 </a>
                             </div>
                         </ul>
