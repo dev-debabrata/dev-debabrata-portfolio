@@ -22,7 +22,7 @@ const Preloader = () => {
       >
         <PreloaderTxt
           tagName="h2"
-          txt="<DevDebabrata/>"
+          txt="<DevDebabrata />"
           className="text-[28px] font-bold md:text-[36px] xl:text-[54px]"
         />
       </motion.div>
