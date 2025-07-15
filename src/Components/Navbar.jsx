@@ -53,7 +53,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379a6] dark:bg-[#11112038] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa dark:bg-gray-950 bg-[#3b5bdb] text-white"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379a6] dark:bg-[#0000006d] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa dark:bg-slate-950 bg-[#3b5bdb] text-white"
             } `}>
             <div className="flex justify-between relative items-center my-3">
                 <Link
@@ -98,13 +98,13 @@ const Navbar = () => {
                         className=" hover:text-black hover:dark:text-blue-500">
                         <FaLinkedin size={35} />
                     </a>
-                    <a
+                    {/* <a
                         href="https://leetcode.com/u/leet-debabrata/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className=" hover:text-black hover:dark:text-blue-500">
                         <SiLeetcode size={35} />
-                    </a>
+                    </a> */}
                 </div>
                 <div>
                     <ThemeToggler />
@@ -147,13 +147,13 @@ const Navbar = () => {
                                     className="hover:text-[#212529]">
                                     <FaLinkedin size={28} />
                                 </a>
-                                <a
+                                {/* <a
                                     href="https://leetcode.com/u/leet-debabrata/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className=" hover:text-black">
                                     <SiLeetcode size={28} />
-                                </a>
+                                </a> */}
                             </div>
                         </ul>
                     </div>

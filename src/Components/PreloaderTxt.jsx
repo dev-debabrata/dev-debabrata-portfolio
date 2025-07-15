@@ -1,6 +1,6 @@
 import { createElement } from "react";
 
-export default function GradientTxt({ tagName, txt, className }) {
+export default function PreloaderTxt({ tagName, txt, className }) {
     return createElement(
         tagName,
         {

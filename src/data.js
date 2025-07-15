@@ -124,11 +124,6 @@ export const logoCard = {
     MysqlCard,
     GithubCard,
     VScodeCard,
-
-
-
-
-
 }
 
 /////////////////////////////////////////////////////

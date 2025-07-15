@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-
 import Home from "./Pages/Home";
 import ProjectsList from "./Pages/ProjectsList";
-import GradientTxt from "./Components/GradientTxt";
+import PreloaderTxt from "./Components/Animation/PreloaderTxt";
 
 
 // Preloader Component
@@ -21,9 +20,9 @@ const Preloader = () => {
           duration: 0.5,
         }}
       >
-        <GradientTxt
+        <PreloaderTxt
           tagName="h2"
-          txt="</>"
+          txt="<DevDebabrata/>"
           className="text-[28px] font-bold md:text-[36px] xl:text-[54px]"
         />
       </motion.div>
