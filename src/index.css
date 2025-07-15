@@ -20,10 +20,26 @@
   background-color: #111827;
 } */
 * {
-  font-family: "Outfit", "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+}
+
+@layer utilities {
+  .swiper-pagination-bullet {
+    background-color: #2563eb !important;
+    /* opacity: 0.5;
+    transition: all 0.3s ease; */
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  .dark .swiper-pagination-bullet {
+    background-color: #133cd0 !important;
+  }
 }

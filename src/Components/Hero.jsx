@@ -14,9 +14,16 @@ const Hero = () => {
                 {/* Left side */}
                 <div className="text-center md:text-left mt-8 md:mt-0">
                     {/* Greeting */}
-                    <h2 className="text-2xl text-blue-600 font-semibold">Hi, I'm</h2>
-                    <h1 className=" text-3xl sm:text-5xl md:text-4xl lg:text-7xl font-extrabold mt-2 dark:text-gray-300">Debabrata Das</h1>
-                    <h2 className="text-3xl font-bold text-blue-600 mt-2 ">frontend developer.</h2>
+                    <h2 className="text-2xl font-semibold">Hi, I'm</h2>
+                    <h1 className=" text-3xl sm:text-5xl md:text-4xl lg:text-7xl font-extrabold mt-2 dark:text-gray-300">
+                        <span className="bg-gradient-to-r dark:from-white dark:via-gray-300 from-black via-gray-500 bg-clip-text text-transparent to-purple-400 undefined">
+                            Debabrata
+                        </span>
+                        <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined ml-2">
+                            Das
+                        </span>
+                    </h1>
+                    <h2 className="text-3xl font-bold mt-2 ">frontend developer.</h2>
                     <p className=" text-sm md:text-sm lg:text-[18px] mt-2 dark:text-gray-400">I am a frontent developer from Kolkata. I have a many project bulid in react.</p>
                     <div className=" space-x-1 md:space-x-2 lg:space-x-4 mt-5">
                         <a

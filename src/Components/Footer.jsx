@@ -15,9 +15,16 @@ const Footer = () => {
 
 
     return (
-        <footer className=" bg-[#3b5bdb] dark:bg-slate-950 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans pt-12 pb-8 text-white">
+        <footer className=" bg-slate-950 dark:bg-slate-950 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans pt-12 pb-8 text-white">
             <div className=" container mx-auto text-center">
-                <h2 className="text-2xl font-semibold">Debabrata Das</h2>
+                <h2 className="text-2xl font-semibold">
+                    <span className="bg-gradient-to-r from-white via-gray-200 bg-clip-text text-transparent to-purple-400 undefined">
+                        &lt;Debabrata
+                    </span>
+                    <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined">
+                        Das /&gt;
+                    </span>
+                </h2>
 
                 {/* Navigation Links - Responsive */}
                 <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
@@ -61,7 +68,12 @@ const Footer = () => {
                 </div>
                 {/* Copyright text */}
                 <p className="text-center mt-8 border-t-2 border-white/40 pt-8">
-                    &copy; 2025 Debabrata Das. All rights reserved.
+                    &copy; 2025 <span className="bg-gradient-to-r from-white via-gray-200 bg-clip-text text-transparent to-purple-400 undefined">
+                        &lt;Debabrata
+                    </span>
+                    <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined">
+                        Das /&gt;
+                    </span>. All rights reserved.
                 </p>
             </div>
         </footer>

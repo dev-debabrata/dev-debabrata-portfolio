@@ -125,7 +125,7 @@ const About = () => {
                                                 {item.list.split(",").map((tech, index) => (
                                                     <span
                                                         key={index}
-                                                        className="bg-blue-300 dark:bg-gray-700 text-gray-200 text-sm px-3 py-1.5 rounded-md"
+                                                        className="bg-blue-300 dark:bg-gray-700 dark:text-gray-200 text-sm px-3 py-1.5 rounded-md"
                                                     >
                                                         {tech.trim()}
                                                     </span>

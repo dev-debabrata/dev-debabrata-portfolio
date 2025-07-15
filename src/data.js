@@ -157,7 +157,7 @@ export const tabContent = {
             },
             {
                 title: "Tools",
-                list: "Git, GitHub, VS Code, Vercel, Netlify ",
+                list: "Git, GitHub, VS Code, Render, Vercel, Netlify ",
             },
         ],
         image: assets.SkillsImg,

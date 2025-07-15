@@ -3,13 +3,14 @@ import { assets, NavbarMenu } from '../data';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdClose, MdMenu } from "react-icons/md";
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import { SiLeetcode } from 'react-icons/si';
+// import { SiLeetcode } from 'react-icons/si';
 import ThemeToggler from './ThemeToggler';
 
 
-
+// bg - [#3b5bdb]
 
 const Navbar = () => {
+
 
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
@@ -17,6 +18,12 @@ const Navbar = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
+
+    // Sync active section on route change
+    useEffect(() => {
+        const path = location.pathname.replace('/', '') || 'home';
+        setActiveSection(path);
+    }, [location]);
 
     // Change navbar style on scroll
     useEffect(() => {
@@ -44,7 +51,7 @@ const Navbar = () => {
             }
         }
     };
-    // Scroll section
+
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
@@ -52,31 +59,57 @@ const Navbar = () => {
         }
     };
 
+
+
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#131379a6] dark:bg-[#0000006d] text-white bg-opacity-50 backdrop-blur-md shadow-xl" : "bg-transpa dark:bg-slate-950 bg-[#3b5bdb] text-white"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#8d8d9920] dark:bg-[#0000006d] dark:text-gray-50 text-whi bg-opacity-50 backdrop-blur-md shadow-xl" : "dark:bg-slate-950 dark:text-gray-50 bg-slate-200 "
             } `}>
             <div className="flex justify-between relative items-center my-3">
-                <Link
+                {/* <Link
                     to="/home"
                     className="flex justify-center gap-2 items-center cursor-pointer">
                     <img
                         src={assets.Logo}
                         alt="Logo"
                         className=" w-10 invert brightness-200" />
-                    <h2 className=" text-xl font-bold">Debabrata Das</h2>
-                </Link>
+                    <h2 className=" text-xl font-medium italic md:text-[24px] lg:font-bold">Debabrata Das</h2>
+                </Link> */}
+                <a
+                    href="/"
+                    class="text-xl font-medium italic md:text-[24px] lg:text-3xl xl:text-3xl lg:font-bold"
+                >
+                    <span className="bg-gradient-to-r from-black dark:from-white dark:via-gray-200 via-gray-500 bg-clip-text text-transparent to-purple-400 undefined">
+                        &lt;Debabrata
+                    </span>
+                    <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined">
+                        Das /&gt;
+                    </span>
+                </a>
+
+
                 {/* Destop menu */}
                 <div>
-                    <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
+                    <ul className="hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
                         {NavbarMenu.map((item) => (
                             <li
                                 key={item.id}
-                                className={`cursor-pointer hover:text-black hover:dark:text-blue-500 ${activeSection === item.id ? " text-black dark:text-blue-500" : ""
-                                    }`}>
-
-                                <button onClick={() => handleMenuItemClick(item)}
-                                    className="inline-block cursor-pointer text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase">
+                                className={`group cursor-pointer md:text-[14px] lg:text-[18px] font-semibold ${activeSection === item.id
+                                    ? "text-blue-600 dark:text-blue-600 "
+                                    : "hover:text-blue-600 hover:dark:text-blue-600"
+                                    }`}
+                            >
+                                <button
+                                    onClick={() => handleMenuItemClick(item)}
+                                    className="relative inline-block py-2 px-4 md:px-2 lg:px-4"
+                                >
                                     {item.title}
+                                    {/* Animated underline */}
+                                    <span
+                                        className={`block h-0.5 transition-all duration-500 ${activeSection === item.id
+                                            ? 'max-w-full bg-blue-600 dark:bg-blue-600'
+                                            : 'max-w-0 group-hover:max-w-full bg-blue-600 dark:bg-blue-600'
+                                            }`}
+                                    />
                                 </button>
                             </li>
                         ))}
@@ -88,15 +121,15 @@ const Navbar = () => {
                         href="https://github.com/dev-debabrata"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" hover:text-black hover:dark:text-blue-500">
-                        <FaGithub size={35} />
+                        className=" hover:text-blue-600 hover:dark:text-blue-600">
+                        <FaGithub className="md:text-[30px] lg:text-[33px]" />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className=" hover:text-black hover:dark:text-blue-500">
-                        <FaLinkedin size={35} />
+                        className=" hover:text-blue-600 hover:dark:text-blue-600">
+                        <FaLinkedin className="md:text-[30px] lg:text-[33px]" />
                     </a>
                     {/* <a
                         href="https://leetcode.com/u/leet-debabrata/"
@@ -106,11 +139,15 @@ const Navbar = () => {
                         <SiLeetcode size={35} />
                     </a> */}
                 </div>
-                <div>
+                <div className="hidden md:flex lg:flex xl:flex">
                     <ThemeToggler />
                 </div>
+
+
+                {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
                 {/* Mobile menu icons */}
-                <div className=" md:hidden">
+                <div className=" md:hidden flex justify-between items-center gap-4">
+                    <ThemeToggler />
                     {isOpen ? (<MdClose className="text-3xl cursor-pointer"
                         onClick={() => setIsOpen(false)} />
                     ) : (<MdMenu className="text-3xl cursor-pointer"
@@ -186,3 +223,20 @@ export default Navbar
                         className=" w-15 " />
                     <h2 className=" text-lg font-bold">Debabrata Das</h2>
                 </a> */}
+
+
+
+{/* <ul className=" hidden md:flex items-center gap-1 md:gap-0 lg:gap-1">
+                        {NavbarMenu.map((item) => (
+                            <li
+                                key={item.id}
+                                className={`cursor-pointer hover:text-blue-600 md:text-[14px] lg:text-[18px] hover:dark:text-blue-600 ${activeSection === item.id ? " text-blue-600 dark:text-blue-600" : ""
+                                    }`}>
+
+                                <button onClick={() => handleMenuItemClick(item)}
+                                    className="inline-block cursor-pointer font-semibold py-2 px-4 md:px-2 lg:px-4">
+                                    {item.title}
+                                </button>
+                            </li>
+                        ))}
+                    </ul> */}

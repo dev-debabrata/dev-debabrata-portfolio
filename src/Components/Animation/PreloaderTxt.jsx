@@ -11,6 +11,7 @@ export default function PreloaderTxt({ tagName, txt, className }) {
 }
 
 
+
 /////////////////////////////////////////////////////////
 
 // import { createElement } from "react";

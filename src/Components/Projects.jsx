@@ -52,7 +52,7 @@ const Projects = () => {
                         <SwiperSlide key={project.id}>
                             <div
                                 onClick={() => handleOpenModal(project)}
-                                className="bg-gray-100 dark:bg-slate-950 backdrop-blur-md h- rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4"
+                                className="bg-gray-100 dark:bg-slate-950 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4"
                             >
                                 <h3 className="text-base font-semibold uppercase px-3 py-1 bg-gray-300 dark:bg-slate-800 inline-block border-none rounded-xl mb-2">
                                     {project.title}
@@ -88,19 +88,19 @@ const Projects = () => {
 
             {/* Modal container */}
             {selectedProject && (
-                <div className="fixed inset-0 z-50 pt-24 flex items-center justify-center bg-black/90 p-4">
-                    <div className="bg-gray-100 rounded-xl shadow-2xl lg:w-[50%] xl:w-[80%] w-[80%] max-w-[480px] overflow-hidden relative ">
-                        <div className="flex justify-end p-3 bg-blue-800">
+                <div className="fixed inset-0 z-50 pt-24 flex items-center justify-center bg-black/90 dark:bg-slate-950/70 p-4">
+                    <div className="bg-gray-100 dark:bg-slate-900 rounded-xl shadow-2xl lg:w-[50%] xl:w-[80%] w-[80%] max-w-[480px] overflow-hidden relative ">
+                        <div className="flex justify-end p-3 bg-blue-800 dark:bg-gray-950">
                             <button
                                 onClick={handleCloseModal}
-                                className="text-5xl cursor-pointer text-white font-bold hover:text-black ">
+                                className="text-5xl cursor-pointer text-white font-bold hover:text-black dark:hover:text-blue-500">
                                 &times;
                             </button>
                         </div>
                         <div className="flex flex-col">
                             <div className="w-full flex flex-col justify-center p-8 pt-4">
                                 <div>
-                                    <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 inline-block border-none rounded-xl mb-2">{selectedProject.title}</h3>
+                                    <h3 className=" text-base font-semibold uppercase px-4 py-2 bg-gray-300 dark:bg-slate-800 inline-block border-none rounded-xl mb-2">{selectedProject.title}</h3>
                                 </div>
                                 <img
                                     src={selectedProject.image}
@@ -110,15 +110,15 @@ const Projects = () => {
                                 <h3 className="font-bold mt-5 mb-2 text-3xl">
                                     {selectedProject.name}
                                 </h3>
-                                <p className="text-gray-500 text-base mb-5">
+                                <p className="text-gray-500 dark:text-gray-400 text-base mb-5">
                                     {selectedProject.description}
                                 </p>
-                                <div className=" flex xl:justify-center md:justify-center xl:gap-20 md:gap-20 justify-between">
+                                <div className=" flex xl:justify-center md:justify-center xl:gap-35 md:gap-20 justify-between">
                                     <a
                                         href={selectedProject.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-block bg-blue-600 border-none text-white px-6 py-2 rounded-full text-md font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+                                        className="inline-block bg-blue-600 dark:bg-slate-950 hover:dark:bg-slate-800 dark:text-gray-300 border-none text-white px-6 py-2 rounded-full text-md font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105"
                                     >
                                         View Code
                                     </a>
@@ -126,7 +126,7 @@ const Projects = () => {
                                         href={selectedProject.webapp}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-block border-none bg-blue-600 text-white px-6 py-2 rounded-full text-md font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+                                        className="inline-block border-none bg-blue-600 dark:bg-slate-950 hover:dark:bg-slate-800 dark:text-gray-300 text-white px-6 py-2 rounded-full text-md font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105"
                                     >
                                         View Live
                                     </a>

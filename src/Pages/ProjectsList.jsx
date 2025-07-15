@@ -122,7 +122,7 @@ const ProjectsList = () => {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-block bg-blue-600 dark:bg-slate-900 border-none text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 hover:dark:bg-slate-800 transition duration-300 transform hover:scale-105"
+                                        className="inline-block bg-blue-600 dark:bg-slate-900 hover:dark:bg-slate-800 border-none text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition duration-300 transform hover:scale-105"
                                     >
                                         View Code
                                     </a>
