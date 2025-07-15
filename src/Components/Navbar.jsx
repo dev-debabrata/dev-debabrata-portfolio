@@ -119,7 +119,7 @@ const Navbar = () => {
                 </div>
                 {/* Mobile Menu Items */}
                 {isOpen && (
-                    <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414bd] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
+                    <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414ad] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
                         <ul className="flex flex-col items-center space-y-4 py-4 text-white">
                             {NavbarMenu.map((item) => (
                                 <li
@@ -152,7 +152,7 @@ const Navbar = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className=" hover:text-black">
-                                    <SiLeetcode size={35} />
+                                    <SiLeetcode size={28} />
                                 </a>
                             </div>
                         </ul>

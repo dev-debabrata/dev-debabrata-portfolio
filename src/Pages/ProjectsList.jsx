@@ -68,7 +68,7 @@ const ProjectsList = () => {
                         {/* Destop slider */}
                         <div
                             ref={tabRef}
-                            className=" hidden xl:w-[80%] mx-auto md:flex items-center justify-between relative rounded-full dark:bg-slate-600 bg-white p-1 mb-10"
+                            className=" hidden xl:w-[80%] mx-auto md:flex items-center justify-between relative rounded-full dark:bg-slate-300 bg-white p-1 mb-10"
                         >
                             {projectsTabs.map((tab, index) => (
                                 <button

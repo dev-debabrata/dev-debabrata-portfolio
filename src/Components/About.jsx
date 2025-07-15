@@ -89,7 +89,7 @@ const About = () => {
                     {/* Tab Buttons */}
                     <div
                         ref={tabRef}
-                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full dark:bg-slate-600 bg-white p-1 mb-10"
+                        className="xl:w-[40%] w-[80%] mx-auto flex items-center justify-between relative rounded-full dark:bg-slate-300 bg-white p-1 mb-10"
                     >
                         {tabs.map((tab, index) => (
                             <button
