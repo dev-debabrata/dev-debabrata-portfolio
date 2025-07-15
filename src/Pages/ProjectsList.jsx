@@ -59,7 +59,9 @@ const ProjectsList = () => {
                 id="projectlist"
                 className=" dark:bg-slate-950 min-h-screen mt-16 px-[4%] md:py-20 lg:py-20 xl:py-20 md:px-[7.5%] lg:px-[10%] xl:px-[10%]">
                 <div >
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold section-title  text-center mx-auto">My Projects</h1>
+                    <h1 className="text-3xl dark:text-gray-300 md:text-4xl lg:text-5xl xl:text-5xl font-bold section-title  text-center mx-auto">
+                        My Projects
+                    </h1>
                     <div className=" w-30 md:w-50 lg:w-50 xl:w-52 h-1 bg-blue-600 mx-auto mt-3 mb-8 xl:mb-12"></div>
                 </div>
                 <div className=" bg-[#edf2ff] dark:bg-slate-900 p-8 rounded-2xl">
@@ -110,7 +112,7 @@ const ProjectsList = () => {
                     <div className="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                         {filteredProjects.map((project, index) => (
                             <div key={index} className="bg-gray-100 dark:bg-slate-950 rounded-2xl p-6 shadow-2xl overflow-hidden backdrop-blur-md hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300">
-                                <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 dark:bg-slate-800 inline-block border-none rounded-xl mb-2">{project.title}</h3>
+                                <h3 className=" text-base font-semibold uppercase px-3 py-1 bg-gray-300 dark:bg-slate-800 dark:text-gray-300 inline-block border-none rounded-xl mb-2">{project.title}</h3>
                                 <img src={project.image} alt={project.name} className="w-full h-48 object-cover rounded-lg mb-4" />
                                 <h3 className="text-2xl dark:text-gray-100 font-bold mb-2">{project.name}</h3>
                                 <p className="text-gray-700 dark:text-gray-400 mb-4">{project.description}</p>

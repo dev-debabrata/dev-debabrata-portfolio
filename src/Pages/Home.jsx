@@ -12,8 +12,8 @@ const Home = () => {
     return (
         // <div className=' flex flex-col items-center space-y-7 text-center'>
         <div
-            id="nav-trigger"
-            className="h-[100px]  dark:bg-gray-900 dark:text-gray-200">
+            // id="nav-trigger"
+            className="  dark:bg-slate-950 dark:text-gray-300">
             <Navbar />
             <Hero />
             <Logo />

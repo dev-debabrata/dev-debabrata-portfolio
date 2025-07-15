@@ -41,7 +41,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="px-[4%] md:py-20 lg:py-20 xl:py-20 md:px-[7.5%] lg:px-[10%] xl:px-[10%] font-sans dark:bg-slate-950">
+            className="my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%] font-sans">
             {/* lg:scroll-mt-6.5 md:scroll-mt-4.5 scroll-mt-10 */}
             <div className="flex flex-col justify-center items-center" >
                 {/* About title */}
