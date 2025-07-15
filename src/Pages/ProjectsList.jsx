@@ -57,7 +57,7 @@ const ProjectsList = () => {
             <section
                 ref={projectListRef}
                 id="projectlist"
-                className=" dark:bg-slate-950 min-h-screen mt-16 px-[4%] md:py-20 lg:py-20 xl:py-20 md:px-[7.5%] lg:px-[10%] xl:px-[10%]">
+                className=" dark:bg-blue-950 min-h-screen py-25 px-[4%] md:py-30 lg:py-35 xl:py-35 md:px-[7.5%] lg:px-[10%] xl:px-[10%]">
                 <div >
                     <h1 className="text-3xl dark:text-gray-300 md:text-4xl lg:text-5xl xl:text-5xl font-bold section-title  text-center mx-auto">
                         My Projects

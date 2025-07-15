@@ -30,7 +30,7 @@ const Hero = () => {
                             download
                             target='_blank'
                             rel='noopener noreferrer'
-                            className=" inline-flex justify-center items-center gap-3 bg-gray-950 dark:bg-gray-900 hover:dark:bg-gray-800 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 rounded-full text-sm lg:text-lg font-semibold transition duration-300 transform hover:scale-105">
+                            className=" inline-flex justify-center items-center gap-3 bg-gray-950 dark:bg-black hover:dark:bg-slate-950 text-white py-3 px-8 md:px-6 md:text-sm lg:px-8 rounded-full text-sm lg:text-lg font-semibold transition duration-300 transform hover:scale-105">
                             Download CV
                             <TbDownload size={20} />
                         </a>
