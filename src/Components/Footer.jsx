@@ -18,12 +18,14 @@ const Footer = () => {
         <footer className=" bg-slate-950 dark:bg-slate-950 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans pt-12 pb-8 text-white">
             <div className=" container mx-auto text-center">
                 <h2 className="text-2xl font-semibold">
-                    <span className="bg-gradient-to-r from-white via-gray-200 bg-clip-text text-transparent to-purple-400 undefined">
-                        &lt;Debabrata
-                    </span>
-                    <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined">
-                        Das /&gt;
-                    </span>
+                    <a href="/">
+                        <span className="bg-gradient-to-r from-white via-gray-200 bg-clip-text text-transparent to-purple-400 undefined">
+                            &lt;Debabrata
+                        </span>
+                        <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined">
+                            Das /&gt;
+                        </span>
+                    </a>
                 </h2>
 
                 {/* Navigation Links - Responsive */}
@@ -38,7 +40,7 @@ const Footer = () => {
                         <button
                             key={index}
                             onClick={() => handleScroll(item.id)}
-                            className="hover:text-black cursor-pointer xl:text-[18px] text-sm sm:text-base my-1"
+                            className="hover:text-blue-600 cursor-pointer xl:text-[18px] text-sm sm:text-base my-1"
                         >
                             {item.name}
                         </button>
@@ -60,7 +62,7 @@ const Footer = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xl hover:text-black transition-transform transform hover:scale-110"
+                            className="text-xl hover:text-blue-600 transition-transform transform hover:scale-110"
                         >
                             {item.icon}
                         </a>

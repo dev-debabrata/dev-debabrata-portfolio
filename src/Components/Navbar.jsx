@@ -19,44 +19,74 @@ const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Sync active section on route change
+    // Set active section based on route path
     useEffect(() => {
-        const path = location.pathname.replace('/', '') || 'home';
-        setActiveSection(path);
+
+        const routeMatch = NavbarMenu.find(
+            item => item.type === 'route' && location.pathname === `/${item.id}`
+        );
+
+        if (routeMatch) {
+            setActiveSection(routeMatch.id);
+        } else if (location.pathname === '/' || location.pathname === '') {
+            setActiveSection('home');
+        }
     }, [location]);
 
-    // Change navbar style on scroll
+    // Handle navbar background on scroll
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // ScrollSpy: update active section on scroll (only on home page)
+    useEffect(() => {
+        if (location.pathname !== '/') return;
+
+        const handleScrollSpy = () => {
+            const activeItem = NavbarMenu
+                .filter(item => item.type === 'scroll')
+                .map(item => {
+                    const el = document.getElementById(item.id);
+                    if (!el) return null;
+                    const top = el.getBoundingClientRect().top;
+                    return { id: item.id, top: Math.abs(top) };
+                })
+                .filter(Boolean)
+                .sort((a, b) => a.top - b.top)[0];
+
+            if (activeItem) {
+                setActiveSection(activeItem.id);
+            }
+        };
+
+        window.addEventListener('scroll', handleScrollSpy);
+        handleScrollSpy(); // Trigger on mount
+        return () => window.removeEventListener('scroll', handleScrollSpy);
+    }, [location]);
+
+    // Handle click on menu item
     const handleMenuItemClick = (item) => {
         setActiveSection(item.id);
         setIsOpen(false);
 
-        if (item.type === "route") {
+        if (item.type === 'route') {
             navigate(`/${item.id}`);
-        } else {
+        } else if (item.type === 'scroll') {
             if (location.pathname !== '/') {
                 navigate('/');
-                setTimeout(() => {
-                    scrollToSection(item.id);
-                }, 300);
+                setTimeout(() => scrollToSection(item.id), 300);
             } else {
                 scrollToSection(item.id);
             }
         }
     };
 
+    // Smooth scroll to section
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+        section?.scrollIntoView({ behavior: 'smooth' });
     };
 
 
@@ -240,3 +270,54 @@ export default Navbar
                             </li>
                         ))}
                     </ul> */}
+
+
+
+
+
+// const [isOpen, setIsOpen] = useState(false);
+// const [activeSection, setActiveSection] = useState('');
+// const [isScrolled, setIsScrolled] = useState(false);
+
+// const navigate = useNavigate();
+// const location = useLocation();
+
+// // Sync active section on route change
+// useEffect(() => {
+//     const path = location.pathname.replace('/', '') || 'home';
+//     setActiveSection(path);
+// }, [location]);
+
+// // Change navbar style on scroll
+// useEffect(() => {
+//     const handleScroll = () => {
+//         setIsScrolled(window.scrollY > 50);
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+// }, []);
+
+// const handleMenuItemClick = (item) => {
+//     setActiveSection(item.id);
+//     setIsOpen(false);
+
+//     if (item.type === "route") {
+//         navigate(`/${item.id}`);
+//     } else {
+//         if (location.pathname !== '/') {
+//             navigate('/');
+//             setTimeout(() => {
+//                 scrollToSection(item.id);
+//             }, 300);
+//         } else {
+//             scrollToSection(item.id);
+//         }
+//     }
+// };
+
+// const scrollToSection = (id) => {
+//     const section = document.getElementById(id);
+//     if (section) {
+//         section.scrollIntoView({ behavior: 'smooth' });
+//     }
+// };
