@@ -94,7 +94,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[10vw] ${isScrolled ? "bg-[#8d8d9920] dark:bg-[#0000006d] dark:text-gray-50 text-whi bg-opacity-50 backdrop-blur-md shadow-xl" : "dark:bg-slate-950 dark:text-gray-50"
             } `}>
-            <div className="flex justify-between relative items-center my-4">
+            <div className="flex justify-between relative items-center my-4.5">
                 {/* <Link
                     to="/home"
                     className="flex justify-center gap-2 items-center cursor-pointer">
@@ -123,7 +123,7 @@ const Navbar = () => {
                         {NavbarMenu.map((item) => (
                             <li
                                 key={item.id}
-                                className={`group cursor-pointer md:text-[14px] lg:text-[18px] font-semibold ${activeSection === item.id
+                                className={`group cursor-pointer md:text-[14px] lg:text-[18px] ${activeSection === item.id
                                     ? "text-blue-600 dark:text-blue-600 "
                                     : "hover:text-blue-600 hover:dark:text-blue-600"
                                     }`}
@@ -191,10 +191,10 @@ const Navbar = () => {
                             {NavbarMenu.map((item) => (
                                 <li
                                     key={item.id}
-                                    className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-[#8245ec]" : ""}`}
+                                    className={`cursor-pointer hover:text-[#8245ec] ${activeSection === item.id ? "text-[#8245ec]" : ""}`}
                                 >
                                     <button onClick={() => handleMenuItemClick(item)}
-                                        className="inline-block cursor-pointer text-base font-semibold py-2 px-4 md:px-2 lg:px-4 uppercase">
+                                        className="inline-block cursor-pointer text-base font-semibold py-2 px-4 md:px-2 lg:px-4">
                                         {item.title}
                                     </button>
                                 </li>
@@ -204,14 +204,14 @@ const Navbar = () => {
                                     href="https://github.com/dev-debabrata"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-[#212529]">
+                                    className="hover:text-[#8245ec]">
                                     <FaGithub size={28} />
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/debabrata-das-01b371152/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-[#212529]">
+                                    className="hover:text-[#8245ec]">
                                     <FaLinkedin size={28} />
                                 </a>
                                 {/* <a

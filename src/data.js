@@ -51,7 +51,7 @@ import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
 import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
 import AuthImg from "./assets/ProjectImg/auth.png";
 import MindMateImg from "./assets/ProjectImg/mindMate.png";
-
+import TravelMapImg from "./assets/ProjectImg/travelmap.png";
 
 
 /////////////////////////////////////////////
@@ -319,7 +319,15 @@ export const projectListData = [
 
     /////////////////////////////////////
     // JavaScript
-
+    {
+        image: TravelMapImg,
+        title: "javascript",
+        name: "Travel Map",
+        description:
+            "Technologies: HTML, CSS, JavaScript",
+        github: "https://github.com/dev-debabrata/travel-map-javascript",
+        webapp: "https://travelmap-dev.netlify.app/",
+    },
     {
         image: BankingSystemImg,
         title: "javascript",

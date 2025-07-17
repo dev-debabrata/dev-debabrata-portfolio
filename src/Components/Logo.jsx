@@ -5,8 +5,8 @@ const Logo = () => {
     const logos = Object.values(logoCard);
 
     return (
-        <section className="bg-gray-100 dark:bg-slate-900 rounded-b-2xl dark:rounded-none py-5 sm:px-2">
-            <div className="w-full overflow-hidden relative xl:h-20 h-15">
+        <section className="bg-gray-100 dark:bg-slate-900 rounded-2xl dark:rounded-none py-5 sm:px-2">
+            <div className="w-full overflow-hidden relative xl:h-18 h-15">
                 <div className="flex gap-4 absolute whitespace-nowrap will-change-transform animate-marquee">
                     {/* Original + Duplicate for seamless scroll */}
                     {[...logos, ...logos].map((src, index) => (
@@ -14,7 +14,7 @@ const Logo = () => {
                             key={index}
                             src={src}
                             alt={`logo-${index}`}
-                            className="w-15 xl:w-20 h-15 xl:h-20 object-contain pointer-events-none"
+                            className="w-15 xl:w-18 h-15 xl:h-18 object-contain pointer-events-none"
                         />
                     ))}
                 </div>
