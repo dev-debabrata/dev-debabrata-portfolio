@@ -51,7 +51,7 @@ import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
 import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
 import AuthImg from "./assets/ProjectImg/auth.png";
 import MindMateImg from "./assets/ProjectImg/mindMate.png";
-import TravelMapImg from "./assets/ProjectImg/travelmap.png";
+import TravelMapImg from "./assets/ProjectImg/travelMap.png";
 
 
 /////////////////////////////////////////////
