@@ -46,7 +46,7 @@ const About = () => {
             <div className="flex flex-col justify-center items-center " >
                 {/* About title */}
                 <div className="relative">
-                    <h1 className=" text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold dark:text-gray-300">
+                    <h1 className=" text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold dark:text-gray-100">
                         About me
                     </h1>
                     <div className=" w-25 md:w-35 lg:w-35 xl:w-35 h-1 bg-blue-600 mx-auto mt-2"></div>

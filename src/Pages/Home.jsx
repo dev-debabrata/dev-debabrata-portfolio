@@ -13,7 +13,7 @@ const Home = () => {
         // <div className=' flex flex-col items-center space-y-7 text-center'>
         <div
             // id="nav-trigger"
-            className="  dark:bg-blue-950 dark:text-gray-300">
+            className="  dark:bg-blue-950 dark:text-gray-100">
             <Navbar />
             <Hero />
             <Logo />

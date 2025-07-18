@@ -15,7 +15,7 @@ const Hero = () => {
                 <div className="text-center md:text-left mt-8 md:mt-0">
                     {/* Greeting */}
                     <h2 className="text-2xl font-semibold">Hi, I'm</h2>
-                    <h1 className=" text-3xl sm:text-5xl md:text-4xl lg:text-7xl font-extrabold mt-2 dark:text-gray-300">
+                    <h1 className=" text-3xl sm:text-5xl md:text-4xl lg:text-7xl font-extrabold mt-2">
                         <span className="bg-gradient-to-r dark:from-white dark:via-gray-300 from-black via-gray-500 bg-clip-text text-transparent to-purple-400 undefined">
                             Debabrata
                         </span>
