@@ -258,7 +258,7 @@ export const projectListData = [
         name: "GroLeaf",
         description:
             "Technologies: React, Tailwind CSS",
-        github: "https://github.com/dev-debabrata/MindMate-react",
+        github: "https://github.com/dev-debabrata/groleaf-react",
         webapp: "",
     },
     {
