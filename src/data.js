@@ -52,6 +52,7 @@ import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
 import AuthImg from "./assets/ProjectImg/auth.png";
 import MindMateImg from "./assets/ProjectImg/mindMate.png";
 import TravelMapImg from "./assets/ProjectImg/travelMap.png";
+import GroLeafImg from "./assets/ProjectImg/groLeaf.png";
 
 
 /////////////////////////////////////////////
@@ -251,8 +252,15 @@ export const projectsTabs = [
 
 // ProjectList Data
 export const projectListData = [
-
-
+    {
+        image: GroLeafImg,
+        title: "react.js",
+        name: "GroLeaf",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/MindMate-react",
+        webapp: "",
+    },
     {
         image: MindMateImg,
         title: "react.js",
