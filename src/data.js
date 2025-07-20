@@ -259,7 +259,7 @@ export const projectListData = [
         description:
             "Technologies: React, Tailwind CSS",
         github: "https://github.com/dev-debabrata/groleaf-react",
-        webapp: "",
+        webapp: "https://groleaf-dev.netlify.app/",
     },
     {
         image: MindMateImg,
