@@ -268,7 +268,7 @@ export const projectListData = [
         description:
             "Technologies: React, Tailwind CSS, React Just Parallax, React Scroll Lock",
         github: "https://github.com/dev-debabrata/MindMate-react",
-        webapp: "",
+        webapp: "mindmate-dev.netlify.app",
     },
     {
         image: AuthImg,
@@ -524,5 +524,15 @@ export const projectData = [
             "Technologies: HTML, CSS, JavaScript",
         github: "https://github.com/dev-debabrata/cloud-kitchen-htmlcss",
         webapp: "https://cloud-kitchen-dev.netlify.app/",
+    },
+    {
+        id: 5,
+        image: GroLeafImg,
+        title: "react.js",
+        name: "GroLeaf",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/groleaf-react",
+        webapp: "https://groleaf-dev.netlify.app/",
     },
 ];  

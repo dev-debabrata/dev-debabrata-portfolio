@@ -52,7 +52,7 @@ const Projects = () => {
                         <SwiperSlide key={project.id}>
                             <div
                                 onClick={() => handleOpenModal(project)}
-                                className="bg-gray-100 dark:bg-slate-950 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-4"
+                                className="bg-gray-100 dark:bg-slate-950 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-blue-800/50 hover:-translate-y-2 transition-transform duration-300 p-5 h-[350px]"
                             >
                                 <h3 className="text-base font-semibold uppercase px-3 py-1 bg-gray-300 dark:bg-slate-800 inline-block border-none rounded-xl mb-2">
                                     {project.title}
@@ -61,7 +61,7 @@ const Projects = () => {
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-48 object-cover rounded-xl"
+                                        className="w-full object-cover rounded-xl"
                                     />
                                 </div>
                                 <div>
@@ -88,8 +88,8 @@ const Projects = () => {
 
             {/* Modal container */}
             {selectedProject && (
-                <div className="fixed inset-0 z-50 pt-24 flex items-center justify-center bg-black/90 dark:bg-slate-950/70 p-4">
-                    <div className="bg-gray-100 dark:bg-slate-900 rounded-xl shadow-2xl lg:w-[50%] xl:w-[80%] w-[80%] max-w-[480px] overflow-hidden relative ">
+                <div className="fixed inset-0 z-50 pt-18 flex items-center justify-center bg-black/90 dark:bg-slate-950/70 p-4">
+                    <div className="bg-gray-100 dark:bg-slate-900 rounded-xl shadow-2xl md:w-[60%] lg:w-[60%] xl:w-[80%] w-full max-w-[580px] overflow-hidden relative ">
                         <div className="flex justify-end p-3 bg-blue-800 dark:bg-gray-950">
                             <button
                                 onClick={handleCloseModal}
@@ -113,7 +113,7 @@ const Projects = () => {
                                 <p className="text-gray-500 dark:text-gray-400 text-base mb-5">
                                     {selectedProject.description}
                                 </p>
-                                <div className=" flex xl:justify-center md:justify-center xl:gap-35 md:gap-20 justify-between">
+                                <div className=" flex xl:justify-center md:justify-center xl:gap-65 md:gap-60 justify-between">
                                     <a
                                         href={selectedProject.github}
                                         target="_blank"
