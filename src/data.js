@@ -268,7 +268,7 @@ export const projectListData = [
         description:
             "Technologies: React, Tailwind CSS, React Just Parallax, React Scroll Lock",
         github: "https://github.com/dev-debabrata/MindMate-react",
-        webapp: "mindmate-dev.netlify.app",
+        webapp: "https://mindmate-dev.netlify.app/",
     },
     {
         image: AuthImg,

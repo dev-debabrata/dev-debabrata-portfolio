@@ -51,7 +51,7 @@ const Hero = () => {
                         className=" xl:max-h-[450px] xl:max-w-[450px] max-w-[400px] max-h-[400px] md:max-h-[300px] rounded-full object-cover" />
                 </div>
             </div>
-        </section >
+        </section>
     )
 }
 
