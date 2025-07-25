@@ -43,14 +43,14 @@ npm run dev
 📁 Folder Structure
 portfolio-react/
 ├── public/
-│   └── assets/            # Images and static files
+│   └── assets/    
 ├── src/
-│   ├── components/        # Reusable components
-│   ├── pages/             # Home, Projects, Contact, etc.
-│   ├── data/              # Projects or skills data
-│   ├── App.jsx            # Main component
-│   └── main.jsx           # React root
-├── tailwind.config.js     # Tailwind setup
+│   ├── components/      
+│   ├── pages/            
+│   ├── data/           
+│   ├── App.jsx           
+│   └── main.jsx           
+├── tailwind.config.js    
 └── README.md
 
 ```
