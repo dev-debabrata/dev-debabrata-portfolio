@@ -1,47 +1,148 @@
-import React from 'react'
+// import React, { useRef } from 'react';
+// import { iconInfoContact } from '../data';
+// import ReCAPTCHA from 'react-google-recaptcha';
+
+// const Contact = () => {
+//     const recaptchaRef = useRef(null);
+
+//     const onSubmit = async (event) => {
+//         event.preventDefault();
+
+//         const token = await recaptchaRef.current.executeAsync();
+//         recaptchaRef.current.reset();
+
+//         if (!token) {
+//             alert("Please verify that you're not a robot.");
+//             return;
+//         }
+
+//         const formData = new FormData(event.target);
+//         formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+//         formData.append("g-recaptcha-response", token); // For Web3Forms
+
+//         const response = await fetch("https://api.web3forms.com/submit", {
+//             method: "POST",
+//             body: formData
+//         });
+
+//         const data = await response.json();
+
+//         if (data.success) {
+//             alert("Email Submitted Successfully");
+//             event.target.reset();
+//         } else {
+//             alert("Submission failed. Please try again.");
+//         }
+//     };
+
+// const onSubmit = async (event) => {
+//     event.preventDefault();
+
+//     // Get reCAPTCHA response
+//     const recaptchaResponse = window.grecaptcha.getResponse();
+
+//     // ✅ If not checked, show alert and stop submission
+//     if (!recaptchaResponse) {
+//         alert("Please verify that you're not a robot.");
+//         return;
+//     }
+
+//     const formData = new FormData(event.target);
+//     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+//     formData.append("g-recaptcha-response", recaptchaResponse); // Required by Web3Forms
+
+//     const response = await fetch("https://api.web3forms.com/submit", {
+//         method: "POST",
+//         body: formData
+//     });
+
+//     const data = await response.json();
+
+//     if (data.success) {
+//         alert("Email Submitted Successfully");
+//         event.target.reset(); // Reset the form
+//         window.grecaptcha.reset(); // ✅ Reset reCAPTCHA
+//     } else {
+//         alert("Submission failed. Please try again.");
+//     }
+// };
+
+
+// const onSubmit = async (event) => {
+//     event.preventDefault();
+//     const formData = new FormData(event.target);
+
+//     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+
+//     const response = await fetch("https://api.web3forms.com/submit", {
+//         method: "POST",
+//         body: formData
+//     });
+
+//     const data = await response.json();
+
+//     if (data.success) {
+//         alert("Email Submitted Successfully");
+//         event.target.reset();
+//     } else {
+//         alert("Submission failed. Please try again.");
+//     }
+// };
+
+import React, { useRef, useState } from 'react';
 import { iconInfoContact } from '../data';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
+    const recaptchaRef = useRef(null);
+    const [captchaToken, setCaptchaToken] = useState(null);
 
 
-    const onSubmit = async (event) => {
-        event.preventDefault();
+    const onSubmit = async (e) => {
+        e.preventDefault();
 
-        // Get reCAPTCHA response
-        const recaptchaResponse = window.grecaptcha.getResponse();
-
-        // ✅ If not checked, show alert and stop submission
-        if (!recaptchaResponse) {
-            alert("Please verify that you're not a robot.");
+        if (!captchaToken) {
+            alert("Please complete the CAPTCHA");
             return;
         }
 
-        const formData = new FormData(event.target);
+        const formData = new FormData(e.target);
         formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-        formData.append("g-recaptcha-response", recaptchaResponse); // Required by Web3Forms
+        formData.append("g-recaptcha-response", captchaToken);
 
-        const response = await fetch("https://api.web3forms.com/submit", {
+        // Debug log
+        for (let [key, val] of formData.entries()) {
+            console.log(key, val);
+        }
+
+        const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             body: formData
         });
 
-        const data = await response.json();
+        const data = await res.json();
+        console.log(data);
 
         if (data.success) {
-            alert("Email Submitted Successfully");
-            event.target.reset(); // Reset the form
-            window.grecaptcha.reset(); // ✅ Reset reCAPTCHA
+            alert("Success");
+            e.target.reset();
+            recaptchaRef.current.reset();
         } else {
-            alert("Submission failed. Please try again.");
+            alert(data.message || "Submission failed");
         }
     };
 
-
     // const onSubmit = async (event) => {
     //     event.preventDefault();
-    //     const formData = new FormData(event.target);
 
+    //     if (!captchaToken) {
+    //         alert("Please verify that you're not a robot.");
+    //         return;
+    //     }
+
+    //     const formData = new FormData(event.target);
     //     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+    //     formData.append("g-recaptcha-response", captchaToken); // Web3Forms requires this
 
     //     const response = await fetch("https://api.web3forms.com/submit", {
     //         method: "POST",
@@ -53,10 +154,13 @@ const Contact = () => {
     //     if (data.success) {
     //         alert("Email Submitted Successfully");
     //         event.target.reset();
+    //         recaptchaRef.current.reset();
+    //         setCaptchaToken(null);
     //     } else {
     //         alert("Submission failed. Please try again.");
     //     }
     // };
+
 
     return (
         <section
@@ -121,9 +225,14 @@ const Contact = () => {
                         required>
                     </textarea>
                     {/* Google reCAPTCHA */}
-                    <div className="my-4">
-                        <div className="g-recaptcha" data-sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA"></div>
-                    </div>
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA" // v2 Checkbox Site Key
+                        onChange={(token) => setCaptchaToken(token)}
+                    />
+                    {/* <div className="my-4 ">
+                        <div className="g-recaptcha" data-sitekey="6Lfe3pArAAAAAAxDLr5DfpJqqjNQWkx4W7z-6s6c"></div>
+                    </div> */}
                     <button
                         className="border-none text-white rounded-full bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">
                         Submit now
