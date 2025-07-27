@@ -122,7 +122,7 @@ const Contact = () => {
                     </textarea>
                     {/* Google reCAPTCHA */}
                     <div className="my-4">
-                        <div className="g-recaptcha" data-sitekey="6Lfr3pArAAAAAPhlYH_EQ4d8UhAn7YVeIMoTmKNl"></div>
+                        <div className="g-recaptcha" data-sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA"></div>
                     </div>
                     <button
                         className="border-none text-white rounded-full bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">
