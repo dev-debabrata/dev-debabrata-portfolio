@@ -106,7 +106,7 @@ const Navbar = () => {
                 </Link> */}
                 <a
                     href="/"
-                    class="text-xl font-medium italic md:text-[24px] lg:text-3xl xl:text-3xl lg:font-bold"
+                    className="text-xl font-medium italic md:text-[24px] lg:text-3xl xl:text-3xl lg:font-bold"
                 >
                     <span className="bg-gradient-to-r from-black dark:from-white dark:via-gray-200 via-gray-500 bg-clip-text text-transparent to-purple-400 undefined">
                         &lt;Debabrata

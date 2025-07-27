@@ -251,7 +251,31 @@ export const projectsTabs = [
 
 
 // ProjectList Data
+import ComingSoonImg from "./assets/ProjectImg/comingSoon.png";
+
+
+
 export const projectListData = [
+
+
+
+
+
+
+
+
+
+
+
+    {
+        image: ComingSoonImg,
+        title: "react.js",
+        name: "Amazon Clone",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/amazon-clone-react",
+        webapp: "",
+    },
     {
         image: GroLeafImg,
         title: "react.js",

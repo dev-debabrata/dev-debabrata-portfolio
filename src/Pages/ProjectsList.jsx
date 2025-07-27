@@ -22,7 +22,7 @@ const ProjectsList = () => {
 
     useEffect(() => {
         updateWidth();
-
+        // window.scrollTo(0, 0);
         const tabElement = tabRef.current;
         const resizeObserver = new ResizeObserver(updateWidth);
 
