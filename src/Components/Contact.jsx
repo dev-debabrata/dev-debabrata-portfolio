@@ -2,6 +2,62 @@ import React from 'react'
 import { iconInfoContact } from '../data';
 
 const Contact = () => {
+
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+
+        // Get reCAPTCHA response
+        const recaptchaResponse = window.grecaptcha.getResponse();
+
+        // ✅ If not checked, show alert and stop submission
+        if (!recaptchaResponse) {
+            alert("Please verify that you're not a robot.");
+            return;
+        }
+
+        const formData = new FormData(event.target);
+        formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+        formData.append("g-recaptcha-response", recaptchaResponse); // Required by Web3Forms
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert("Email Submitted Successfully");
+            event.target.reset(); // Reset the form
+            window.grecaptcha.reset(); // ✅ Reset reCAPTCHA
+        } else {
+            alert("Submission failed. Please try again.");
+        }
+    };
+
+
+    // const onSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const formData = new FormData(event.target);
+
+    //     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+
+    //     const response = await fetch("https://api.web3forms.com/submit", {
+    //         method: "POST",
+    //         body: formData
+    //     });
+
+    //     const data = await response.json();
+
+    //     if (data.success) {
+    //         alert("Email Submitted Successfully");
+    //         event.target.reset();
+    //     } else {
+    //         alert("Submission failed. Please try again.");
+    //     }
+    // };
+
     return (
         <section
             id='contact'
@@ -33,25 +89,27 @@ const Contact = () => {
                 </div>
                 {/* Right section */}
 
-                <form
+                <form onSubmit={onSubmit}
                     action=""
                     className="flex flex-col items-start gap-3 basis-[55%]">
                     <label
                         htmlFor=""
                         className="text-gray-500  dark:text-gray-400 text-[18px] font-semibold">Your Name</label>
                     <input
-                        className="border-none w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md "
+                        className=" peer border border-transparent w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:invalid:ring-red-500"
                         type="text"
                         placeholder='Enter your name'
-                        name='name' />
+                        name='name'
+                        required />
                     <label
                         htmlFor=""
                         className="text-gray-500 dark:text-gray-400 text-[18px] font-semibold">Your Email</label>
                     <input
-                        className="border-none w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md "
+                        className="peer border border-transparent w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:invalid:ring-red-500"
                         type="email"
                         placeholder='Enter your email'
-                        name='email' />
+                        name='email'
+                        required />
                     <label
                         htmlFor=""
                         className="text-gray-500 dark:text-gray-400 text-[18px] font-semibold">Write your message here</label>
@@ -59,7 +117,13 @@ const Contact = () => {
                         className="border-none w-full lg:w-[650px] xl:w-[650px] py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md dark:text-gray-200 "
                         name="message"
                         rows="8"
-                        placeholder='Enter your message'></textarea>
+                        placeholder='Enter your message'
+                        required>
+                    </textarea>
+                    {/* Google reCAPTCHA */}
+                    <div className="my-4">
+                        <div className="g-recaptcha" data-sitekey="6Lfr3pArAAAAAPhlYH_EQ4d8UhAn7YVeIMoTmKNl"></div>
+                    </div>
                     <button
                         className="border-none text-white rounded-full bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">
                         Submit now
