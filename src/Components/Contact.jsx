@@ -1,205 +1,3 @@
-// import React, { useRef } from 'react';
-// import { iconInfoContact } from '../data';
-// import ReCAPTCHA from 'react-google-recaptcha';
-
-// const Contact = () => {
-//     const recaptchaRef = useRef(null);
-
-//     const onSubmit = async (event) => {
-//         event.preventDefault();
-
-//         const token = await recaptchaRef.current.executeAsync();
-//         recaptchaRef.current.reset();
-
-//         if (!token) {
-//             alert("Please verify that you're not a robot.");
-//             return;
-//         }
-
-//         const formData = new FormData(event.target);
-//         formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-//         formData.append("g-recaptcha-response", token); // For Web3Forms
-
-//         const response = await fetch("https://api.web3forms.com/submit", {
-//             method: "POST",
-//             body: formData
-//         });
-
-//         const data = await response.json();
-
-//         if (data.success) {
-//             alert("Email Submitted Successfully");
-//             event.target.reset();
-//         } else {
-//             alert("Submission failed. Please try again.");
-//         }
-//     };
-
-// const onSubmit = async (event) => {
-//     event.preventDefault();
-
-//     // Get reCAPTCHA response
-//     const recaptchaResponse = window.grecaptcha.getResponse();
-
-//     // ✅ If not checked, show alert and stop submission
-//     if (!recaptchaResponse) {
-//         alert("Please verify that you're not a robot.");
-//         return;
-//     }
-
-//     const formData = new FormData(event.target);
-//     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-//     formData.append("g-recaptcha-response", recaptchaResponse); // Required by Web3Forms
-
-//     const response = await fetch("https://api.web3forms.com/submit", {
-//         method: "POST",
-//         body: formData
-//     });
-
-//     const data = await response.json();
-
-//     if (data.success) {
-//         alert("Email Submitted Successfully");
-//         event.target.reset(); // Reset the form
-//         window.grecaptcha.reset(); // ✅ Reset reCAPTCHA
-//     } else {
-//         alert("Submission failed. Please try again.");
-//     }
-// };
-
-
-// const onSubmit = async (event) => {
-//     event.preventDefault();
-//     const formData = new FormData(event.target);
-
-//     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-
-//     const response = await fetch("https://api.web3forms.com/submit", {
-//         method: "POST",
-//         body: formData
-//     });
-
-//     const data = await response.json();
-
-//     if (data.success) {
-//         alert("Email Submitted Successfully");
-//         event.target.reset();
-//     } else {
-//         alert("Submission failed. Please try again.");
-//     }
-// };
-
-// import React, { useRef, useState } from 'react';
-// import { iconInfoContact } from '../data';
-// import ReCAPTCHA from 'react-google-recaptcha';
-
-// const Contact = () => {
-//     const recaptchaRef = useRef(null);
-//     const [captchaToken, setCaptchaToken] = useState(null);
-
-
-//     const onSubmit = async (e) => {
-//         e.preventDefault();
-
-//         if (!captchaToken) {
-//             alert("Please complete the CAPTCHA");
-//             return;
-//         }
-
-//         const formData = new FormData(e.target);
-//         formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-//         formData.append("g-recaptcha-response", captchaToken);
-
-//         // Debug log
-//         for (let [key, val] of formData.entries()) {
-//             console.log(key, val);
-//         }
-
-//         const res = await fetch("https://api.web3forms.com/submit", {
-//             method: "POST",
-//             body: formData
-//         });
-
-//         const data = await res.json();
-//         console.log(data);
-
-//         if (data.success) {
-//             alert("Success");
-//             e.target.reset();
-//             recaptchaRef.current.reset();
-//         } else {
-//             alert(data.message || "Submission failed");
-//         }
-//     };
-
-// const onSubmit = async (event) => {
-//     event.preventDefault();
-
-//     if (!captchaToken) {
-//         alert("Please verify that you're not a robot.");
-//         return;
-//     }
-
-//     const formData = new FormData(event.target);
-//     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-//     formData.append("g-recaptcha-response", captchaToken); // Web3Forms requires this
-
-//     const response = await fetch("https://api.web3forms.com/submit", {
-//         method: "POST",
-//         body: formData
-//     });
-
-//     const data = await response.json();
-
-//     if (data.success) {
-//         alert("Email Submitted Successfully");
-//         event.target.reset();
-//         recaptchaRef.current.reset();
-//         setCaptchaToken(null);
-//     } else {
-//         alert("Submission failed. Please try again.");
-//     }
-// };
-// import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
-// import { iconInfoContact } from '../data';
-// import ReCAPTCHA from 'react-google-recaptcha';
-
-// const Contact = () => {
-//     const form = useRef();
-//     const recaptchaRef = useRef(null);
-
-//     const sendEmail = (e) => {
-//         e.preventDefault();
-
-//         const recaptchaValue = recaptchaRef.current.getValue();
-
-//         if (!recaptchaValue) {
-//             alert("Please complete the CAPTCHA");
-//             return;
-//         }
-
-//         emailjs
-//             .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-//                 publicKey: 'YOUR_PUBLIC_KEY',
-//             })
-//             .then(
-//                 () => {
-//                     alert('Email sent successfully!');
-//                     form.current.reset();
-//                     recaptchaRef.current.reset();
-//                 },
-//                 (error) => {
-//                     console.log('FAILED...', error.text);
-//                     alert('Failed to send email. Please try again.');
-//                 }
-//             );
-//     };
-
-
-
-
-
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { iconInfoContact } from '../data';
@@ -276,7 +74,7 @@ const Contact = () => {
                         htmlFor=""
                         className="text-gray-500  dark:text-gray-400 text-[18px] font-semibold">Your Name</label>
                     <input
-                        className=" peer border border-transparent w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:invalid:ring-red-500"
+                        className=" peer border border-transparent w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:invalid:ring-red-400 focus:invalid:placeholder-red-400"
                         type="text"
                         placeholder='Enter your name'
                         name='name'
@@ -285,7 +83,7 @@ const Contact = () => {
                         htmlFor=""
                         className="text-gray-500 dark:text-gray-400 text-[18px] font-semibold">Your Email</label>
                     <input
-                        className="peer border border-transparent w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:invalid:ring-red-500"
+                        className="peer border border-transparent w-full py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:invalid:ring-red-400 focus:invalid:placeholder-red-400"
                         type="email"
                         placeholder='Enter your email'
                         name='email'
@@ -294,15 +92,15 @@ const Contact = () => {
                         htmlFor=""
                         className="text-gray-500 dark:text-gray-400 text-[18px] font-semibold">Write your message here</label>
                     <textarea
-                        className="border-none w-full lg:w-[650px] xl:w-[650px] py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md dark:text-gray-200 "
+                        className="peer border-none w-full lg:w-[650px] xl:w-[650px] py-4 pl-5 rounded-md bg-blue-200 dark:bg-slate-700 text-gray-800 dark:placeholder-gray-500 text-md dark:text-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:invalid:ring-red-400 "
                         name="message"
                         rows="8"
                         placeholder='Enter your message'
                         required>
                     </textarea>
                     <input type="hidden" name="time" value={new Date().toLocaleString()} />
-                    {/* Google reCAPTCHA */}
 
+                    {/* Google reCAPTCHA */}
                     {/* localhost */}
                     {/* <ReCAPTCHA
                         ref={recaptchaRef}
