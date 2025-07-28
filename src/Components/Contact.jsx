@@ -89,16 +89,128 @@
 //     }
 // };
 
+// import React, { useRef, useState } from 'react';
+// import { iconInfoContact } from '../data';
+// import ReCAPTCHA from 'react-google-recaptcha';
+
+// const Contact = () => {
+//     const recaptchaRef = useRef(null);
+//     const [captchaToken, setCaptchaToken] = useState(null);
+
+
+//     const onSubmit = async (e) => {
+//         e.preventDefault();
+
+//         if (!captchaToken) {
+//             alert("Please complete the CAPTCHA");
+//             return;
+//         }
+
+//         const formData = new FormData(e.target);
+//         formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+//         formData.append("g-recaptcha-response", captchaToken);
+
+//         // Debug log
+//         for (let [key, val] of formData.entries()) {
+//             console.log(key, val);
+//         }
+
+//         const res = await fetch("https://api.web3forms.com/submit", {
+//             method: "POST",
+//             body: formData
+//         });
+
+//         const data = await res.json();
+//         console.log(data);
+
+//         if (data.success) {
+//             alert("Success");
+//             e.target.reset();
+//             recaptchaRef.current.reset();
+//         } else {
+//             alert(data.message || "Submission failed");
+//         }
+//     };
+
+// const onSubmit = async (event) => {
+//     event.preventDefault();
+
+//     if (!captchaToken) {
+//         alert("Please verify that you're not a robot.");
+//         return;
+//     }
+
+//     const formData = new FormData(event.target);
+//     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
+//     formData.append("g-recaptcha-response", captchaToken); // Web3Forms requires this
+
+//     const response = await fetch("https://api.web3forms.com/submit", {
+//         method: "POST",
+//         body: formData
+//     });
+
+//     const data = await response.json();
+
+//     if (data.success) {
+//         alert("Email Submitted Successfully");
+//         event.target.reset();
+//         recaptchaRef.current.reset();
+//         setCaptchaToken(null);
+//     } else {
+//         alert("Submission failed. Please try again.");
+//     }
+// };
+// import React, { useRef } from 'react';
+// import emailjs from '@emailjs/browser';
+// import { iconInfoContact } from '../data';
+// import ReCAPTCHA from 'react-google-recaptcha';
+
+// const Contact = () => {
+//     const form = useRef();
+//     const recaptchaRef = useRef(null);
+
+//     const sendEmail = (e) => {
+//         e.preventDefault();
+
+//         const recaptchaValue = recaptchaRef.current.getValue();
+
+//         if (!recaptchaValue) {
+//             alert("Please complete the CAPTCHA");
+//             return;
+//         }
+
+//         emailjs
+//             .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+//                 publicKey: 'YOUR_PUBLIC_KEY',
+//             })
+//             .then(
+//                 () => {
+//                     alert('Email sent successfully!');
+//                     form.current.reset();
+//                     recaptchaRef.current.reset();
+//                 },
+//                 (error) => {
+//                     console.log('FAILED...', error.text);
+//                     alert('Failed to send email. Please try again.');
+//                 }
+//             );
+//     };
+
+
+
+
+
 import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { iconInfoContact } from '../data';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
+    const form = useRef();
     const recaptchaRef = useRef(null);
     const [captchaToken, setCaptchaToken] = useState(null);
 
-
-    const onSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
 
         if (!captchaToken) {
@@ -106,60 +218,24 @@ const Contact = () => {
             return;
         }
 
-        const formData = new FormData(e.target);
-        formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-        formData.append("g-recaptcha-response", captchaToken);
-
-        // Debug log
-        for (let [key, val] of formData.entries()) {
-            console.log(key, val);
-        }
-
-        const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await res.json();
-        console.log(data);
-
-        if (data.success) {
-            alert("Success");
-            e.target.reset();
-            recaptchaRef.current.reset();
-        } else {
-            alert(data.message || "Submission failed");
-        }
+        emailjs
+            .sendForm('service_7iov10o', 'template_skahyly', form.current, {
+                publicKey: '3SvRB8OsWc4xn3ya9',
+            })
+            .then(
+                () => {
+                    alert('Email sent successfully!');
+                    form.current.reset();
+                    recaptchaRef.current.reset();
+                    setCaptchaToken(null);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    alert('Failed to send email. Please try again.');
+                }
+            );
     };
 
-    // const onSubmit = async (event) => {
-    //     event.preventDefault();
-
-    //     if (!captchaToken) {
-    //         alert("Please verify that you're not a robot.");
-    //         return;
-    //     }
-
-    //     const formData = new FormData(event.target);
-    //     formData.append("access_key", "7af5357d-0756-4b26-b7b9-3ddfdd361e92");
-    //     formData.append("g-recaptcha-response", captchaToken); // Web3Forms requires this
-
-    //     const response = await fetch("https://api.web3forms.com/submit", {
-    //         method: "POST",
-    //         body: formData
-    //     });
-
-    //     const data = await response.json();
-
-    //     if (data.success) {
-    //         alert("Email Submitted Successfully");
-    //         event.target.reset();
-    //         recaptchaRef.current.reset();
-    //         setCaptchaToken(null);
-    //     } else {
-    //         alert("Submission failed. Please try again.");
-    //     }
-    // };
 
 
     return (
@@ -193,7 +269,7 @@ const Contact = () => {
                 </div>
                 {/* Right section */}
 
-                <form onSubmit={onSubmit}
+                <form ref={form} onSubmit={sendEmail}
                     action=""
                     className="flex flex-col items-start gap-3 basis-[55%]">
                     <label
@@ -224,15 +300,22 @@ const Contact = () => {
                         placeholder='Enter your message'
                         required>
                     </textarea>
+                    <input type="hidden" name="time" value={new Date().toLocaleString()} />
                     {/* Google reCAPTCHA */}
+
+                    {/* localhost */}
+                    {/* <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6Lfe3pArAAAAAAxDLr5DfpJqqjNQWkx4W7z-6s6c"
+                        onChange={(token) => setCaptchaToken(token)}
+                    /> */}
+
+                    {/* Onrender.com */}
                     <ReCAPTCHA
                         ref={recaptchaRef}
-                        sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA" // v2 Checkbox Site Key
+                        sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA"
                         onChange={(token) => setCaptchaToken(token)}
                     />
-                    {/* <div className="my-4 ">
-                        <div className="g-recaptcha" data-sitekey="6Lfe3pArAAAAAAxDLr5DfpJqqjNQWkx4W7z-6s6c"></div>
-                    </div> */}
                     <button
                         className="border-none text-white rounded-full bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">
                         Submit now
