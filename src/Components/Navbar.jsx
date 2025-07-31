@@ -92,7 +92,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[4vw] md:px-[7vw] lg:px-[8vw] xl:px-[8vw] ${isScrolled ? "bg-[#8d8d9920] dark:bg-[#0000006d] dark:text-gray-50 text-whi bg-opacity-50 backdrop-blur-md shadow-xl" : " text-gray-900 dark:bg-slate-950 dark:text-gray-100"
+        <nav className={`fixed top-0 w-full z-999 transition duration-300 px-[4vw] md:px-[7vw] lg:px-[8vw] xl:px-[8vw] bg-[#f8f9fa] ${isScrolled ? "bg-[#8d8d9920] dark:bg-[#0000006d] dark:text-gray-50 text-whi bg-opacity-50 backdrop-blur-md shadow-xl" : " text-gray-900 dark:bg-slate-950 dark:text-gray-100"
             } `}>
             <div className="flex justify-between relative items-center my-4.5">
                 {/* <Link

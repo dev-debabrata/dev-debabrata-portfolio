@@ -9,7 +9,7 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="dark:bg-slate-900 py-12 pt-30 px-[4vw] md:px-[7vw] lg:px-[8vw] xl:px-[8vw]">
+            className="bg-[#f8f9fa] dark:bg-slate-900 py-12 pt-30 px-[4vw] md:px-[7vw] lg:px-[8vw] xl:px-[8vw]">
             <div className="flex xl:flex flex-col-reverse xl:gap-12 md:gap-10 gap-5 md:flex-row justify-between items-center my-2">
                 {/* Left side */}
                 <div className="text-center md:text-left mt-8 md:mt-0">

@@ -4,8 +4,12 @@ import { logoCard } from '../data';
 const Logo = () => {
     const logos = Object.values(logoCard);
 
+
+    //bg-[#f1f3f5e4]
+
+
     return (
-        <section className="bg-[#f1f3f5e4] dark:bg-[#111124f4] rounded-2xl dark:rounded-none py-5 sm:px-2">
+        <section className="bg-[#f8f9fa] dark:bg-[#111124f4] rounded-2xl dark:rounded-none py-5 sm:px-2">
             <div className="w-full overflow-hidden relative xl:h-18 h-15">
                 <div className="flex gap-4 absolute whitespace-nowrap will-change-transform animate-marquee">
                     {/* Original + Duplicate for seamless scroll */}
