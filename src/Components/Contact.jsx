@@ -39,7 +39,7 @@ const Contact = () => {
     return (
         <section
             id='contact'
-            className="flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7.5%] lg:mx-[10%] xl:mx-[10%] pt-4">
+            className="flex flex-col md:justify-center md:items-center lg:justify-center xl:justify-center items-center lg:items-center xl:items-center gap-10 my-15 mx-[4%] md:my-20 lg:my-20 xl:my-20 md:mx-[7%] lg:mx-[8%] xl:mx-[8%] pt-4">
             <div className="relative">
                 <h1 className="text-3xl md:text-[40px] lg:text-[40px] xl:text-[40px] font-bold px-8 dark:text-gray-100">
                     Get in touch
@@ -102,18 +102,18 @@ const Contact = () => {
 
                     {/* Google reCAPTCHA */}
                     {/* localhost */}
-                    {/* <ReCAPTCHA
+                    <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey="6Lfe3pArAAAAAAxDLr5DfpJqqjNQWkx4W7z-6s6c"
                         onChange={(token) => setCaptchaToken(token)}
-                    /> */}
+                    />
 
                     {/* Onrender.com */}
-                    <ReCAPTCHA
+                    {/* <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA"
                         onChange={(token) => setCaptchaToken(token)}
-                    />
+                    /> */}
                     <button
                         className="border-none text-white rounded-full bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">
                         Submit now
