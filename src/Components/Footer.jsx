@@ -15,7 +15,7 @@ const Footer = () => {
 
 
     return (
-        <footer className=" bg-slate-950 dark:bg-slate-950 px-[7vw] md:px-[7vw] lg:px-[10vw] font-sans pt-12 pb-8 text-white">
+        <footer className=" bg-slate-950 dark:bg-slate-950 px-[4vw] md:px-[7vw] lg:px-[8vw] xl:px-[8vw] font-sans pt-12 pb-8 text-white">
             <div className=" container mx-auto text-center">
                 <h2 className="text-2xl font-semibold">
                     <a href="/">
