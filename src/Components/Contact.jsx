@@ -102,18 +102,18 @@ const Contact = () => {
 
                     {/* Google reCAPTCHA */}
                     {/* localhost */}
-                    <ReCAPTCHA
+                    {/* <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey="6Lfe3pArAAAAAAxDLr5DfpJqqjNQWkx4W7z-6s6c"
                         onChange={(token) => setCaptchaToken(token)}
-                    />
+                    /> */}
 
                     {/* Onrender.com */}
-                    {/* <ReCAPTCHA
+                    <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey="6Lf73ZArAAAAAOQP_nxYMR-vo0bz46Em8mtcSgcA"
                         onChange={(token) => setCaptchaToken(token)}
-                    /> */}
+                    />
                     <button
                         className="border-none text-white rounded-full bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 text-xl mt-5 px-8 py-3 font-semibold transition duration-300 transform hover:scale-105 cursor-pointer">
                         Submit now
