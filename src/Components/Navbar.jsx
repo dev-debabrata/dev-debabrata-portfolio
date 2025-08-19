@@ -169,7 +169,7 @@ const Navbar = () => {
                         <SiLeetcode size={35} />
                     </a> */}
                 </div>
-                <div className="hidden md:flex lg:flex xl:flex">
+                <div className="hidden md:flex lg:flex xl:flex cursor-pointer">
                     <ThemeToggler />
                 </div>
 
