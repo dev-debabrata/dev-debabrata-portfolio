@@ -230,6 +230,10 @@ export const projectsTabs = [
         id: "allprojects",
         label: "All Projects"
     },
+    // {
+    //     id: "full stack",
+    //     label: "Full Stack"
+    // },
     {
         id: "mern stack",
         label: "MERN Stack"

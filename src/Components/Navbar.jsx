@@ -123,14 +123,14 @@ const Navbar = () => {
                         {NavbarMenu.map((item) => (
                             <li
                                 key={item.id}
-                                className={`group cursor-pointer md:text-[14px] lg:text-[18px] ${activeSection === item.id
+                                className={`group md:text-[14px] lg:text-[18px] ${activeSection === item.id
                                     ? "text-blue-600 dark:text-blue-600 "
                                     : "hover:text-blue-600 hover:dark:text-blue-600"
                                     }`}
                             >
                                 <button
                                     onClick={() => handleMenuItemClick(item)}
-                                    className="relative inline-block py-2 px-4 md:px-2 lg:px-4"
+                                    className="relative inline-block py-2 px-4 md:px-2 lg:px-4 cursor-pointer"
                                 >
                                     {item.title}
                                     {/* Animated underline */}
