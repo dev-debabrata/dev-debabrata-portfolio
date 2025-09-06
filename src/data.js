@@ -30,29 +30,7 @@ import { MdMailOutline } from "react-icons/md";
 import { PiBookOpen } from "react-icons/pi";
 import { BiPhoneCall } from "react-icons/bi";
 
-// Project images
-import AcademicImg from "./assets/ProjectImg/academic.png";
-import CloudKitchenImg from "./assets/ProjectImg/cloudkitchen.png";
-import CalculatorImg from "./assets/ProjectImg/calculator.png";
-import WeatherImg from "./assets/ProjectImg/weather.png";
-import AnalogClockImg from "./assets/ProjectImg/analogclock.png";
-import DigitalClockImg from "./assets/ProjectImg/digitalclock.png";
-import StopwatchImg from "./assets/ProjectImg/stopwatch.png";
-import QRcodeImg from "./assets/ProjectImg/qrcode.png";
-import GuessMyNumberImg from "./assets/ProjectImg/guessmynumber.png";
-import ModalShowImg from "./assets/ProjectImg/modalshow.png";
-import PigGameImg from "./assets/ProjectImg/piggame.png";
-import ElearningImg from "./assets/ProjectImg/elearning.png";
-import CocaColaImg from "./assets/ProjectImg/cocacola.png";
-import BankTransactionImg from "./assets/ProjectImg/bankingtransaction.png";
-import TodoListImg from "./assets/ProjectImg/todolist.png";
-import TicTacToeImg from "./assets/ProjectImg/tictactoe.png";
-import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
-import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
-import AuthImg from "./assets/ProjectImg/auth.png";
-import MindMateImg from "./assets/ProjectImg/mindMate.png";
-import TravelMapImg from "./assets/ProjectImg/travelMap.png";
-import GroLeafImg from "./assets/ProjectImg/groLeaf.png";
+
 
 
 /////////////////////////////////////////////
@@ -255,8 +233,33 @@ export const projectsTabs = [
 
 
 // ProjectList Data
-import ComingSoonImg from "./assets/ProjectImg/comingSoon.png";
+// import ComingSoonImg from "./assets/ProjectImg/comingSoon.png";
 
+
+// Project images
+import AcademicImg from "./assets/ProjectImg/academic.png";
+import CloudKitchenImg from "./assets/ProjectImg/cloudkitchen.png";
+import CalculatorImg from "./assets/ProjectImg/calculator.png";
+import WeatherImg from "./assets/ProjectImg/weather.png";
+import AnalogClockImg from "./assets/ProjectImg/analogclock.png";
+import DigitalClockImg from "./assets/ProjectImg/digitalclock.png";
+import StopwatchImg from "./assets/ProjectImg/stopwatch.png";
+import QRcodeImg from "./assets/ProjectImg/qrcode.png";
+import GuessMyNumberImg from "./assets/ProjectImg/guessmynumber.png";
+import ModalShowImg from "./assets/ProjectImg/modalshow.png";
+import PigGameImg from "./assets/ProjectImg/piggame.png";
+import ElearningImg from "./assets/ProjectImg/elearning.png";
+import CocaColaImg from "./assets/ProjectImg/cocacola.png";
+import BankTransactionImg from "./assets/ProjectImg/bankingtransaction.png";
+import TodoListImg from "./assets/ProjectImg/todolist.png";
+import TicTacToeImg from "./assets/ProjectImg/tictactoe.png";
+import OutdoorTravelImg from "./assets/ProjectImg/outdoortravel.png";
+import BankingSystemImg from "./assets/ProjectImg/bankingsystem.png";
+import AuthImg from "./assets/ProjectImg/auth.png";
+import MindMateImg from "./assets/ProjectImg/mindMate.png";
+import TravelMapImg from "./assets/ProjectImg/travelMap.png";
+import GroLeafImg from "./assets/ProjectImg/groLeaf.png";
+import AmazonCloneImg from "./assets/ProjectImg/amazonClone.png";
 
 
 export const projectListData = [
@@ -272,7 +275,7 @@ export const projectListData = [
 
 
     {
-        image: ComingSoonImg,
+        image: AmazonCloneImg,
         title: "react.js",
         name: "Amazon Clone",
         description:
@@ -562,5 +565,15 @@ export const projectData = [
             "Technologies: React, Tailwind CSS",
         github: "https://github.com/dev-debabrata/groleaf-react",
         webapp: "https://groleaf-dev.netlify.app/",
+    },
+    {
+        id: 6,
+        image: AmazonCloneImg,
+        title: "react.js",
+        name: "Amazon Clone",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/amazon-clone-react",
+        webapp: "",
     },
 ];  
