@@ -220,10 +220,10 @@ export const projectsTabs = [
         id: "react.js",
         label: "React.JS"
     },
-    // {
-    //     id: "next.js",
-    //     label: "Next.JS"
-    // },
+    {
+        id: "next.js",
+        label: "Next.JS"
+    },
     {
         id: "javascript",
         label: "JavaScript"
