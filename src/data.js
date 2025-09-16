@@ -281,7 +281,7 @@ export const projectListData = [
         description:
             "Technologies: React, Tailwind CSS",
         github: "https://github.com/dev-debabrata/amazon-clone-react",
-        webapp: "",
+        webapp: "https://amazon-clone-dev-debabrata.netlify.app",
     },
     {
         image: GroLeafImg,
@@ -536,16 +536,16 @@ export const projectData = [
         github: "https://github.com/dev-debabrata/auth-mern",
         webapp: "",
     },
-    {
-        id: 3,
-        image: OutdoorTravelImg,
-        title: "react.js",
-        name: "Outdoor Travel",
-        description:
-            "Technologies: React, Tailwind CSS, Framer-motion",
-        github: "https://github.com/dev-debabrata/outdoor-travel-react",
-        webapp: "https://outdoor-travel-dev.netlify.app/",
-    },
+    // {
+    //     id: 3,
+    //     image: OutdoorTravelImg,
+    //     title: "react.js",
+    //     name: "Outdoor Travel",
+    //     description:
+    //         "Technologies: React, Tailwind CSS, Framer-motion",
+    //     github: "https://github.com/dev-debabrata/outdoor-travel-react",
+    //     webapp: "https://outdoor-travel-dev.netlify.app/",
+    // },
     {
         id: 4,
         image: CloudKitchenImg,
@@ -574,6 +574,6 @@ export const projectData = [
         description:
             "Technologies: React, Tailwind CSS",
         github: "https://github.com/dev-debabrata/amazon-clone-react",
-        webapp: "",
+        webapp: "https://amazon-clone-dev-debabrata.netlify.app",
     },
 ];  
