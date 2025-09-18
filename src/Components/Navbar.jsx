@@ -62,7 +62,7 @@ const Navbar = () => {
         };
 
         window.addEventListener('scroll', handleScrollSpy);
-        handleScrollSpy(); // Trigger on mount
+        handleScrollSpy();
         return () => window.removeEventListener('scroll', handleScrollSpy);
     }, [location]);
 
@@ -155,7 +155,7 @@ const Navbar = () => {
                         <FaGithub className="md:text-[30px] lg:text-[33px]" />
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/debabrata-das-01b371152/"
+                        href="https://www.linkedin.com/in/dev-debabrata"
                         target="_blank"
                         rel="noopener noreferrer"
                         className=" hover:text-blue-600 hover:dark:text-blue-600">
@@ -208,7 +208,7 @@ const Navbar = () => {
                                     <FaGithub size={28} />
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com/in/debabrata-das-01b371152/"
+                                    href="https://www.linkedin.com/in/dev-debabrata/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-[#8245ec]">
