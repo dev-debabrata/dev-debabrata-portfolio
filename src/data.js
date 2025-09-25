@@ -233,7 +233,7 @@ export const projectsTabs = [
 
 
 // ProjectList Data
-// import ComingSoonImg from "./assets/ProjectImg/comingSoon.png";
+import ComingSoonImg from "./assets/ProjectImg/comingSoon.png";
 
 
 // Project images
@@ -272,8 +272,15 @@ export const projectListData = [
 
 
 
-
-
+    {
+        image: ComingSoonImg,
+        title: "mern stack",
+        name: "LinkedIn Clone",
+        description:
+            "Technologies: React, Tailwind CSS, Node JS, Express.js, MongoDB",
+        github: "https://github.com/dev-debabrata/linkedin-clone-mern",
+        webapp: "",
+    },
     {
         image: AmazonCloneImg,
         title: "react.js",
