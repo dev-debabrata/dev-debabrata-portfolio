@@ -277,7 +277,7 @@ export const projectListData = [
         title: "mern stack",
         name: "LinkedIn Clone",
         description:
-            "Technologies: React, Tailwind CSS, Node JS, Express.js, MongoDB",
+            "Technologies: React, Tailwind CSS, Node JS, Express.JS, MongoDB",
         github: "https://github.com/dev-debabrata/linkedin-clone-mern",
         webapp: "",
     },
@@ -313,7 +313,7 @@ export const projectListData = [
         title: "mern stack",
         name: "Athentication App",
         description:
-            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB Framer-motion",
+            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB Framer-motion",
         github: "https://github.com/dev-debabrata/auth-mern",
         webapp: "",
     },
@@ -356,7 +356,7 @@ export const projectListData = [
         title: "mern stack",
         name: "E-Learning",
         description:
-            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB",
+            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB",
         github: "https://github.com/dev-debabrata/e-learning-mern",
         webapp: "https://education-learnig-dev.netlify.app/",
     },
@@ -539,7 +539,7 @@ export const projectData = [
         title: "mern stack",
         name: "Authentication App",
         description:
-            "Technologies: React, Tailwind CSS, Node.JS, Express.js, MongoDB Framer-motion",
+            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB Framer-motion",
         github: "https://github.com/dev-debabrata/auth-mern",
         webapp: "",
     },
