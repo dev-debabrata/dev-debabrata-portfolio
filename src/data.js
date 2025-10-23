@@ -260,6 +260,8 @@ import MindMateImg from "./assets/ProjectImg/mindMate.png";
 import TravelMapImg from "./assets/ProjectImg/travelMap.png";
 import GroLeafImg from "./assets/ProjectImg/groLeaf.png";
 import AmazonCloneImg from "./assets/ProjectImg/amazonClone.png";
+import LinkedInCloneImg from "./assets/ProjectImg/linkedinClone.png";
+
 
 
 export const projectListData = [
@@ -273,13 +275,13 @@ export const projectListData = [
 
 
     {
-        image: ComingSoonImg,
+        image: LinkedInCloneImg,
         title: "mern stack",
         name: "LinkedIn Clone",
         description:
             "Technologies: React, Tailwind CSS, Node JS, Express.JS, MongoDB",
         github: "https://github.com/dev-debabrata/linkedin-clone-mern",
-        webapp: "",
+        webapp: "https://linkedin-clone-dev.vercel.app",
     },
     {
         image: AmazonCloneImg,
@@ -313,7 +315,7 @@ export const projectListData = [
         title: "mern stack",
         name: "Athentication App",
         description:
-            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB Framer-motion",
+            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB, Framer-motion",
         github: "https://github.com/dev-debabrata/auth-mern",
         webapp: "",
     },
@@ -539,7 +541,7 @@ export const projectData = [
         title: "mern stack",
         name: "Authentication App",
         description:
-            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB Framer-motion",
+            "Technologies: React, Tailwind CSS, Node.JS, Express.JS, MongoDB, Framer-motion",
         github: "https://github.com/dev-debabrata/auth-mern",
         webapp: "",
     },

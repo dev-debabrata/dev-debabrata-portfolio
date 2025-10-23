@@ -5,6 +5,8 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
 
+    const currentYear = new Date().getFullYear();
+
     // Smooth scroll function
     const handleScroll = (sectionId) => {
         const section = document.getElementById(sectionId);
@@ -70,12 +72,12 @@ const Footer = () => {
                 </div>
                 {/* Copyright text */}
                 <p className="text-center mt-8 border-t-2 border-white/40 pt-8">
-                    &copy; 2025 <span className="bg-gradient-to-r from-white via-gray-200 bg-clip-text text-transparent to-purple-400 undefined">
+                    &copy; Copyright {currentYear} by <span className="bg-gradient-to-r from-white via-gray-200 bg-clip-text text-transparent to-purple-400 undefined">
                         &lt;Debabrata
                     </span>
                     <span className="bg-gradient-to-r from-purple-400 via-red-500 bg-clip-text text-transparent to-orange-600 undefined">
                         Das /&gt;
-                    </span>. All rights reserved.
+                    </span> | All rights reserved
                 </p>
             </div>
         </footer>
