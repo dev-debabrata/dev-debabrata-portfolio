@@ -261,7 +261,7 @@ import TravelMapImg from "./assets/ProjectImg/travelMap.png";
 import GroLeafImg from "./assets/ProjectImg/groLeaf.png";
 import AmazonCloneImg from "./assets/ProjectImg/amazonClone.png";
 import LinkedInCloneImg from "./assets/ProjectImg/linkedinClone.png";
-
+import InvoiceImg from "./assets/ProjectImg/invoice.png";
 
 
 export const projectListData = [
@@ -338,6 +338,16 @@ export const projectListData = [
             "Technologies: React, Tailwind CSS, Framer-motion",
         github: "https://github.com/dev-debabrata/outdoor-travel-react",
         webapp: "https://outdoor-travel-dev.netlify.app/",
+    },
+
+    {
+        image: InvoiceImg,
+        title: "react.js",
+        name: "Invoice Generator",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/invoice-generator-react",
+        webapp: "https://invoice-dev.netlify.app",
     },
 
     {
