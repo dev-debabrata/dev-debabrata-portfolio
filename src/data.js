@@ -283,6 +283,17 @@ export const projectListData = [
         github: "https://github.com/dev-debabrata/linkedin-clone-mern",
         webapp: "https://linkedin-clone-dev.vercel.app",
     },
+
+    {
+        image: ComingSoonImg,
+        title: "react.js",
+        name: "Feedback Form",
+        description:
+            "Technologies: React, Tailwind CSS",
+        github: "https://github.com/dev-debabrata/feedback-board-react",
+        webapp: "",
+    },
+
     {
         image: AmazonCloneImg,
         title: "react.js",
@@ -595,4 +606,16 @@ export const projectData = [
         github: "https://github.com/dev-debabrata/amazon-clone-react",
         webapp: "https://amazon-clone-dev-debabrata.netlify.app",
     },
-];  
+
+    {
+        id: 7,
+        image: LinkedInCloneImg,
+        title: "mern stack",
+        name: "LinkedIn Clone",
+        description:
+            "Technologies: React, Tailwind CSS, Node JS, Express.JS, MongoDB",
+        github: "https://github.com/dev-debabrata/linkedin-clone-mern",
+        webapp: "https://linkedin-clone-dev.vercel.app",
+    },
+];
+
