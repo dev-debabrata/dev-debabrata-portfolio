@@ -33,7 +33,7 @@ const Hero = () => {
                             <FiSend />
                         </a>
                         <a
-                            href="/resume/DebabrataResume.pdf"
+                            href="/resume/DebabrataResumeNew.pdf"
                             download
                             target='_blank'
                             rel='noopener noreferrer'
